@@ -186,7 +186,17 @@ const Timesheet = () => {
   const [activeWeekIndex, setActiveWeekIndex] = useState(0);
   const weekRanges = [];
   const [meetingSession, setMeetingSession] = useState([]);
+
+  const [filterPlan, setfilterPlan] = useState('all');
   
+
+  const handleFilterPlan = (plann) => {
+    if (filterPlan  == plann) {
+      setfilterPlan('all');
+    }else{
+      setfilterPlan(plann);
+    }
+  };
   const [datesArray, setdatesArray] = useState([]);
   const currentWeekStart = new Date(currentDate);
   currentWeekStart.setDate(currentWeekStart.getDate() - currentDate.getDay() + 1);
@@ -218,6 +228,9 @@ const Timesheet = () => {
       setActiveWeekIndex(activeWeekIndex + 1);
     }
   };
+
+
+  
 
   const [currentYear, setCurrentYear] = useState(currentDate.getFullYear());
   const [currentYear2, setCurrentYear2] = useState(currentDate.getFullYear());
@@ -513,9 +526,12 @@ const totalEarnings = filteredMeetingSessions.length * 20; // Assuming $20 per s
             <div className='timesheet-buttons'>
               <div className='row'>
                 <div className='col-sm-12'>
-                  <button className='btn btn-one'>Experienced</button>
-                  <button className='btn btn-two'>Novice</button>
-                  <button className='btn btn-three'>Probono</button>
+                  <button className='btn btn-one' onClick={() => handleFilterPlan('experienced')}
+ >Experienced</button>
+                  <button className='btn btn-two' onClick={() => handleFilterPlan('novice')}
+>Novice</button>
+                  <button className='btn btn-three' onClick={() => handleFilterPlan('probono')}
+>Probono</button>
                 </div>
               </div>
             </div>
@@ -598,6 +614,8 @@ return (
       return (
     
         <td key={index}>
+
+          {filterPlan == 'all' || filterPlan == 'probono' ?
             <div className='third'>
                 <p>
                     {probonoCount}.0  <span>hour</span>
@@ -606,7 +624,8 @@ return (
                 £ <span>000.00</span>
                 </p>
             </div>
-
+            : null }
+{filterPlan == 'all' || filterPlan == 'novice' ?
             <div className='first'>
                 <p>
                     {`${ (((filteredMeetingSessions2(dateString,dateString).filter(
@@ -617,7 +636,10 @@ return (
                 £ <span>000.00</span>
                 </p>
             </div>
+:null }
 
+
+{filterPlan == 'all' || filterPlan == 'experienced' ?
 
             <div className='second'>
                 <p>
@@ -629,6 +651,7 @@ return (
                 £ <span>000.00</span>
                 </p>
             </div>
+            : null }
         </td>
     );
 })}
