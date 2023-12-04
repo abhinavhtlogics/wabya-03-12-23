@@ -616,16 +616,21 @@ return (
         <td key={index}>
 
           {filterPlan == 'all' || filterPlan == 'probono' ?
-            <div className='third'>
-                <p>
-                    {probonoCount}.0  <span>hour</span>
-                </p>
-                <p>
-                £ <span>000.00</span>
-                </p>
-            </div>
+            // <div className='third'>
+            //     <p>
+            //         {probonoCount}.0  <span>hour</span>
+            //     </p>
+            //     <p>
+            //     £ <span>000.00</span>
+            //     </p>
+            // </div>
+            <></>
             : null }
-{filterPlan == 'all' || filterPlan == 'novice' ?
+{(filterPlan == 'all' || filterPlan == 'novice') &&  (((filteredMeetingSessions2(dateString,dateString).filter(
+        meet => meet.client_plan === 'novice'
+      )).length * 30) / 60).toFixed(1) != '0.0' ?
+
+
             <div className='first'>
                 <p>
                     {`${ (((filteredMeetingSessions2(dateString,dateString).filter(
@@ -639,7 +644,9 @@ return (
 :null }
 
 
-{filterPlan == 'all' || filterPlan == 'experienced' ?
+{(filterPlan == 'all' || filterPlan == 'experienced') &&  (((filteredMeetingSessions2(dateString,dateString).filter(
+        meet => meet.client_plan === 'experienced'
+      )).length * 30) / 60).toFixed(1) != '0.0' ?
 
             <div className='second'>
                 <p>
