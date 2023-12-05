@@ -3101,6 +3101,7 @@ button{font-family: Gothic A1 !important;}
   .btn.btn-darkgreen{background:#236a6d;}
   .btn.btn-chestnutred{background:#ef7655;}
   .btn.btn-thulian-pink{background:#d37aa5;}
+  .btn.btn-width{min-width: 150px !important; width: auto !important; padding:11px 10px;}
 
   .clients-listing{position:relative; margin:0; padding: 30px 15px 30px; z-index:1;}
   .clients-listing .row{margin: 0 -20px;}
