@@ -2928,6 +2928,8 @@ button{font-family: Gothic A1 !important;}
 .stand-avbl{display: block;}
 @media (min-width: 320px) and (max-width: 767px) {
   
+    h1, h2, h3, h4, h5, h6{font-weight:700;}
+	
    .header{border-top: 3px solid #ec2397;}
    .stand-avbl{display: none;}
    .stand-avbl-mobile{display: block;}
