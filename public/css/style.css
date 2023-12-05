@@ -3219,7 +3219,7 @@ button{font-family: Gothic A1 !important;}
        .user-time-table .month-sec .table tr:last-child td:nth-child(2){font-weight: 700;}
        .user-time-table .month-sec .table tr:nth-child(2) td:first-child,.client-sec .month-sec .table tr:nth-child(3) td:first-child,.client-sec .month-sec .table tr:nth-child(4) td:first-child{position: relative;z-index: 0;}
       
-       .user-time-table .time-table-btn{width: 100%;margin-left: -12px;}
+       .user-time-table .time-table-btn{width: 100%;margin-left: 0;}
 
        .month-sec .table tr:nth-child(1) th{border-top:1px solid #000;}
        .month-sec .table tr:nth-child(1) th:nth-child(1), .month-sec .table tr:last-child td:nth-child(2){border-left: 1px solid #000;}
