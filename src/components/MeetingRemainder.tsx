@@ -39,7 +39,7 @@ const MeetingReminder = ({ meeting, newClient, scheduleMeeting, updateNewClientN
         scheduleMeeting.map((meet) => (
           <div className="meeting-reminder" key={meet.meet_id}>
             <div className="info">
-              <div className="title">new meeting scheduled</div>
+              <div className="title">new meeting scheduled </div>
               <p>10 minutes: client name</p>
             </div>
             <div className="meeting-link">

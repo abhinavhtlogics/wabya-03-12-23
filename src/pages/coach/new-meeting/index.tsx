@@ -43,7 +43,7 @@ const getMeeting = async () => {
 // Get the current date
 const currentDate = new Date();
 console.log(currentDate);
-  const queryDoc = query(meetingRef, where("coachId", "==", userId),where("meetingApiCreated", "==", true));
+  const queryDoc = query(meetingRef, where("coachId", "==", userId),where("isNotified", "==", 0));
 
   await getDocs(queryDoc).then((response) => {
     setMeeting(
@@ -98,9 +98,10 @@ const getClients = async () => {
 
   return (
     <>
-    <section className='clients-listing client-listing-desktop lower-letter'>
+    <section className='clients-listing  lower-letter'>
       <div className='container'>
         <div className='row'>
+          <h2 className='new-meet-heading'>New Meeting</h2>
           <div className='col-sm-12 filter-coll'>
             <div className='client-filter'>
               
@@ -112,12 +113,12 @@ const getClients = async () => {
           <div className='col-sm-6 cl-coll'>
   
     <div className='info' key={index}>
-      <h3>Abhinav</h3>
-      <p>
-        <span>Meeting Date:</span> <span>{meeting.meetingDate}</span>
+      {/* <h3>Abhinav</h3> */}
+      <p className='new-meet-p'>
+        <span><b>Meeting Date:</b></span> <span>{meeting.meetingDate}</span>
       </p>
-      <p>
-        <span>Meeting Time:</span> <span>{meeting.meetingTime}  - {meeting.meetingEndTime}</span>
+      <p className='new-meet-p'>
+        <span><b>Meeting Time:</b></span> <span>{meeting.meetingTime}  - {meeting.meetingEndTime}</span>
       </p>
       {/* Add additional meeting information as needed */}
     </div>
@@ -135,7 +136,7 @@ const getClients = async () => {
     </section> 
 
 
-<section className="clients-listing client-listing-mobile">
+<section className="clients-listing client-listing-mobile" style={{'display':'none'}}>
   <div className="container">
     <div className="row">
       <div className="col-12 filter-coll">
