@@ -91,7 +91,7 @@ const convertToCSV2 = (e) => {
 
   csvRows.push("Employee id:, 1234, , , job type:, fulltime"); // Header row
   csvRows.push("");
-  csvRows.push("Date,Number of Hours,RateSssion,Vages,Amount,Deduction,Balance"); // Header row
+  csvRows.push("Date,Number of Hours,RateSssion,Wages,Amount,Deduction,Balance"); // Header row
  
 
   meetingSession.forEach((meet, index) => {

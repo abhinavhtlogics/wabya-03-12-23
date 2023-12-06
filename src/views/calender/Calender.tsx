@@ -209,13 +209,13 @@ const Calender = () => {
 
 
   const [availability, setAvailability] = useState({
-    mon: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', isMore:false, isUnAvbl :false },
-    tue: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', isMore:false,isUnAvbl :false },
-    wed: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', isMore:false, isUnAvbl :false },
-    thu: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',isMore:false,isUnAvbl :false },
-    fri: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', isMore:false,isUnAvbl :false },
-    sat: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', isMore:false,isUnAvbl :false },
-    sun: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', isMore:false,isUnAvbl :false }
+    mon: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false, isUnAvbl :false },
+    tue: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00',isMore:false,isUnAvbl :false },
+    wed: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false, isUnAvbl :false },
+    thu: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00',isMore:false,isUnAvbl :false },
+    fri: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false },
+    sat: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false },
+    sun: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false }
   });
 
   // const handleHourChange = (event,day) => {
@@ -299,6 +299,44 @@ const Calender = () => {
       }));
     }
   };
+
+
+
+
+  const handleHourChange3 = (e, day) => {
+    console.log('working');
+    const { name, value } = e.target;
+
+    console.log(name,value);
+    const numericValue = parseInt(value, 10);
+  
+    // Ensure the input value is within the valid range (00 to 23 for hours)
+    const sanitizedValue = Math.max(0, Math.min(numericValue, 23));
+  
+    if (name === 'startHour3') {
+      // If changing startHour, update it directly
+      setAvailability(prevState => ({
+        ...prevState,
+        [day]: {
+          ...prevState[day],
+          [name]: sanitizedValue.toString().padStart(2, '0')
+        }
+      }));
+    } else {
+      // If changing endHour, ensure it is greater than startHour
+      const startHour3 = parseInt(availability[day].startHour3, 10);
+      const updatedEndHour = sanitizedValue < startHour3 ? startHour3 : sanitizedValue;
+  
+      setAvailability(prevState => ({
+        ...prevState,
+        [day]: {
+          ...prevState[day],
+          endHour3: updatedEndHour.toString().padStart(2, '0')
+        }
+      }));
+    }
+  };
+  
   
 
   const handleMinuteChange = (e, day) => {
@@ -373,6 +411,58 @@ const Calender = () => {
     setAvailability(updatedAvailability);
   };
   
+  
+  const handleMinuteChange3 = (e, day) => {
+    e.preventDefault();
+    console.log("handleMinuteChange called");
+   
+    const { name, value } = e.target;
+    console.log(e.target);
+    const numericValue = parseInt(e.target.value, 10);
+    const sanitizedValue = Math.max(0, Math.min(59, numericValue));
+    console.log(name,value);
+    const updatedAvailability = {
+      ...availability,
+      [day]: {
+        ...availability[day],
+        [name]: sanitizedValue.toString().padStart(2, '0')
+      }
+    };
+    console.log(sanitizedValue);
+    if (name === 'endMinute3' && updatedAvailability[day].startHour2 === updatedAvailability[day].endHour3) {
+      const startMinute3= parseInt(updatedAvailability[day].startMinute3, 10);
+      const endMinute3 = sanitizedValue >= startMinute3 ? sanitizedValue + 1 : startMinute3;
+      updatedAvailability[day].endMinute3 = endMinute3.toString().padStart(2, '0');
+    }
+  
+    if (name === 'startMinute3' ) {
+      
+      console.log(sanitizedValue);
+      const startMinute3 = parseInt(updatedAvailability[day].startMinute3, 10);
+      const endMinute3 = sanitizedValue >= startMinute3 ? sanitizedValue + 1 : startMinute3;
+      updatedAvailability[day].startMinute3 = endMinute3.toString().padStart(2, '0');
+    }
+    setAvailability(updatedAvailability);
+  };
+  
+
+  const isBetweenAvailabilityTimeslot = (timeslot, day) => {
+    const validDays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+  
+    // Convert the provided day to lowercase
+    const lowercaseDay = day.toLowerCase();
+  
+    // Check if the converted day is valid
+    if (!validDays.includes(lowercaseDay)) {
+      console.error(`Invalid day: ${day}`);
+      return false;
+    }
+  
+    const startAvailability = availability[lowercaseDay].startHour3 + ':' + availability[lowercaseDay].startMinute3;
+    const endAvailability = availability[lowercaseDay].endHour3 + ':' + availability[lowercaseDay].endMinute3;
+  
+    return timeslot >= startAvailability && timeslot < endAvailability;
+  };
   
   
   
@@ -497,7 +587,7 @@ const getMyMeeting = async () => {
   if (myAvailability) {
     const updatedAvailability = { ...availability };
     myAvailability.forEach((myData) => {
-      const { day, startHour, startMinute, endHour, endMinute, startHour2, startMinute2, endHour2, endMinute2, isUnAvbl } = myData;
+      const { day, startHour, startMinute, endHour, endMinute, startHour2, startMinute2, endHour2, endMinute2, startHour3, startMinute3, endHour3, endMinute3, isUnAvbl } = myData;
       updatedAvailability[day] = {
         startHour: startHour.padStart(2, '0'),
         startMinute: startMinute.padStart(2, '0'),
@@ -507,6 +597,10 @@ const getMyMeeting = async () => {
         startMinute2: startMinute2.padStart(2, '0'),
         endHour2: endHour2.padStart(2, '0'),
         endMinute2: endMinute2.padStart(2, '0'),
+        startHour3: startHour3.padStart(2, '0'),
+        startMinute3: startMinute3.padStart(2, '0'),
+        endHour3: endHour3.padStart(2, '0'),
+        endMinute3: endMinute3.padStart(2, '0'),
         isMore: false,
         isUnAvbl: isUnAvbl,
       };
@@ -2096,6 +2190,10 @@ m=0;
       startMinute2: data.startMinute2,
       endHour2: data.endHour2,
       endMinute2: data.endMinute2,
+      startHour3: data.startHour3,
+      startMinute3: data.startMinute3,
+      endHour3: data.endHour3,
+      endMinute3: data.endMinute3,
       isUnAvbl: data.isUnAvbl,
       coach_id:coachId,
     }));
@@ -2127,6 +2225,10 @@ m=0;
               startMinute2: data.startMinute2,
               endHour2: data.endHour2,
               endMinute2: data.endMinute2,
+              startHour3: data.startHour3,
+              startMinute3: data.startMinute3,
+              endHour3: data.endHour3,
+              endMinute3: data.endMinute3,
               isUnAvbl: data.isUnAvbl,
               coach_id:coachId,
             })
@@ -2162,6 +2264,10 @@ m=0;
         startMinute2: data.startMinute2,
         endHour2: data.endHour2,
         endMinute2: data.endMinute2,
+        startHour3: data.startHour3,
+        startMinute3: data.startMinute3,
+        endHour3: data.endHour3,
+        endMinute3: data.endMinute3,
         isUnAvbl:data.isUnAvbl,
         coach_id:coachId,
       
@@ -2507,7 +2613,7 @@ if(isBetween)
 
 
 return(<>
-  <td>
+  <td style={{ backgroundColor: index < 7 && isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}>
                      <div className="blue-event">
                            <p><span>{ matchingStarttime} - {matchingEndtime} </span> </p>
 
@@ -2559,14 +2665,14 @@ return(<>
                       else
                       if(index2 < 7){
                         return(
-<><td></td></>
+<><td style={{ backgroundColor:  index2 < 7 && isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}></td></>
                       
                         )
                       }
 
 })}
 
-                      <td></td>
+                      <td> </td>
                       <td>
                         {/* <div className="green-event">
                           <p>personal event <span>09:00 - 10:00 </span></p>
@@ -2826,6 +2932,61 @@ footer={[]}
         }
         </div>
 
+       
+        <div className="col-sm-1 ap1" />
+        <div className="col-sm-2 ap2">
+        <input
+            type="number"
+            className="text-top form-control dates"
+            name="startHour3"
+           value={availability[day].startHour3}
+           onChange={(e) => handleHourChange3(e, day)}
+           />
+             <input
+            type="number"
+            className="text-top form-control dates"
+            name="startMinute3"
+            value={availability[day].startMinute3}
+            onChange={(e) => handleMinuteChange3(e, day)}
+          />
+        </div>
+        <div className="col-sm-1 ap3">
+          <span className="text-center">to</span>
+        </div>
+        <div className="col-sm-2 ap2">
+        <input
+            type="number"
+            className="text-top form-control dates"
+            name="endHour3"
+            value={availability[day].endHour3}
+            onChange={(e) => handleHourChange3(e, day)}
+          />
+          <input
+            type="number"
+            className="text-top form-control dates"
+            name="endMinute3"
+            value={availability[day].endMinute3}
+            onChange={(e) => handleMinuteChange3(e, day)}
+          />
+        </div>
+        <div className="col-sm-1 ap4">
+          {/* <section className="sec-plus" >+</section> */}
+        </div>
+        <div className="col-sm-4 ap5 text-right" />
+
+       
+      
+
+
+
+
+
+
+
+
+
+
+
         { availability[day].isMore || availability[day].startHour2 != '00' || availability[day].startMinute2 != '00' || availability[day].endHour2 != '00' || availability[day].endMinute2 != '00' ?
         <>
         <div className="col-sm-1 ap1" />
@@ -2879,7 +3040,7 @@ footer={[]}
   <div className="col-sm-10" >
   {scheduleSuccess &&  <Alert severity='success' style={{ margin :'0 55px 20px 55px',width:'100%'}}> Data Saved</Alert> } </div>
   <div className="close-button">
-    <button className="btn btn-darkgreen btn-close" onClick={updateSchedule}>approve</button>
+    <button className="btn btn-darkgreen btn-close" onClick={updateSchedule} style={{'background':'#6cc3a5','textTransform':'lowercase'}}>approve</button>
   </div>
 </div>
 
