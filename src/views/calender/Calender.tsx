@@ -2608,7 +2608,7 @@ const clientEmail = matchingTimeslot && matchingTimeslot.clientEmail;
 const meet_iddd = matchingTimeslot && matchingTimeslot.meet_idd;
 const isCoachAccept_ = matchingTimeslot && matchingTimeslot.isCoachAccept;
 const isCoachCancel_ = matchingTimeslot && matchingTimeslot.isCoachCancel;
-if(isBetween)
+if(isBetween && ! isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day))
 
 
 
