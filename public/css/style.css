@@ -526,12 +526,24 @@ h4{color:#f79632;}
   justify-content: end;
 }
 
-.timesheet-buttons .btn{font-weight: 500; font-size: 15px; text-shadow: none; text-transform: lowercase; letter-spacing: 3px; color: #0f2540; box-shadow: none; border: 0; min-width: 190px; border-radius: 20px; text-align: center; margin: 0 0 0 15px; padding: 9px 20px 8px; position: relative; z-index: 2;}
+.timesheet-buttons .btn{background:#f79632; border:0; text-decoration: none; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; font-size:15px; font-weight:500; position: relative; z-index: 1; display: inline-block; text-align: center; color: #eae3d1; padding: 9px 20px 8px; letter-spacing:1px; margin:0; overflow:hidden; text-shadow:none; box-shadow:none; text-transform: inherit;}
+.new-plans .btn:hover, .new-plans .btn:focus, .new-plans .btn:visited{color: #eae3d1; background:#f79632;}
+.new-plans .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #0e2540; z-index: -1; border: 0; margin:0;}
+.new-plans .btn:focus:after, .new-plans .btn:visited:after, .new-plans .btn:hover:after{width: 100%;}
+.new-plans .btn.btn-maroon{background:#b95427;}
+.new-plans .btn.btn-orange{background:#f59633;}
+.new-plans .btn.btn-lightgreen{background:#6ec1a3;}
+.new-plans .btn.btn-darkgreen{background:#236a6d;}
+.new-plans .btn.btn-chestnutred{background:#ef7655;}
+.new-plans .btn.btn-thulian-pink{background:#d37aa5;}
+.new-plans .btn.btn-darkblue{background:#0f2540;}
+
+/*.timesheet-buttons .btn{font-weight: 500; font-size: 15px; text-shadow: none; text-transform: lowercase; letter-spacing: 3px; color: #0f2540; box-shadow: none; border: 0; min-width: 190px; border-radius: 20px; text-align: center; margin: 0 0 0 15px; padding: 9px 20px 8px; position: relative; z-index: 2;}
 .timesheet-buttons .btn-one{background: #f59533;}
 .timesheet-buttons .btn-two{background: #6cc3a5;}
 .timesheet-buttons .btn-three{background: #d479a6;}
 .timesheet-buttons .btn-four{background: #f27553;}
-.timesheet-buttons .btn-five{background: #0f2540; color: rgb(248, 243, 231);}
+.timesheet-buttons .btn-five{background: #0f2540; color: rgb(248, 243, 231);}*/
 
 .calendar-box {
   background: rgb(248, 243, 231);
