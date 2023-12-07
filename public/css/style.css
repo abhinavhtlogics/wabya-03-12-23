@@ -3034,7 +3034,7 @@ button{font-family: Gothic A1 !important;}
   .user-detail-mobile .session-info .probono-text{position: relative; background:#f7f0e4; padding: 20px 20px 10px; margin:0; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px;}
   .user-detail-mobile .session-info .probono-text h3{border-bottom: 1px solid #0e2540; padding: 0 20px 15px; margin: 0 -20px 15px;}
   
-  .notes-list h4{color: #0e2540; font-weight: 800; font-size: 20px; margin: 0 0 5px;}
+  .notes-list h4{color: #0e2540; font-weight: 600; font-size: 20px; margin: 0 0 5px;}
   .notes-search form{position:relative; z-index:2;}
   .notes-search form i{position: absolute; right: 10px; top: 12px; z-index: 5; font-size: 18px; color:#0b233f;}
   .notes-search form .form-control{background:#fff; border: 1px solid #0b233f; box-shadow:none; font-weight:600; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; color: #0b233f; height:44px; padding:6px 40px 6px 15px;}
