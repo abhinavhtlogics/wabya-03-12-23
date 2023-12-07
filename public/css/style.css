@@ -837,10 +837,7 @@ padding: 25px 40px;
 .client-dashboard .banner-et .table{ border-top: 1px solid #0f2540; }
 .client-dashboard .table-coach p{ letter-spacing: 2px; font-weight: 400;}
 .client-dashboard .table-coach .table-pad td{/*padding-bottom: 30px;*/ padding: 5px 5px 30px !important; vertical-align: middle;}
-.td-two {
-  text-align: center;
-  }
-  
+.td-two{text-align: left;}  
 .client-dashboard .next-session { margin-bottom: 40px; }
 .client-dashboard .divider-bottom{border-bottom: 1px solid #0f2540; margin: 20px 0; width:100%; max-width: 90%;}
 .client-plans figure { width: 450px; float: right; }
@@ -2916,7 +2913,7 @@ button{font-family: Gothic A1 !important;}
 .stand-avbl{display: block;}
 @media (min-width: 320px) and (max-width: 767px) {
   
-    h1, h2, h3, h4, h5, h6{font-weight:700;}
+    h1, h2, h3, h4, h5, h6{font-weight:500;}
 	
    .header{border-top: 3px solid #ec2397;}
    .stand-avbl{display: none;}
