@@ -4095,7 +4095,7 @@ onClick={handleTimeClick}
                         </div>
                         <div className='col-sm-6'>
                           <p>
-                            mobile:
+                            cell:
                             <span>
                               <input
                                 type='text'
@@ -4203,7 +4203,7 @@ onClick={handleTimeClick}
                       </div>
                       <div className="col-sm-6">
                         <p>
-                        mobile:
+                        cell:
                           <span>
                             {client ? <> {client.client_phone} </> : null}
                           </span>
