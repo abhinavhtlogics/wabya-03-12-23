@@ -526,11 +526,11 @@ const totalEarnings = filteredMeetingSessions.length * 20; // Assuming $20 per s
             <div className='timesheet-buttons'>
               <div className='row'>
                 <div className='col-sm-12'>
-                  <button className='btn btn-one' onClick={() => handleFilterPlan('experienced')}
+                  <button className='btn btn-orange' onClick={() => handleFilterPlan('experienced')}
  >Experienced</button>
-                  <button className='btn btn-two' onClick={() => handleFilterPlan('novice')}
+                  <button className='btn btn-lightgreen' onClick={() => handleFilterPlan('novice')}
 >Novice</button>
-                  <button className='btn btn-three' onClick={() => handleFilterPlan('probono')}
+                  <button className='btn btn-maroon' onClick={() => handleFilterPlan('probono')}
 >Probono</button>
                 </div>
               </div>
