@@ -2715,12 +2715,8 @@ button{font-family: Gothic A1 !important;}
 
   .maping-sec .row{margin: 0 !important;}
   .maping-sec .col-sm-3{padding: 0 !important;}
-  .maping-sec .info h4 {
-    color: #fff !important;
-    position: relative !important;
-    z-index: 2 !important;
-    font-size: 15px !important;
-  }
+  .maping-sec .info h4{color: #fff !important; position: relative !important; z-index: 2 !important;    font-size: 15px !important;}
+  .maping-sec .info h4 span{display: block; font-size: 20px; margin: 0 0 5px;}
   .maping-sec .info figure{position: relative; margin: 0;}
 .maping-sec .info figcaption {
    position: absolute;
