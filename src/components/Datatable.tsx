@@ -301,8 +301,8 @@ return (
       <div className='timesheet-buttons'>
         <div className='row'>
           <div className='col-sm-12'>
-            <button className='btn btn-five' onClick={convertToCSV2}>view past payslips</button>
-            <button className='btn btn-four' onClick={convertToCSV}>query my timesheet</button>
+            <button className='btn btn-lightgreen' onClick={convertToCSV2}>view past payslips</button>
+            <button className='btn btn-chestnutred' onClick={convertToCSV}>query my timesheet</button>
           </div>
         </div>
       </div>

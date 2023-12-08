@@ -530,7 +530,7 @@ const totalEarnings = filteredMeetingSessions.length * 20; // Assuming $20 per s
  >Experienced</button>
                   <button className='btn btn-lightgreen' onClick={() => handleFilterPlan('novice')}
 >Novice</button>
-                  <button className='btn btn-maroon' onClick={() => handleFilterPlan('probono')}
+                  <button className='btn btn-thulian-pink' onClick={() => handleFilterPlan('probono')}
 >Probono</button>
                 </div>
               </div>

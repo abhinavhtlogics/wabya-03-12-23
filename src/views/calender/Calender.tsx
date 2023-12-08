@@ -2491,7 +2491,7 @@ m=0;
             <div className='row'>
               <div className='col-sm-12'>
                 {/* <button className='btn btn-two'>sync calendars</button> */}
-                <button className='btn btn-four'  onClick={handleStand}>set availability</button>
+                <button className='btn btn-chestnutred'  onClick={handleStand}>set availability</button>
 
                   <Fragment>
 
@@ -2539,7 +2539,7 @@ m=0;
       </Menu>
                         </Fragment>
 
-                  <button className='btn btn-five' onClick={handleSchedule}>schedule session</button>
+                  <button className='btn btn-darkblue' onClick={handleSchedule}>schedule session</button>
 
               </div>
             </div>
@@ -3550,7 +3550,7 @@ return(<>
             {/*/ availability-box */}
 
             {days.map((day) => (
-            <div className="availability-box">
+            <div className="availability-box availability-box-edit">
               <div className="accepting-availability">
                 <span className="span">{day.toUpperCase()}</span>
                 <label className="switch">
