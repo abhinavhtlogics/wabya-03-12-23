@@ -35,7 +35,7 @@ const CoachingJourney = () => {
             <>
             <img src="../../images/coach13.png" alt="image" />
             <figcaption>
-               <h4> let's uncover and transform your beliefs to serve your purpose</h4>
+               <h4><span>Dave</span> let's uncover and transform your beliefs to serve your purpose</h4>
                <img src="../../images/coach13-s.png" className='solid-img' alt="image"
                   />
             </figcaption>
@@ -57,7 +57,7 @@ const CoachingJourney = () => {
             <>
             <img src="../../images/coaches-banner-Desktop-2.png" alt="image" />
             <figcaption>
-               <h4>your personal development and wellness are my priorities</h4>
+               <h4><span>Dave</span>your personal development and wellness are my priorities</h4>
                <img src="../../images/coaches-banner-Desktop-2-solid.png" className='solid-img' alt="image"
                   />
             </figcaption>
@@ -81,7 +81,7 @@ const CoachingJourney = () => {
             <>
             <img src="../../images/coaches-banner-Desktop-3.png" alt="image" />
             <figcaption>
-               <h4>you have the answers- i'm here to help you uncover them</h4>
+               <h4><span>Dave</span>you have the answers- i'm here to help you uncover them</h4>
                <img src="../../images/coaches-banner-Desktop-3-solid.png" className='solid-img' alt="image"
                   />
             </figcaption>
@@ -102,7 +102,7 @@ const CoachingJourney = () => {
          <figure>
          <img src="../../images/coaches-banner-Desktop-7.png" alt="image" />
             <figcaption>
-               <h4>your unique gifts are the path to your authentic self</h4>
+               <h4><span>Dave</span>your unique gifts are the path to your authentic self</h4>
                <img src="../../images/coaches-banner-Desktop-7-solid.png" className='solid-img' alt="image"
                   />
             </figcaption>
@@ -126,7 +126,7 @@ const CoachingJourney = () => {
             <>
             <img src="../../images/coaches-banner-Desktop-4.png" alt="image" />
             <figcaption>
-               <h4>greater self-awareness promotes a more fulfilling life</h4>
+               <h4><span>Dave</span>greater self-awareness promotes a more fulfilling life</h4>
                <img src="../../images/coaches-banner-Desktop-4-solid.png" className='solid-img' alt="image"
                   />
             </figcaption>
@@ -140,7 +140,7 @@ const CoachingJourney = () => {
             <>
             <img src="../../images/coach12.png" alt="image" />
             <figcaption>
-               <h4>let’s harness your differences to realise your full potential</h4>
+               <h4><span>Dave</span>let’s harness your differences to realise your full potential</h4>
                <img src="../../images/coach12-s.png" className='solid-img' alt="image"
                   />
             </figcaption>
@@ -154,7 +154,7 @@ const CoachingJourney = () => {
             <>
             <img src="../../images/coaches-banner-Desktop-6.png" alt="image" />
             <figcaption>
-               <h4>helping you give meaning to your professional and personal life</h4>
+               <h4><span>Dave</span>helping you give meaning to your professional and personal life</h4>
                <img src="../../images/coaches-banner-Desktop-6-solid.png" className='solid-img' alt="image"
                   />
             </figcaption>
@@ -167,7 +167,7 @@ const CoachingJourney = () => {
          <figure>
          <img src="../../images/coaches-banner-Desktop-8.png" alt="image" />
             <figcaption>
-               <h4>let's turn your choices into actions that lead to reaching your goals</h4>
+               <h4><span>Dave</span>let's turn your choices into actions that lead to reaching your goals</h4>
                <img src="../../images/coaches-banner-Desktop-8solid.png" className='solid-img' alt="image"
                   />
             </figcaption>
