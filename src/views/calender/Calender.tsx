@@ -529,9 +529,14 @@ if(isNotAvbl){
 
 const getMyAvailability = async () => {
   console.log('testtt');
+  console.log(nextSevenDay[0].date, nextSevenDay[1].date,nextSevenDay[2].date,nextSevenDay[3].date,nextSevenDay[4].date,nextSevenDay[5].date,nextSevenDay[6].date);
   const coachId = sessionStorage.getItem('coachId');
   const schedulesCollection = collection(database, 'schedules');
-  const queryDoc = query(schedulesCollection, where("coach_id", "==", coachId));
+  const queryDoc = query(schedulesCollection, where("coach_id", "==", coachId), where(
+    "date",
+    "in",
+    [nextSevenDay[0].date, nextSevenDay[1].date,nextSevenDay[2].date,nextSevenDay[3].date,nextSevenDay[4].date,nextSevenDay[5].date,nextSevenDay[6].date] // Additional OR condition
+  ));
 
   try {
     const response = await getDocs(queryDoc);
@@ -594,6 +599,7 @@ const getMyMeeting = async () => {
 
  useEffect(() => {
   if (myAvailability) {
+  
     const updatedAvailability = { ...availability };
     myAvailability.forEach((myData) => {
       const { day, startHour, startMinute, endHour, endMinute, startHour2, startMinute2, endHour2, endMinute2, startHour3, startMinute3, endHour3, endMinute3, isUnAvbl } = myData;
@@ -680,9 +686,23 @@ useEffect(() => {
   useEffect(() => {
 
     getWeek();
+    
 
 }, [startLoop])
 
+useEffect(() => {
+  setAvailability({ 
+
+    mon: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false, isUnAvbl :false },
+    tue: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00',isMore:false,isUnAvbl :false },
+    wed: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false, isUnAvbl :false },
+    thu: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00',isMore:false,isUnAvbl :false },
+    fri: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false },
+    sat: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false },
+    sun: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false }
+   });
+  getMyAvailability();
+},[nextSevenDay[0].date])
 
 
 useEffect(() => {
@@ -1773,6 +1793,10 @@ const getEventTypes = async () => {
       setstartLoop((id)*7);
     }
 
+    // useEffect(() => {
+    //   console.log('workkkk');
+    //  getMyAvailability();
+    // }, [startLoop]);
 
     // get all meeting data
   const getMeeting = async () => {
@@ -2208,13 +2232,14 @@ m=0;
     }));
   
     // Add data to Firebase
-    availabilityData.forEach((data) => {
+    availabilityData.forEach((data,index) => {
 
-
+console.log('myindex',index);
+console.log('day',nextSevenDay[index].date);
 
       const coachId = sessionStorage.getItem('coachId');
       const userDocRef = collection(database, 'schedules');
-      const queryDoc = query(userDocRef, where("coach_id", "==", coachId), where("day", "==", `${data.day}`));
+      const queryDoc = query(userDocRef, where("coach_id", "==", coachId), where("day", "==", `${data.day}`), where("date","==", `${nextSevenDay[index].date}`));
 
 
 
@@ -2239,6 +2264,8 @@ m=0;
               endHour3: data.endHour3,
               endMinute3: data.endMinute3,
               isUnAvbl: data.isUnAvbl,
+              date:nextSevenDay[index].date,
+              month:nextSevenDay[index].month,
               coach_id:coachId,
             })
               .then(() => {
@@ -2279,6 +2306,8 @@ m=0;
         endMinute3: data.endMinute3,
         isUnAvbl:data.isUnAvbl,
         coach_id:coachId,
+        date:nextSevenDay[index].date,
+        month:nextSevenDay[index].month,
       
        
        
