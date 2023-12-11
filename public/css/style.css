@@ -1217,9 +1217,14 @@ padding: 25px 40px;
   min-width: 44px;
   background: none;
 }
-.react-calendar__navigation button:disabled {
-  background-color: #f0f0f0;
-}
+
+.react-calendar__navigation button:nth-child(1){order: 2;}
+.react-calendar__navigation button:nth-child(2){order: 3;}
+.react-calendar__navigation button:nth-child(3){order: 1; text-align: left;}
+.react-calendar__navigation button:nth-child(4){order: 4;}
+.react-calendar__navigation button:nth-child(5){order: 5;}
+
+.react-calendar__navigation button:disabled{background-color: #f0f0f0;}
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
   background-color: #e6e6e6;
