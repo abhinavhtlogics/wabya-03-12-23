@@ -660,14 +660,14 @@ h4{color:#f79632;}
 #calendar-wrap .table-calendar th{border-bottom: 1px solid #0f2540; border-right: 1px solid #0f2540; width: 13.5%;}
 #calendar-wrap .table-calendar th:last-child{border-right: none;}
 #calendar-wrap .table-calendar th:first-child { width: 5.5%; border-left: none; vertical-align: middle; }
-#calendar-wrap .table-calendar td{ height: 200px; padding: 10px 5px; border-bottom: 1px solid #0f2540; border-right: 1px solid #0f2540;}
+#calendar-wrap .table-calendar td{height: 150px; padding: 10px 5px; border-bottom: 1px solid #0f2540; border-right: 1px solid #0f2540;}
 #calendar-wrap .table-calendar td:last-child { border-right: none; }
 #calendar-wrap .table-calendar .green-event {
     background: #6cc3a5;
     padding: 25px 5px;
     border-radius: 20px;
     text-transform: capitalize;
-    letter-spacing: 2px; height: 200px;
+    letter-spacing: 2px; height: 150px;
 }
 #calendar-wrap .table-calendar .green-event p {
   font-size: 16px;
@@ -678,7 +678,7 @@ h4{color:#f79632;}
   font-size: 14px;
   font-weight: 400;
 }
-#calendar-wrap .table-calendar .blue-event{background: #0f2540; color: rgb(248, 243, 231); padding: 25px 15px; border-radius: 20px; text-transform: lowercase; letter-spacing: 2px;  height: 200px; }
+#calendar-wrap .table-calendar .blue-event{background: #0f2540; color: rgb(248, 243, 231); padding: 25px 15px; border-radius: 20px; text-transform: lowercase; letter-spacing: 2px;  height: 150px; }
 #calendar-wrap .table-calendar .blue-event small{font-size: 12px;
   letter-spacing: 1px; text-align: left;}
 #calendar-wrap .table-calendar .blue-event p{text-align: left;}
