@@ -26,6 +26,19 @@ const options = {
   // ]
 };
 
+
+const options2 = {
+  items: 1,
+  loop: true,
+  nav: true,
+  rewind: true,
+
+  // navText: [
+  //   "<i class='fa fa-angle-left'></i>",
+  //   "<i class='fa fa-angle-right'></i>"
+  // ]
+};
+
 const Home = () => {
 
   return (
@@ -112,7 +125,7 @@ const Home = () => {
             <h2>what our community has to say</h2>
           </div>
 
-          <div className="col-sm-12 carousel-coll">
+          <div className="col-sm-12 carousel-coll mobile-hidden">
           <OwlCarousel options={options}>
 
               <div className="item">
@@ -157,6 +170,63 @@ const Home = () => {
               </div>{/* <!--/ item --> */}
 
           </OwlCarousel>
+
+
+        
+
+            </div> {/* <!--/ right --> */}
+
+
+
+
+            <div className="col-sm-12 carousel-coll desktop-hidden">
+          <OwlCarousel options={options2}>
+
+              <div className="item">
+                <div className="inner">
+                  <p>"wabya has been such a fuss-free platform! The free discovery call was so amazing as I was nervous and didn't knoww what to expect from coaching, but after chatting with the coach I know this was a step in the rigth direction"</p>
+                <h4>Jessica Varvy</h4>
+                </div>{/* <!--/ inner --> */}
+              </div>{/* <!--/ item --> */}
+
+              <div className="item">
+                <div className="inner">
+                  <p>"The coaching journey has been really rewarding. I have learned how to better communicate with my team and to reflect on my leadership skills. My coach, Sarah, was a phenomenal listener and gave me fantastic tips to improve my performance. Sarah had that natural ability to make you recognize your own potential and help to guide you towards it."</p>
+                <h4>Waldo Benjamin</h4>
+                </div>{/* <!--/ inner --> */}
+              </div>{/* <!--/ item --> */}
+
+              <div className="item">
+                <div className="inner">
+                  <p>"My Coach Dave was an invaluable source of advice, motivation and guideance throughout my tumultuous post-college career search. He helped me to indentify my strengths and define what it wa that I really wanted to achieve. Dave was endlessly positive, supportive and motivating form the beginning of my search until my final interview. I would not have got here without him!"</p>
+                <h4>Martha McEwan</h4>
+                </div>{/* <!--/ inner --> */}
+              </div>{/* <!--/ item --> */}
+              <div className="item">
+                <div className="inner">
+                  <p>"wabya has been such a fuss-free platform! The free discovery call was so amazing as I was nervous and didn't knoww what to expect from coaching, but after chatting with the coach I know this was a step in the rigth direction"</p>
+                <h4>Jessica Varvy</h4>
+                </div>{/* <!--/ inner --> */}
+              </div>{/* <!--/ item --> */}
+
+              <div className="item">
+                <div className="inner">
+                  <p>"The coaching journey has been really rewarding. I have learned how to better communicate with my team and to reflect on my leadership skills. My coach, Sarah, was a phenomenal listener and gave me fantastic tips to improve my performance. Sarah had that natural ability to make you recognize your own potential and help to guide you towards it."</p>
+                <h4>Waldo Benjamin</h4>
+                </div>{/* <!--/ inner --> */}
+              </div>{/* <!--/ item --> */}
+
+              <div className="item">
+                <div className="inner">
+                  <p>"My Coach Dave was an invaluable source of advice, motivation and guideance throughout my tumultuous post-college career search. He helped me to indentify my strengths and define what it wa that I really wanted to achieve. Dave was endlessly positive, supportive and motivating form the beginning of my search until my final interview. I would not have got here without him!"</p>
+                <h4>Martha McEwan</h4>
+                </div>{/* <!--/ inner --> */}
+              </div>{/* <!--/ item --> */}
+
+          </OwlCarousel>
+
+
+        
 
             </div> {/* <!--/ right --> */}
 
