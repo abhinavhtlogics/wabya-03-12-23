@@ -3589,7 +3589,7 @@ return(<>
                   <small>to</small>  
                  {availability[day].endHour} : {availability[day].endMinute} 
                  </span>
-                 <span onClick={() => handleIsMoreToggle(day)}> + </span>
+                 <div className='plus' onClick={() => handleIsMoreToggle(day)}> + </div>
                  </> 
                 
                 </>
