@@ -2923,7 +2923,7 @@ button{font-family: Gothic A1 !important;}
 @media (min-width: 320px) and (max-width: 767px) {
   
     h1, h2, h3, h4, h5, h6{font-weight:500;}
-	
+	.pricing-wrap .left-top p{max-width: 100%;}
    .header{border-top: 3px solid #ec2397;}
    .stand-avbl{display: none;}
    .stand-avbl-mobile{display: block;}
