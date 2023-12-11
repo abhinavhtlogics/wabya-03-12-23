@@ -458,6 +458,15 @@ const Calender = () => {
       return false;
     }
   
+
+    const isNotAvbl = availability[lowercaseDay].isUnAvbl;
+
+if(isNotAvbl){
+  return true;
+}
+
+
+
     const startAvailability = availability[lowercaseDay].startHour3 + ':' + availability[lowercaseDay].startMinute3;
     const endAvailability = availability[lowercaseDay].endHour3 + ':' + availability[lowercaseDay].endMinute3;
   
