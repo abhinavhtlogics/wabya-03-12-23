@@ -125,7 +125,7 @@ const Home = () => {
             <h2>what our community has to say</h2>
           </div>
 
-          <div className="col-sm-12 carousel-coll mobile-hidden">
+          <div className="col-sm-12 carousel-coll desktop-hidden">
           <OwlCarousel options={options}>
 
               <div className="item">
@@ -179,7 +179,7 @@ const Home = () => {
 
 
 
-            <div className="col-sm-12 carousel-coll desktop-hidden">
+            <div className="col-sm-12 carousel-coll mobile-hidden">
           <OwlCarousel options={options2}>
 
               <div className="item">
