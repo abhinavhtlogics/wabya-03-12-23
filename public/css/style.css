@@ -1345,7 +1345,6 @@ padding: 25px 40px;
   border-bottom: 1px solid #0f2540; text-align: center; margin-bottom: 30px;
 }
 .meeting-schedule .tick-icon i {
-  border: 1px solid #6dc1a4;
   padding: 20px;
   border-radius: 50%;
   background: #6dc1a4;
@@ -1353,10 +1352,10 @@ padding: 25px 40px;
   color: #0f2450; margin: 10px 0;
 }
 .meeting-schedule .tick-icon h2 {
-  color: #0f2540;
+  color: #0f2540; text-transform: lowercase;
 }
 .meeting-schedule .tick-icon p {
-  font-size: 16px;
+  font-size: 16px; text-transform: lowercase; text-align: center;
   font-weight: 400; margin-bottom: 30px;
 }
 .meeting-schedule .meet {
