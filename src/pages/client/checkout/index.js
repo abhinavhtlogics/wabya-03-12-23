@@ -127,22 +127,26 @@ if(plan_detail != null){
                 <div className='inner-info'>
 
                 <div className="row">
-                    <div className="col-sm-5">	
+                    <div className="col-sm-6">	
                       <label>Journey Type</label>
                     </div>
-                    <div className="col-sm-2">
+                    <div className="col-sm-3">
                         <input type='radio' className='' onClick={handleJourneyType} name='journey_type' value="bundle" checked={journey_type === "bundle"}></input> Bundle                        
                     </div> 
-                    <div className="col-sm-2">
+                    <div className="col-sm-3">
                         <input type='radio' className='' onClick={handleJourneyType} name='journey_type' value="payg" checked={journey_type === "payg"}></input> Pay as you go                    
                     </div>                     
                   </div>
                 
                   <div className="row"  style={{ marginTop: '20px' }}>
-                    <div className="col-sm-5">	
+                    <div className="col-sm-6">	
                       <label>Price: ${price}.00</label>
                     </div>
-                    <div className="col-sm-5">
+
+                    <div className="col-sm-3">	
+                     
+                    </div>
+                    <div className="col-sm-3">
                         <CheckoutButton  price={price} journey_type={journey_type} />                          
                     </div>                     
                   </div>
@@ -150,6 +154,12 @@ if(plan_detail != null){
                 
                 </div>
               </div>
+
+              <div className="col-sm-5">
+              <figure className="desktop-hidden"><img src="images/banner-bg.png" alt=""/></figure>
+            <figure className="mobile-hidden"><img src="images/homepage-banner-mobile.png" alt=""/></figure>
+            </div>
+         
               
             </div>
           </div>
