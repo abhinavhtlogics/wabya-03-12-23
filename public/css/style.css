@@ -3638,4 +3638,4 @@ button{font-family: Gothic A1 !important;}
 .new-modall{top: 0px !important;}
 
 
-.MuiButtonBase-root{background-image: url(https://wabya-dev-site.netlify.app/_next/static/media/shape-04.879afd4f.png); background-color: inherit !important; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; min-width: 48px; min-height: 46.5px; padding: 0; width: auto; height: auto; border-radius: 0; box-shadow: none;}
+.MuiButtonBase-root{background-image: url(https://wabya-dev-site.netlify.app/_next/static/media/shape-04.879afd4f.png); background-color: inherit !important;background-size: cover !important; background-repeat: no-repeat !important; background-attachment: scroll !important; min-width: 48px !important; min-height: 46.5px !important; padding: 0 !important; width: auto !important; height: auto !important; border-radius: 0 !important; box-shadow: none !important;}
