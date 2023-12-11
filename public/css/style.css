@@ -2539,7 +2539,10 @@ color: #fff !important;
  .custom-class .profile-button .dropdown .inner .btn{ color: white !important;} 
  .upload_notes_client{font-size: 14px; color: #f79632; text-decoration: underline; cursor: pointer;} 
  .planactive{background: #f27553; border-radius: 30px;} 
- .buyagain-btn{background: #f27553 !important; color: white !important;} 
+ 
+ .buyagain-btn{background: #f27553; color:#fff; border:0; font-size:16px; font-weight:500; margin:0; padding:10px 35px; letter-spacing: 0; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; position:relative;}
+  .buyagain-btn:hover, .buyagain-btn:active{background: #1d696c; color: #fff; -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in-out; transition: background 0.5s ease-in-out, color 0.5s ease-in-out;} 
+ 
  .bookErr{color: red;} 
  .pass-eye-main{position: relative;} 
  .pass-eye-main .pass-eye{top: 0; right: 40px;}
