@@ -2392,18 +2392,16 @@ const year = today.getFullYear();
          { selectOption ?
          <>
             <div className="row">
-                <div className="col-md-4">.</div>
-                <div className="col-md-8"><h2>select option</h2></div>
+                
+                <div className="col-md-12 text-center"><h2>select option</h2></div>
          
-         </div>
-              <div className="row">
-                <div className="col-md-3">.</div>
-                <div className="col-md-6 cal-time"><button onClick={showEmailForm} className="btn btn-time">send email to coach</button></div>
-                </div>
+         
+            
+                <div className="col-md-12 cal-time"><button onClick={showEmailForm} className="btn btn-time">send email to coach</button></div>
+                
 
-                <div className="row">
-                <div className="col-md-3">.</div>
-                <div className="col-md-6 cal-time"><button className="btn btn-time" onClick={makePhoneCall}>call to coach</button></div>
+               
+                <div className="col-md-12 cal-time"><button className="btn btn-time" onClick={makePhoneCall}>call to coach</button></div>
                   </div>
 </>
                   : null}
