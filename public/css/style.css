@@ -124,7 +124,7 @@ h4{color:#f79632;}
     /* background: #f69532; */
     -webkit-border-radius: 0; border-radius: 0; border-radius: 0;}
   .menu-head .navbar-nav > li > a:hover::before, .menu-head .navbar-nav > li > a:focus::before, .menu-head .navbar-nav .current-menu-item a::before{opacity: 1; width: 100%;}
-  .menu-head .navbar-nav > li.coaching-active a, .menu-head .navbar-nav > li.coaching-active a:hover{color: #0f2540;}  
+  .menu-head .navbar-nav > li.coaching-active a, .menu-head .navbar-nav > li.coaching-active a:hover{color: #0f2540;}
   .menu-head .navbar-nav > li.sub-drop > a::after{content: ""; display: inline-block; width: .6rem; height: .6rem; border-right: 2px solid #fff; border-bottom: 2px solid #fff; -webkit-transform: rotate(45deg) scale(.85); transform: rotate(45deg) scale(.85); margin-left: 10px; position: relative; bottom: .125rem;}
   .header .menu-head .navbar-nav > li.sub-drop:hover > a::after{border-color:#fff;}
   .menu-head .navbar-nav > li > a{border:transparent; text-transform: none; color:#0f2540; text-shadow:none; padding:5px 0; display: block; transition:all 1s ease; -webkit-transition:all 1s ease; -moz-transition:all 1s ease; -ms-transition:all 1.4s ease; -o-transition:all 1s ease;}
@@ -3305,7 +3305,7 @@ button{font-family: Gothic A1 !important;}
    .frontend-change .profile-button{padding:0 5px;}
    .frontend-change .profile-button .dropdown{min-width: inherit !important;}
    .frontend-change .profile-button .inner{width: inherit; top: 0; position:relative; background:none; border-radius:0;}
-   .frontend-change .profile-button .inner .btn{width: 71px !important; min-width: inherit !important; font-size: 10px; padding: 6px 15px;}
+   .frontend-change .profile-button .inner .btn{width: 76px !important; min-width: inherit !important; font-size: 10px; padding: 6px 15px;}
    .frontend-change .profile-button .inner ul{position: absolute; border: 0 !important; background: #f7f0e4 !important; border-radius: 22px; right: 0; top: 120%; padding: 5px 0;}
    .frontend-change .profile-button ul li a{border-bottom: 0 !important; padding: 5px 0; font-size: 12px;}
    
