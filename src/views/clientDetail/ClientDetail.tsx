@@ -221,7 +221,7 @@ console.log(currentDate);
           <div className="info-grid">
 
 
-                <div className="client-light">
+                <div className="client-light hidden">
                     <div className="icons-bottom">
                       <span className="icons"><i className="fa fa-microphone-slash" aria-hidden="true"></i></span>
                       <span className="icons"><i className="fa fa-video-camera" aria-hidden="true"></i></span>
