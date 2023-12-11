@@ -1584,6 +1584,8 @@ footer.layout-footer p { color: #ece6d3; }
   .banner-info .left .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #1d696c; z-index: -1;}
   .banner-info .left .btn:hover:after{width: 100%;}
   .banner-info .right{width: 55%; position: relative;}
+  .banner-info .right::after{content: ""; position: absolute; height: 150px; width: 155px; bottom: -55px; right: 45px; background-image: url(https://wabya-dev-site.netlify.app/images/shape-feedback2.png);
+  background-repeat: no-repeat; background-position: top; background-attachment: scroll; background-size: cover;}
   .banner-info .right figure.about-fig { position: absolute; right: 8%; bottom: 22%; width: 120px; }
   .banner-info .right iframe{width: 100%; height: 460px;}
 
