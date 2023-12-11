@@ -1190,7 +1190,7 @@ padding: 25px 40px;
 .reschedule-zone .btn-next:hover:after{width: 100%; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px;}
 
 .reschedule-zone .resc-cal h5 {
-  margin-bottom: 10px;
+  margin-bottom: 10px; font-weight: 500;
 }
 .react-calendar {
   width: 100%;
@@ -1253,7 +1253,7 @@ padding: 25px 40px;
 }
 .react-calendar__month-view__weekdays {
   text-align: center;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: 400;
   font-size: 17px;
   letter-spacing: 2px;
