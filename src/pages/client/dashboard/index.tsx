@@ -2557,7 +2557,7 @@ const year = today.getFullYear();
                     
                   <div className="col-sm-4"></div>
                     <div className="col-sm-6">
-                    <h2>Upload Notes</h2>
+                    <h2>upload notes</h2>
                       </div>   
                     </div>
 
@@ -2584,7 +2584,7 @@ const year = today.getFullYear();
 
                     <div className="col-sm-2">
 
-                      <input type="submit" value="SAVE" className='btn btn-save btn-success' onClick={handleSubmit} />
+                      <input type="submit" value="save" className='btn btn-save btn-success' onClick={handleSubmit} />
                     
                      
                      </div>
