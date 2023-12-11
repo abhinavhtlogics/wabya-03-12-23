@@ -2485,7 +2485,8 @@ position: relative;
 
 
 .profile-button .inner{border: 2px solid #f7f0e4; padding: 0;}
-.login-info ,.profile-button .dropdown .inner .btn{
+.login-info{}
+.profile-button .dropdown .inner .btn{
   background: #0f2540 !important;
   color: #fff !important;
   border-radius: 30px !important;
