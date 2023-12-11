@@ -156,8 +156,8 @@ if(plan_detail != null){
               </div>
 
               <div className="col-sm-5">
-              <figure className="desktop-hidden"><img src="images/banner-bg.png" alt=""/></figure>
-            <figure className="mobile-hidden"><img src="images/homepage-banner-mobile.png" alt=""/></figure>
+              <figure className="desktop-hidden"><img src="../../images/banner-bg.png" alt=""/></figure>
+            <figure className="mobile-hidden"><img src="../../images/homepage-banner-mobile.png" alt=""/></figure>
             </div>
          
               

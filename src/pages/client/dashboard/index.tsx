@@ -2393,17 +2393,17 @@ const year = today.getFullYear();
          <>
             <div className="row">
                 <div className="col-md-4">.</div>
-                <div className="col-md-8"><h2>Select Option</h2></div>
+                <div className="col-md-8"><h2>select option</h2></div>
          
          </div>
               <div className="row">
                 <div className="col-md-3">.</div>
-                <div className="col-md-6 cal-time"><button onClick={showEmailForm} className="btn btn-time">Send Email to Coach</button></div>
+                <div className="col-md-6 cal-time"><button onClick={showEmailForm} className="btn btn-time">send email to coach</button></div>
                 </div>
 
                 <div className="row">
                 <div className="col-md-3">.</div>
-                <div className="col-md-6 cal-time"><button className="btn btn-time" onClick={makePhoneCall}>Call to Coach</button></div>
+                <div className="col-md-6 cal-time"><button className="btn btn-time" onClick={makePhoneCall}>call to coach</button></div>
                   </div>
 </>
                   : null}
@@ -2412,7 +2412,7 @@ const year = today.getFullYear();
          <>
          <div className="row">
                 <div className="col-md-4"><button className="btn btn-success" onClick={backToMain}>Back</button></div>
-                <div className="col-md-8"><h2>Send Email</h2></div>
+                <div className="col-md-8"><h2>send email</h2></div>
          
          </div>
               <div className="row">
