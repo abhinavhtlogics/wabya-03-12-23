@@ -367,7 +367,9 @@ h4{color:#f79632;}
   .clients-listing .filter-coll{padding: 0 50px;}
   .clients-listing .cl-coll{margin: 0 0 80px; padding: 0 50px;}
   .clients-listing .info{background:#f7f0e4; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; color:#0f2540; position: relative; padding:40px 30px 20px; height: 100%;}
-  .clients-listing .info figure{display: block; -webkit-border-radius:100%; -moz-border-radius:100%; border-radius:100%; width: 80px; margin: 0 15px 0 0; border:5px solid #fff; position: absolute; right: 10px; top: -40px;}
+  .clients-listing .info figure{display: block; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; width: 80px; margin: 0 15px 0 0; border:0; position: absolute; right: 10px; top: -40px;}
+  .clients-listing .info figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-07.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+  .clients-listing .info figure img{min-width: 80px; min-height: 77px; object-fit: cover; object-position: center center;}
   .clients-listing .info h3{color:#0f2540; font-size:20px; min-height: 60px; margin:0 0 40px; position:relative;}
   .clients-listing .info h3 span{display:block; font-size:14px; margin:10px 0 0; text-transform: uppercase; font-weight:500;}
   .clients-listing .client-filter{text-align: right; margin: 0 0 100px; position:relative;}
@@ -700,13 +702,10 @@ h4{color:#f79632;}
 .edit-profile {position:relative; margin:0; padding:70px 0 80px; z-index:1;}
 .edit-profile .container{max-width:1300px;}
 .edit-profile h2{color:#0f2540; font-size:30px; margin:40px 0; position:relative; text-align: left; letter-spacing: 5px; text-transform: capitalize;}
-.edit-profile .inner-info{ background: #f7f0e4;
-border-radius: 20px;
-color: #0f2540;
-position: relative;
-margin: 0 0 30px;
-padding: 25px 40px;
-}
+.edit-profile .inner-info{background: #f7f0e4; border-radius: 20px; color: #0f2540; position: relative; margin: 0 0 30px; padding: 25px 40px;}
+.edit-profile .inner-info figure{position: relative; margin: 0; max-width: 120px;}
+.edit-profile .inner-info figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-05.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+.edit-profile .inner-info figure img{width: 120px !important; height: 116px !important; object-fit: cover; object-position: center center;}
 .edit-profile .inner-info .btn { font-weight: 400; font-size: 14px; text-shadow: none; text-transform: uppercase; letter-spacing: 2px; background: #f59533; color: #f7f0e4; box-shadow: none; border: 0; min-width: 198px; border-radius: 20px; text-align: center; padding: 9px 20px 8px; position: relative; z-index: 2; margin: 0 10px 0 0; }
 .edit-profile .inner-info .reset-btn { border: 2px solid #f59533 !important; color: #0f2540 !important; background: #f7f0e4 !important; }
 
@@ -1140,14 +1139,10 @@ padding: 25px 40px;
   height: 100%;
   padding-left: 20px;
 }
-.reschedule-zone .coach-fig figure {
-  width: 125px;
-  display: block;
-  margin: 0px auto;
-  border: 5px solid #fff;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
+.reschedule-zone .coach-fig figure{width: 125px; display: block; margin: 0px auto; border: 0; border-radius: 0; margin-bottom: 15px; position:relative;}
+.reschedule-zone .coach-fig figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-06.png); background-repeat: no-repeat;
+  background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+.reschedule-zone .coach-fig figure img{width: 125px; height: 121px; object-fit: cover; object-position: center center;}
 .reschedule-zone .coach-fig p, .cal-time p {text-align: center;}
 
 .cal-time{text-align: center;}
@@ -3018,7 +3013,11 @@ button{font-family: Gothic A1 !important;}
   .user-detail-mobile .client-name{position: relative; margin:0 0 30px;}
   .user-detail-mobile .client-name .info-name{display: flex; align-items: start; gap: 30px; justify-content: space-between;}
   .user-detail-mobile .client-name h2{color: #0e2540; font-weight: 600; font-size: 36px; margin: 0 0 5px;}
-  .user-detail-mobile .client-name img{-webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; width: 75px; margin: 0 5px 0 0; border: 3px solid #fff;}
+  .user-detail-mobile .client-name .info-name figure{position: relative; width: 75px; margin: 0;}
+  .user-detail-mobile .client-name .info-name figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-08.png); background-repeat: no-repeat;
+  background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+  .user-detail-mobile .client-name .info-name img{width: 71px; height: 69PX; object-fit: cover; object-position: center center;}
+  .user-detail-mobile .client-name img{/*-webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; width: 75px; margin: 0 5px 0 0; border: 3px solid #fff;*/}
   .user-detail-mobile h4{color: #0e2540; font-weight:600; font-size: 20px; margin: 0 0 5px;}
   .user-detail-mobile .session-info h3{color: #296c6f; font-size: 20px;}
   .user-detail-mobile .session-info ul{margin:0; padding:0 0 0 15px;}
@@ -3091,7 +3090,8 @@ button{font-family: Gothic A1 !important;}
   .clients-listing .filter-coll{}
   .clients-listing .cl-coll{margin: 0 0 60px; padding: 0 20px;}
   .clients-listing .info{background:#f7f0e4; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px; color:#0f2540; position: relative; padding:40px 15px 10px; font-size:12px;height: 100%;} 
-  .clients-listing .info figure{display: block; -webkit-border-radius:100%; -moz-border-radius:100%; border-radius:100%; width: 65px; margin: 0 15px 0 0; border:3px solid #fff; position: absolute; right: 0; top: -30px;}
+  .clients-listing .info figure{/*display: block; -webkit-border-radius:100%; -moz-border-radius:100%; border-radius:100%; width: 65px; margin: 0 15px 0 0; border:3px solid #fff; position: absolute; right: 0; top: -30px;*/ width: 65px; top: -30px; right: 0;}
+  .clients-listing .info figure img{min-width: 60px; min-height: 63px;}
   .clients-listing .info h3{color:#0f2540; font-size:14px; margin:0 0 20px; position:relative;}
   .clients-listing .info h3 span{display:block; font-size:14px; margin:10px 0 0; font-weight:600;}
   .clients-listing .info p{margin: 0 0 8px; line-height:18px;}
@@ -3129,8 +3129,13 @@ button{font-family: Gothic A1 !important;}
   .user-profile .switch-input:checked ~ .switch-handle{left: 51.5px; top: 2.5px;} 
   /* Transition ========================== */ 
   .user-profile .switch-label, .user-profile .switch-handle{transition: All 0.3s ease; -webkit-transition: All 0.3s ease; -moz-transition: All 0.3s ease; -o-transition: All 0.3s ease;}  
-  .user-profile.new-user-profile figure{display: block; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; width: 70px; margin: -65px auto 15px; border:0;}
-  .user-profile figure{display: block; -webkit-border-radius:100%; -moz-border-radius:100%; border-radius:100%; width: 70px; margin: -65px auto 15px; border:3px solid #fff; overflow: hidden;}
+  .user-profile.new-user-profile figure{display: block; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; width: 70px; margin: -65px auto 15px; border:0; position: relative;}
+  .user-profile.new-user-profile figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-05.png); background-repeat: no-repeat;
+  background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+  .user-profile.new-user-profile figure img{width: 70px; height: 68px; object-fit: cover; object-position: center center;}
+  .user-profile figure{display: block; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; width: 70px; margin: -65px auto 15px; border:0; overflow: hidden; position:relative;}
+  .user-profile figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-03.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+  .user-profile figure img{width: 70px; height: 68px; object-fit: cover; object-position: center center;}
   .user-profile h3{color:#0f2540; font-size: 22px; margin:0 0 25px; text-align: center; position:relative;}
   .user-profile h3 span{display:block; font-size:14px; margin:5px 0 0; font-weight:600;}
   .user-profile ul{padding:0; margin:0 -10px !important;}
