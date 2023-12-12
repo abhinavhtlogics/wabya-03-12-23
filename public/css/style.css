@@ -3459,6 +3459,12 @@ button{font-family: Gothic A1 !important;}
 }
 
 
+@media (min-width: 575px) and (max-width: 767px) { 
+
+   .client-resources .left, .client-resources .right{width: 100%;}
+
+}
+
 @media (min-width: 768px) and (max-width: 1023px) { 
    
    .admin-header.superadmin-head{padding: 0 0 15px;}
@@ -3538,7 +3544,9 @@ button{font-family: Gothic A1 !important;}
    
    .client-profile{padding: 190px 0 80px; word-break: break-all;}
    .client-profile .inner-info figure{max-width: 190px;}
-   .client-resources .left figure, .profile-button > figure, .user-profile .inner-info figure{border:3px solid #fff;}
+   .client-resources .left figure, .profile-button > figure, .user-profile .inner-info figure{border:0;}
+   .client-resources .left figure{margin: auto;}
+   .client-resources .left, .client-resources .right{width: 100%;}
    
    .meet-client{flex-flow: inherit; flex-wrap: wrap;}
    .meet-client .col-sm-3{width: 50%;}
