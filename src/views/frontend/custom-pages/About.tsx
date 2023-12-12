@@ -52,7 +52,7 @@ Nullam mattis ac ex in blandit. Aliquam ut accumsan ex.</p>
               <div className="col-sm-3">
               <div className="meet-client-box">
                 <figure>
-                  <img src="../../../../images/clients-01.png" alt="Co-founder"  />
+                  <img src="../../../../images/dummy-user-01.png" alt="Co-founder"  />
                 </figure>
                 <h4>jf</h4>
                 <span>co-founder</span>
@@ -62,7 +62,7 @@ Nullam mattis ac ex in blandit. Aliquam ut accumsan ex.</p>
               <div className="col-sm-3">
               <div className="meet-client-box">
                 <figure>
-                  <img src="../../../../images/clients-01.png" alt="Co-founder"  />
+                  <img src="../../../../images/dummy-user-01.png" alt="Co-founder"  />
                 </figure>
                 <h4>craig</h4>
                 <span>co-founder</span>
@@ -73,7 +73,7 @@ Nullam mattis ac ex in blandit. Aliquam ut accumsan ex.</p>
               <div className="col-sm-3">
               <div className="meet-client-box">
                 <figure>
-                  <img src="../../../../images/clients-01.png" alt="Head of Collaboration"  />
+                  <img src="../../../../images/dummy-user-01.png" alt="Head of Collaboration"  />
                 </figure>
                 <h4>martin</h4>
                 <span>head of collaboration</span>
@@ -84,7 +84,7 @@ Nullam mattis ac ex in blandit. Aliquam ut accumsan ex.</p>
               <div className="col-sm-3">
               <div className="meet-client-box">
                 <figure>
-                  <img src="../../../../images/clients-01.png" alt="Chief People Officer"  />
+                  <img src="../../../../images/dummy-user-01.png" alt="Chief People Officer"  />
                 </figure>
                 <h4>ciara</h4>
                 <span>chief people officer</span>
