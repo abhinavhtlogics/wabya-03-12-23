@@ -409,10 +409,10 @@ h4{color:#f79632;}
   .client-profile .left .info-grid p a:hover{color:#f79632;}
 
 .client-resources{position:relative; margin:0; padding:70px 0 80px; z-index:1;}
-  .client-resources .left figure{position: relative; margin:0; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; border:0;}
+  .client-resources .left figure{position: relative; margin:0; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; border:0; max-width: 180px;}
   .client-resources .left figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-08.png); background-repeat: no-repeat;
   background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
-  .client-resources .left figure img{width: 125px; height: 121px; object-fit: cover; object-position: center center;}
+  .client-resources .left figure img{max-width: 180px; min-height: 174px; object-fit: cover; object-position: center center;}
   .client-resources .left figure img{-webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
   .client-resources .inner-info{background:#f7f0e4; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; color:#0f2540; position: relative; margin: 0 0 30px; padding:25px 40px;}
   .client-resources h2{color:#0f2540; font-size:30px; margin:0; position:relative; text-align: left;}
@@ -2896,6 +2896,7 @@ button{font-family: Gothic A1 !important;}
 @media (min-width: 320px) and (max-width: 767px) {
   
     h1, h2, h3, h4, h5, h6{font-weight:500;}
+	.client-resources .left figure{margin: 0 auto;}
 	.pricing-wrap .left-top p{max-width: 100%;}
    .header{border-top: 3px solid #ec2397;}
    .stand-avbl{display: none;}
