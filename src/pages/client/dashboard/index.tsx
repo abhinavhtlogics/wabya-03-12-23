@@ -2676,7 +2676,7 @@ const year = today.getFullYear();
                 <div className="col-sm-2">
                   <div className="coach-fig">
                     <figure>
-                      <img src="../../images/clients-01.png" alt="Coach Name" />
+                      <img src="../../images/dummy-user.png" alt="Coach Name" />
                     </figure>
                     <p>{coachesCalName}</p>
                     <p>
@@ -2868,7 +2868,7 @@ const year = today.getFullYear();
                       <div className="coach-fig">
                         <figure>
                           <img
-                            src="../../images/clients-01.png"
+                            src="../../images/dummy-user.png"
                             alt="Coach Name"
                           />
                         </figure>
@@ -3170,7 +3170,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
             <div className="col-sm-4 right">
               <div className="info-basic">
                 <figure>
-                  <img src="../../images/clients-01.png" alt="" />
+                  <img src="../../images/dummy-user.png" alt="" />
                 </figure>
                 <h3>{client ? <> {client.client_name} </> : null}</h3>
                 {/* { client ? ( <p> API key: {client.client_api} </p> )  : null }
@@ -3837,7 +3837,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                       <div className="coach-fig">
                         <figure>
                           <img
-                            src="../../images/clients-01.png"
+                            src="../../images/dummy-user.png"
                             alt="Coach Name"
                           />
                         </figure>
@@ -4057,7 +4057,7 @@ onClick={handleTimeClick}
     <div className="col-12">
       <div className="user-profile new-user-profile mrb-20">
         <figure>
-          <img src="../../images/clients-01.png" alt="" />
+          <img src="../../images/dummy-user.png" alt="" />
         </figure>
         <h3>{client ? <> {client.client_name} </> : null}</h3>
         <div className="info-basic">
@@ -4309,7 +4309,7 @@ const timeRemaining = Math.floor((meetingDate - currentTime) / 60000);
         <div className="client-name mrb-50">
           <div className="info-name mrb-10">
             <h2>welcome  {client ? <> {clientFirebaseFirstName} </> : null}</h2>
-            <img src="../../images/clients-01.png" alt="" />
+            <img src="../../images/dummy-user.png" alt="" />
           </div>
           <p className="btn-p text-center">
             <a href="#" className="btn btn-maroon" onClick={toggleProfile}>

@@ -449,7 +449,7 @@ setend_time_minute(parts2[1])
         <Grid container spacing={7}>
           <Grid item xs={12} sx={{ marginTop: 4.8, marginBottom: 3 }}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            {file ? (<ImgStyled src={URL.createObjectURL(file)} alt='Profile Pic' />) : (<ImgStyled src={proImage} alt='Profile Pic' />)}
+            {file ? (<figure className='edit-figure'><ImgStyled src={URL.createObjectURL(file)} alt='Profile Pic' /></figure>) : (<figure className='edit-figure'><ImgStyled src={proImage} alt='Profile Pic' /></figure>)}
 
               <Box>
                 <ButtonStyled className='btn' component='label' variant='contained' htmlFor='account-settings-upload-image'>
