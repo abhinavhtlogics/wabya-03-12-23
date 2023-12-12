@@ -4309,7 +4309,7 @@ const timeRemaining = Math.floor((meetingDate - currentTime) / 60000);
         <div className="client-name mrb-50">
           <div className="info-name mrb-10">
             <h2>welcome  {client ? <> {clientFirebaseFirstName} </> : null}</h2>
-            <img src="../../images/dummy-user.png" alt="" />
+           <figure className="edit-figure"> <img src="../../images/dummy-user.png" alt="" /></figure>
           </div>
           <p className="btn-p text-center">
             <a href="#" className="btn btn-maroon" onClick={toggleProfile}>
