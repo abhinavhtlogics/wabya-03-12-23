@@ -1,5 +1,5 @@
 html{overflow-x:hidden;}
-html, body {height: 100%;} 
+html, body {height: 100%;}
 
 body{background:#ece6d3 !important; font-size: 16px !important; font-family: 'Gothic A1', sans-serif !important; font-weight:400 !important; color: #1b1b1b !important;}
 
@@ -367,7 +367,9 @@ h4{color:#f79632;}
   .clients-listing .filter-coll{padding: 0 50px;}
   .clients-listing .cl-coll{margin: 0 0 80px; padding: 0 50px;}
   .clients-listing .info{background:#f7f0e4; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; color:#0f2540; position: relative; padding:40px 30px 20px; height: 100%;}
-  .clients-listing .info figure{display: block; -webkit-border-radius:100%; -moz-border-radius:100%; border-radius:100%; width: 80px; margin: 0 15px 0 0; border:5px solid #fff; position: absolute; right: 10px; top: -40px;}
+  .clients-listing .info figure{display: block; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; width: 80px; margin: 0 15px 0 0; border:0; position: absolute; right: 10px; top: -40px;}
+  .clients-listing .info figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-07.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+  .clients-listing .info figure img{min-width: 80px; min-height: 77px; object-fit: cover; object-position: center center;}
   .clients-listing .info h3{color:#0f2540; font-size:20px; min-height: 60px; margin:0 0 40px; position:relative;}
   .clients-listing .info h3 span{display:block; font-size:14px; margin:10px 0 0; text-transform: uppercase; font-weight:500;}
   .clients-listing .client-filter{text-align: right; margin: 0 0 100px; position:relative;}
