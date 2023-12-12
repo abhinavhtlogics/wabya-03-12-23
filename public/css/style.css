@@ -2958,7 +2958,8 @@ button{font-family: Gothic A1 !important;}
   .header-mobile .logo img{max-width: 125px;}
   .header-mobile .client-login-info{width: auto; position: absolute; right: 0; top: 9px;}
   .header-mobile .client-login-info figure{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; width: 50px; margin: 0 8px 0 0; border: 0; position: relative;}
-  .header-mobile .client-login-info figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-01.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+  .header-mobile .client-login-info figure a{display: block; position: relative;}
+  .header-mobile .client-login-info figure a::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-01.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
   .header-mobile .client-login-info figure, .client-login-info a{display: inline-block; vertical-align: middle;}
   .header-mobile .client-login-info .btn{border: 2px solid #eae3d1; color: #eae3d1; font-family: 'Gothic A1', sans-serif; font-weight: 600; font-size: 13px; padding: 4px 15px; background:none; text-decoration: none; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; position: relative; z-index: 1; display: inline-block; text-align: center; overflow:hidden; text-shadow:none; box-shadow:none; text-transform: inherit; width: auto;}
   .header-mobile .client-login-info .btn:hover{color: #0e2540  !important;}
