@@ -3086,7 +3086,8 @@ button{font-family: Gothic A1 !important;}
   .clients-listing .filter-coll{}
   .clients-listing .cl-coll{margin: 0 0 60px; padding: 0 20px;}
   .clients-listing .info{background:#f7f0e4; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px; color:#0f2540; position: relative; padding:40px 15px 10px; font-size:12px;height: 100%;} 
-  .clients-listing .info figure{display: block; -webkit-border-radius:100%; -moz-border-radius:100%; border-radius:100%; width: 65px; margin: 0 15px 0 0; border:3px solid #fff; position: absolute; right: 0; top: -30px;}
+  .clients-listing .info figure{/*display: block; -webkit-border-radius:100%; -moz-border-radius:100%; border-radius:100%; width: 65px; margin: 0 15px 0 0; border:3px solid #fff; position: absolute; right: 0; top: -30px;*/ width: 65px; top: -30px; right: 0;}
+  .clients-listing .info figure img{min-width: 60px; min-height: 63px;}
   .clients-listing .info h3{color:#0f2540; font-size:14px; margin:0 0 20px; position:relative;}
   .clients-listing .info h3 span{display:block; font-size:14px; margin:10px 0 0; font-weight:600;}
   .clients-listing .info p{margin: 0 0 8px; line-height:18px;}
