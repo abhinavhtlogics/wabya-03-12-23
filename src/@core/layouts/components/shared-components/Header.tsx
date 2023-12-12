@@ -110,7 +110,7 @@ const Header = () => {
           
           <div className="col-12 logo"><a href="/client/dashboard"><img src="/images/admin.png" alt="" /></a></div>
           
-          <div className="col-12 client-login-info"><figure><a href="/client/dashboard"><img src="/images/clients-01.png" alt=""/></a></figure><a href="#" className="btn"  onClick={clientLogout}>Log out</a></div>
+          <div className="col-12 client-login-info"><figure><a href="/client/dashboard"><img src="/images/dummy-user.png" alt=""/></a></figure><a href="#" className="btn"  onClick={clientLogout}>Log out</a></div>
           </div>
             
           </div>         
