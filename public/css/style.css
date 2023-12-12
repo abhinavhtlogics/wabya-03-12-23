@@ -319,8 +319,9 @@ h4{color:#f79632;}
   /* user profile */
   .user-profile{position:relative; margin:0; padding:270px 0 80px; z-index:1;}
   .user-profile .inner-info{background:#f7f0e4; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; color:#0f2540; position: relative; margin: 0 0 30px 100px; display: flex; justify-content: space-between; align-items: center; align-content: end;}
-  .user-profile .inner-info figure{position: absolute; left:-100px; bottom:0; margin:0; max-width:270px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; border: 5px solid #fff;}
-  .user-profile .inner-info figure img{-webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
+  .user-profile .inner-info figure{position: absolute; left:-100px; bottom:0; margin:0; max-width:270px; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; border: 0;}
+  .user-profile .inner-info figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-04.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+  .user-profile .inner-info figure img{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
   .user-profile h2{color: #0f2540; font-size: 30px; position: relative; margin: 0; letter-spacing: 5px; padding: 0 0 0 18%; text-transform: capitalize !important;}
   .user-profile .right-area{position:relative; padding:15px;}
   .user-profile .accepting-info{position:relative; margin:0 0 10px; display: flex;}
@@ -383,7 +384,7 @@ h4{color:#f79632;}
 
 .client-profile{position:relative; margin:0; padding:270px 0 80px; z-index:1;}
   .client-profile .inner-info{background:#f7f0e4; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; color:#0f2540; position: relative; margin: 0 0 30px; padding:10px 30px; display: flex; justify-content: space-between; align-items: center; align-content: end;}
-  .client-profile .inner-info figure{position: absolute; left:0; right:0; bottom:26px; margin:0 auto; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; border:0; max-width:270px;}
+  .client-profile .inner-info figure{position: absolute; left:0; right:0; bottom:28px; margin:0 auto; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; border:0; max-width:270px;}
   .client-profile .inner-info figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-02.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
   .client-profile .inner-info figure img{-webkit-border-radius:0; -moz-border-radius:0; border-radius:0;  min-width: 270px; min-height: 261px; object-fit: cover; object-position: center center;}
   .client-profile h2{color:#0f2540; font-size:30px; margin:0; position:relative;}
