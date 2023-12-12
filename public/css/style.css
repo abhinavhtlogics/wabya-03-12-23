@@ -153,8 +153,9 @@ h4{color:#f79632;}
 
   /* profile dashboard */
   .profile-button{position: relative; left: 0; top: 0; z-index: 3; order:3;}
-  .profile-button > figure{display: inline-block; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius:100%; vertical-align: middle; width: 70px; border: 5px solid #fff; margin: 0 14px 0 0;}
-  .profile-button > figure img{-webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius:100%;}
+  .profile-button > figure{display: inline-block; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius:0; vertical-align: middle; width: 70px; border: 0; margin: 0 14px 0 0; position:relative;}
+  .profile-button > figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-01.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+  .profile-button > figure img{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius:0;}
   .profile-button .dropdown{display: inline-block; min-width: 164px; vertical-align: middle;}
   .profile-button .dropdown-toggle{position: relative;}
   .profile-button .dropdown-toggle::after{content: ""; border: 0; position: absolute; background-image: url(../images/arrow-bottom.png); background-repeat: no-repeat; background-attachment: scroll; background-position: center center; background-size: cover; height: 20px; width: 20px; right: 10px !important; top: 7px !important; margin: 0 !important; display: block !important;}
