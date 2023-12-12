@@ -323,7 +323,7 @@ h4{color:#f79632;}
   .user-profile .inner-info figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-04.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
   .user-profile .inner-info figure img{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
   .user-profile h2{color: #0f2540; font-size: 30px; position: relative; margin: 0; letter-spacing: 5px; padding: 0 0 0 18%; text-transform: capitalize !important;}
-  .user-profile .right-area{position:relative; padding:15px;}
+  .user-profile .right-area{position:relative; padding:16px;}
   .user-profile .accepting-info{position:relative; margin:0 0 10px; display: flex;}
   .user-profile .accepting-info span{display: block; text-transform: lowercase; letter-spacing:2px; font-size:14px;}
   .user-profile .dropdown{display: block; text-align: right;}
