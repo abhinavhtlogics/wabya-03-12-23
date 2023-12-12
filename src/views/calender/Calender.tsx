@@ -2910,7 +2910,7 @@ footer={[]}
         </div>
       </div>
 
-      <div className="timesheet-carousel" style={{display:'none'}}>
+      <div className="timesheet-carousel" >
           <OwlCarousel options={options}>
 
           { forloops.map((floop, index) => {
@@ -2919,14 +2919,14 @@ footer={[]}
             if (index== active) {
               return (
                 <>
-                  <div className='active-owl cal-item' onClick={handleClick} data-id={index}>{ allWeekDay.length>i ? allWeekDay[i].month : null} { allWeekDay.length>i ? allWeekDay[i].date : null } -  { allWeekDay.length>j ?  allWeekDay[j].month : null} { allWeekDay.length>j ?  allWeekDay[j].date : null}</div>
+                  <div className='active-owl cal-item' style={{fontSize:'12px'}} onClick={handleClick} data-id={index}>{ allWeekDay.length>i ? allWeekDay[i].month : null} { allWeekDay.length>i ? allWeekDay[i].date : null } -  { allWeekDay.length>j ?  allWeekDay[j].month : null} { allWeekDay.length>j ?  allWeekDay[j].date : null}</div>
                 </>
               )
             }else{
               return (
 
                 <>
-                  <div className='cal-item' onClick={handleClick} data-id={index}>{ allWeekDay.length>i ? allWeekDay[i].month : null} { allWeekDay.length>i ? allWeekDay[i].date : null } -  { allWeekDay.length>j ?  allWeekDay[j].month : null} { allWeekDay.length>j ?  allWeekDay[j].date : null}</div>
+                  <div className='cal-item' style={{fontSize:'12px'}} onClick={handleClick} data-id={index}>{ allWeekDay.length>i ? allWeekDay[i].month : null} { allWeekDay.length>i ? allWeekDay[i].date : null } -  { allWeekDay.length>j ?  allWeekDay[j].month : null} { allWeekDay.length>j ?  allWeekDay[j].date : null}</div>
                 </>
               );
             }
