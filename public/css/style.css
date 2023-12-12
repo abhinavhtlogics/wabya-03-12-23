@@ -3132,7 +3132,7 @@ button{font-family: Gothic A1 !important;}
   .user-profile.new-user-profile figure{display: block; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; width: 70px; margin: -65px auto 15px; border:0; position: relative;}
   .user-profile.new-user-profile figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-05.png); background-repeat: no-repeat;
   background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
-  .user-profile.new-user-profile figure img{width: 70px; height: 67px; object-fit: cover; object-position: center center;}
+  .user-profile.new-user-profile figure img{width: 70px; height: 68px; object-fit: cover; object-position: center center;}
   .user-profile figure{display: block; -webkit-border-radius:100%; -moz-border-radius:100%; border-radius:100%; width: 70px; margin: -65px auto 15px; border:0; overflow: hidden; position:relative;}
   .user-profile figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-03.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
   .user-profile figure img{width: 70px; height: 67px; object-fit: cover; object-position: center center;}
