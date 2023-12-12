@@ -3013,7 +3013,11 @@ button{font-family: Gothic A1 !important;}
   .user-detail-mobile .client-name{position: relative; margin:0 0 30px;}
   .user-detail-mobile .client-name .info-name{display: flex; align-items: start; gap: 30px; justify-content: space-between;}
   .user-detail-mobile .client-name h2{color: #0e2540; font-weight: 600; font-size: 36px; margin: 0 0 5px;}
-  .user-detail-mobile .client-name img{-webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; width: 75px; margin: 0 5px 0 0; border: 3px solid #fff;}
+  .user-detail-mobile .client-name .info-name figure{position: relative; width: 75px; margin: 0;}
+  .user-detail-mobile .client-name .info-name figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-08.png); background-repeat: no-repeat;
+  background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+  .user-detail-mobile .client-name .info-name img{width: 75px; height: 72px; object-fit: cover; object-position: center center;}
+  .user-detail-mobile .client-name img{/*-webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; width: 75px; margin: 0 5px 0 0; border: 3px solid #fff;*/}
   .user-detail-mobile h4{color: #0e2540; font-weight:600; font-size: 20px; margin: 0 0 5px;}
   .user-detail-mobile .session-info h3{color: #296c6f; font-size: 20px;}
   .user-detail-mobile .session-info ul{margin:0; padding:0 0 0 15px;}
