@@ -1139,7 +1139,7 @@ h4{color:#f79632;}
 .reschedule-zone .coach-fig figure{width: 125px; display: block; margin: 0px auto; border: 0; border-radius: 0; margin-bottom: 15px; position:relative;}
 .reschedule-zone .coach-fig figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-06.png); background-repeat: no-repeat;
   background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
-.reschedule-zone .coach-fig figure img{width: 115px; height: 111px; object-fit: cover; object-position: center center;}
+.reschedule-zone .coach-fig figure img{width: 125px; height: 121px; object-fit: cover; object-position: center center;}
 .reschedule-zone .coach-fig p, .cal-time p {text-align: center;}
 
 .cal-time{text-align: center;}
@@ -3121,9 +3121,10 @@ button{font-family: Gothic A1 !important;}
   .user-profile .switch-input:checked ~ .switch-handle{left: 51.5px; top: 2.5px;} 
   /* Transition ========================== */ 
   .user-profile .switch-label, .user-profile .switch-handle{transition: All 0.3s ease; -webkit-transition: All 0.3s ease; -moz-transition: All 0.3s ease; -o-transition: All 0.3s ease;}  
-  .user-profile.new-user-profile figure{display: block; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; width: 70px; margin: -65px auto 15px; border:0;}
+  .user-profile.new-user-profile figure{display: block; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; width: 70px; margin: -65px auto 15px; border:0; position: relative;}
   .user-profile.new-user-profile figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-05.png); background-repeat: no-repeat;
   background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+  .user-profile.new-user-profile figure img{width: 70px; height: 67px; object-fit: cover; object-position: center center;}
   .user-profile figure{display: block; -webkit-border-radius:100%; -moz-border-radius:100%; border-radius:100%; width: 70px; margin: -65px auto 15px; border:3px solid #fff; overflow: hidden;}
   .user-profile h3{color:#0f2540; font-size: 22px; margin:0 0 25px; text-align: center; position:relative;}
   .user-profile h3 span{display:block; font-size:14px; margin:5px 0 0; font-weight:600;}
