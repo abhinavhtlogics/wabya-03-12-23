@@ -447,8 +447,9 @@ const Calender = () => {
   
 
   const isBetweenAvailabilityTimeslot = (timeslot, day) => {
-    const validDays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+    const validDays = ['tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'mon'];
   
+    console.log('my day', day);
     // Convert the provided day to lowercase
     const lowercaseDay = day.toLowerCase();
   
