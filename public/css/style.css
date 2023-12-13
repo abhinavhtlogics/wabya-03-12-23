@@ -3617,6 +3617,12 @@ button{font-family: Gothic A1 !important;}
    
 }
 
+@media (min-width: 1201px) and (max-width: 1450px) { 
+
+   .client-dashboard .banner-et{width: 95%;}
+   
+}
+
 .no-client{text-align: center;}
 .no-file{text-align: center;font-size: 20px; font-weight: 700;}
 .error-message-video{text-align: center;margin-top: 15%;}
