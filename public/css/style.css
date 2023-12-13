@@ -3611,6 +3611,7 @@ button{font-family: Gothic A1 !important;}
 @media (min-width: 1024px) and (max-width: 1200px) { 
    
    .header .menu-head .navbar-nav{margin: 0 auto !important;}
+   .header .menu-head .navbar-collapse{order: 2 !important; padding: 0 !important;}
    .login-info{order:3;}
    .login-info{position: relative; display: flex; order: 2; padding: 0; justify-content: inherit; width: auto; margin: 10px 0 0;}
    .login-info .btn{border:1px solid #fffff3; color: #fffff3; margin:7px 5px; padding: 4px;}
