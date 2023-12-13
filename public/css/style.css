@@ -3609,9 +3609,12 @@ button{font-family: Gothic A1 !important;}
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) { 
+
    .next-session .left, .next-session .right{width: 100%;}
    .client-plans .col-sm-7, .client-plans .col-sm-5{width: 100%;}
    .client-dashboard .banner-et{width: auto;}
+   .client-dashboard .banner-et .table{margin: 0 0 70px;}
+   
 }
 
 .no-client{text-align: center;}
