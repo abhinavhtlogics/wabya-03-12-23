@@ -2794,7 +2794,7 @@ const year = today.getFullYear();
 
         <Modal
           centered
-          className="session-history-modal session-reschedule-modal"
+          className="session-history-modal session-reschedule-modal ant-modal-meeting"
           visible={reschedule}
           onOk={rescheduleOk}
           onCancel={rescheduleCancel}
