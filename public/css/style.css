@@ -3468,7 +3468,7 @@ button{font-family: Gothic A1 !important;}
 @media (min-width: 768px) and (max-width: 1023px) { 
    
    .admin-header.superadmin-head{padding: 0 0 15px;}
-   
+   .client-dashboard .banner-et .table{margin: 0 0 70px;}
    .login-info{position: relative; display: flex; order: 2; padding: 0; justify-content: inherit; width: auto; margin: 10px 0 0;}
    .login-info .btn{border:1px solid #fffff3; color: #fffff3; margin:7px 5px; padding: 4px;}
    .login-info .btn:after{background-color: #f69532;}
