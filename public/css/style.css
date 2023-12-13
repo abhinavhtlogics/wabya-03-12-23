@@ -3221,7 +3221,7 @@ button{font-family: Gothic A1 !important;}
       .client-sec .next{right: 5%;}
   
   .user-profile ul li a{border-bottom: none !important; padding: 0; font-size: 12px; background-color: transparent; text-transform: lowercase; border: 0;}
-  .edit-password{position:relative; margin:0; padding: 60px 15px 30px; z-index:1;}
+  .edit-password{position:relative; margin:0; padding: 35px 0 30px; z-index:1;}
   .edit-password form{position:relative;}
   .edit-password .edit-box{background:#faf4e8; -webkit-border-radius:30px; -moz-border-radius:30px; border-radius:30px; color:#0f2540; position: relative; padding:30px 25px 10px; font-size:12px;} 
   .edit-password form .form-control{background:#fff; border:1px solid #0e2540; box-shadow:none; font-weight:500; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; font-size:8px; color: #0b233f; height:36px; padding:3px 8px; width: 60%;}
