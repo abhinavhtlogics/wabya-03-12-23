@@ -2898,7 +2898,7 @@ button{font-family: Gothic A1 !important;}
   
     h1, h2, h3, h4, h5, h6{font-weight:500;}
 	.client-resources .left figure{margin: 0 auto;}
-	.pricing-wrap .left-top p{max-width: 100%;}
+	.pricing-wrap .left-top p{max-width: 100%;}	
    .header{border-top: 3px solid #ec2397;}
    .stand-avbl{display: none;}
    .stand-avbl-mobile{display: block;}
@@ -3394,7 +3394,12 @@ button{font-family: Gothic A1 !important;}
    .work-together::after{display:none;}
    .work-together form .form-group{width: 100%;}
    
-   .close-back{position: absolute; right: -10px; top: -10px; z-index: 99; background: rgba(0, 0, 0, 0.1); width: 30px; height: 30px; text-align: center; line-height: 30px; -webkit-border-radius: 20px; -moz-border-radius: 30px; border-radius: 30px;}
+   .client-password .inner-info{padding: 25px 25px 25px 21px;}
+   .client-password .form-password label{font-size: 14px; font-weight: 500; letter-spacing: 1px; margin-top: 0;}
+   .client-password .inner-info .col-12{width: 35%; padding: 0 0 0 15px;}
+   .client-password .inner-info .col-10{width: 55%; padding: 0 15px 0 0;}
+   .client-password .inner-info .col-2{padding: 0; width: 10%;}
+   .close-back{position: absolute; right: -35px; top: -35px; z-index: 99; background: rgba(0, 0, 0, 0.1); width: 30px; height: 30px; text-align: center; line-height: 30px; -webkit-border-radius: 20px; -moz-border-radius: 30px; border-radius: 30px;}
    
    .react-calendar__month-view__days{min-height: 195px;}
    .client-profile .info-grid{padding: 10px;}
