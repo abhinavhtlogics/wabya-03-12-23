@@ -3613,7 +3613,7 @@ button{font-family: Gothic A1 !important;}
    .header .menu-head .navbar-nav{margin: 0 auto !important;}
    .header .menu-head .navbar-collapse{order: 2 !important; padding: 0 !important;}
    .login-info{order:3;}
-   .login-info{position: relative; display: flex; order: 2; padding: 0; justify-content: inherit; width: auto; margin: 10px 0 0;}
+   .login-info{position: relative; display: flex; order: 2; padding: 0; justify-content: inherit; width: auto; margin: 0;}
    .login-info .btn{border:1px solid #fffff3; color: #fffff3; margin:7px 5px; padding: 4px;}
    .login-info .btn:after{background-color: #f69532;}
    .frontend-change .profile-button .dropdown{min-width: 120px !important;}
