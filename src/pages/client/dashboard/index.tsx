@@ -2792,7 +2792,206 @@ const year = today.getFullYear();
           </div>
         </Modal>
 
-   
+        <Modal
+          centered
+          className="session-history-modal session-reschedule-modal "
+          visible={reschedule}
+          onOk={rescheduleOk}
+          onCancel={rescheduleCancel}
+          width={1200}
+          footer={[]}
+        >
+          <div className="modal-data">
+
+
+
+            {next ? (
+              <>
+                <div className="meeting-schedule">
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <div className="tick-icon">
+                        <i className="fa fa-check"></i>
+                        <h2>This meeting is { res_action } </h2>
+                        <p>
+                          We emailed you and the other attendees a calendar
+                          invitation with all the details.
+                        </p>
+                      </div>
+                      {/* <div className="meet">
+                        <div className="left-meet">
+                          <strong>What</strong>
+                        </div>
+                        <div className="right-meet">
+                          <p>{meetingtitle}</p>
+                        </div>
+                      </div> */}
+                      {/* <div className="meet">
+                        <div className="left-meet">
+                          <strong>When</strong>
+                        </div>
+                        <div className="right-meet">
+                          <p>Friday, March 17, 2023</p>
+                          <p>
+                            15:30 - 16:30 <span> (India Standard Time) </span>
+                          </p>
+                        </div>
+                      </div> */}
+                      {/* <div className="meet">
+                        <div className="left-meet">
+                          <strong>Who</strong>
+                        </div>
+                        <div className="right-meet">
+                          <p>
+                            {meetinguser} <br />
+                            <span>{meetinguseremail}</span>
+                          </p>
+                          <p>
+                            {meetinguser2} <br />
+                            <span>{meetinguser2email}</span>
+                          </p>
+                        </div>
+                      </div> */}
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="history-modal">
+                  <h4>{modal_action}</h4>
+                </div>
+
+                <div className="reschedule-zone">
+                  <div className="row">
+                    <div className="col-sm-2">
+                      <div className="coach-fig">
+                        <figure>
+                          <img
+                            src="../../images/dummy-user.png"
+                            alt="Coach Name"
+                          />
+                        </figure>
+                        <p>{coachesCalName}</p>
+                        <p>
+                          <strong>next session</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div className="col-sm-6">
+                      <div className="resc-cal">
+                        <h5>select a date &amp; time</h5>
+                        <Calendar onChange={getTimeslots} value={date} minDate={today} />
+                        <h5>time zone</h5>
+                        <p>{coachesCalTimezone}</p>
+                      </div>
+                    </div>
+                    {isShow ? (
+                      <div className="col-sm-4">
+                        <div className="cal-time">
+                          <p>
+                            {Day_} {Month} {Date_}
+                          </p>
+                          {isUnavailable ? (
+
+                          array1.map((timeSlot, index) => {
+                            return selectedTime == index ? (
+                              <button
+                                className="btn btn-time"
+                                data-key={index}
+                                key={index}
+                                data-time={timeSlot}
+                                style={{ backgroundColor: "#6dc1a4" }}
+                                onClick={handleTimeClick}
+                              >
+                                {timeSlot}
+                              </button>
+                            ) : (
+                              <button
+                                className="btn btn-time"
+                                data-time={timeSlot}
+                                data-key={index}
+                                key={index}
+                                onClick={handleTimeClick}
+                              >
+                                {timeSlot}
+                              </button>
+                            );
+                          })
+
+                          )
+                          : ( 
+                            array1.map((timeSlot, index) => {
+
+                              const timeSlotDate = new Date(`1970-01-01T${timeSlot}`);
+  const unavailableStart = new Date(`1970-01-01T${UnavailableStartSlot}`);
+  const unavailableEnd = new Date(`1970-01-01T${UnavailableEndSlot}`);
+
+  // Check if timeSlot is outside the range
+  const isOutsideRange = timeSlotDate < unavailableStart || timeSlotDate > unavailableEnd;
+
+                              return isOutsideRange ? (
+                                selectedTime == index ?
+                                <button
+                                  className="btn btn-time"
+                                  data-key={index}
+                                  key={index}
+                                  data-time={timeSlot}
+                                  style={{ backgroundColor: "#6dc1a4" }}
+                                  onClick={handleTimeClick}
+                                >
+                                  {timeSlot}
+                                </button>:
+
+<button
+className="btn btn-time"
+data-time={timeSlot}
+data-key={index}
+key={index}
+onClick={handleTimeClick}
+>
+{timeSlot}
+</button>
+                              ) : (
+                              null
+                              );
+                            })
+
+
+                            )
+                        }
+                          {timeslot_load ? (
+                            <div className="btn btn-time"> Loading...</div>
+                          ) : null}
+                        </div>
+                        <button className="btn btn-next" onClick={scheduleNext}  disabled={!meetingtime && isUnavailable}>
+                          next <i className="fa fa-arrow-right"></i>
+                        </button>
+                        {bookingLoad ? <p>Loading, Please Wait...</p> : null}
+
+                        {bookingError ? <p>Something Went Wrong...</p> : null}
+                      </div>
+                    ) : (
+                      <div className="col-sm-4">
+                        <div className="cal-time">
+                          <p>
+                            {Day_} {Month} {Date_}
+                          </p>
+                          {timeslot_load ? (
+                            <div className="btn btn-time">
+                              Timeslot Loading...
+                            </div>
+                          ) : null}
+                          <p>No Timeslot Available</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </Modal>
         {/* reschedule session = modal ends */}
 
         <div className="next-session">
@@ -3564,7 +3763,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
 
         <Modal
           centered
-          className="session-history-modal session-reschedule-modal ant-modal-meeting"
+          className="session-history-modal session-reschedule-modal"
           visible={reschedule}
           onOk={rescheduleOk}
           onCancel={rescheduleCancel}
