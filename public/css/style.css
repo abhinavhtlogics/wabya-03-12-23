@@ -3400,6 +3400,7 @@ button{font-family: Gothic A1 !important;}
    .client-password .inner-info .col-10{width: 55%; padding: 0 15px 0 0;}
    .client-password .inner-info .col-2{padding: 0; width: 10%;}
    .close-back{position: absolute; right: -35px; top: -35px; z-index: 99; background: rgba(0, 0, 0, 0.1); width: 30px; height: 30px; text-align: center; line-height: 30px; -webkit-border-radius: 20px; -moz-border-radius: 30px; border-radius: 30px;}
+   .client-password .form-password .btn{float: none; margin: 15px 0 0;}
    
    .react-calendar__month-view__days{min-height: 195px;}
    .client-profile .info-grid{padding: 10px;}
