@@ -2794,7 +2794,7 @@ const year = today.getFullYear();
 
         <Modal
           centered
-          className="session-history-modal session-reschedule-modal ant-modal-meeting"
+          className="session-history-modal session-reschedule-modal"
           visible={reschedule}
           onOk={rescheduleOk}
           onCancel={rescheduleCancel}
@@ -3763,7 +3763,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
 
         <Modal
           centered
-          className="session-history-modal session-reschedule-modal"
+          className="session-history-modal session-reschedule-modal ant-modal-meeting"
           visible={reschedule}
           onOk={rescheduleOk}
           onCancel={rescheduleCancel}
