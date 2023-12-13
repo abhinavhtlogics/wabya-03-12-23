@@ -1016,7 +1016,7 @@ h4{color:#f79632;}
 .client-contact .two-button .btn-send{background: #1d696c; color: #fff;}
 .client-contact .two-button .btn-chat{color: #1d696c; background: #fff;}
 .client-contact .two-button .btn-chat i {font-size: 20px; vertical-align: middle;}
-.client-contact .coach-resp { padding: 70px 0; border-right: 1px solid #1d696c; }
+.client-contact .coach-resp{padding: 70px 15px 70px 0; border-right: 1px solid #1d696c; }
 .client-contact .coach-resp h5{color: #1d696c; margin-bottom: 7px; letter-spacing: 1px;}
 .client-contact .coach-resp ul {
   list-style: circle;
