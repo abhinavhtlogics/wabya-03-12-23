@@ -3608,6 +3608,12 @@ button{font-family: Gothic A1 !important;}
 
 }
 
+@media (min-width: 1024px) and (max-width: 1200px) { 
+   .next-session .left, .next-session .right{width: 100%;}
+   .client-plans .col-sm-7, .client-plans .col-sm-5{width: 100%;}
+   .client-dashboard .banner-et{width: auto;}
+}
+
 .no-client{text-align: center;}
 .no-file{text-align: center;font-size: 20px; font-weight: 700;}
 .error-message-video{text-align: center;margin-top: 15%;}
