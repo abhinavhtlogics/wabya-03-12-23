@@ -1564,7 +1564,7 @@ if(myAvailability && myAvailability.length !=0){
     
   }
 
-  var interval = "45";
+  var interval = "60";
 
 
 
@@ -1572,7 +1572,7 @@ if(myAvailability && myAvailability.length !=0){
   }
   else{
     var starttime = "09:00:00";
-    var interval = "45";
+    var interval = "60";
     var endtime = "17:00:00";
   }
 
@@ -1928,18 +1928,22 @@ var interval = "45";
 
          //var endtime = "17:00:00";
   var timeslots = [starttime];
-    
+  let index = 0;
   while (starttime < endtime) {
-    
-      starttime = addMinutes(starttime, interval); 
-    
-      if(starttime < endtime){
-      // if(!isReserved(starttime)){
+    const interval = index % 2 === 0 ? 45 : 15;
+  
+    starttime = addMinutes(starttime, interval);
+  
+    if (starttime < endtime) {
+      // Uncomment the following line if you want to check for reservations
+      // if (!isReserved(starttime)) {
       timeslots.push(starttime);
-    //  }
+      // }
     }
-     // settimeslot_load(false);
-    }
+  
+    index++;
+    // settimeslot_load(false);
+  }
     
     setarray1(timeslots);
   
@@ -2603,6 +2607,7 @@ console.log('day',nextSevenDay[index].date);
                   {array1.map((timeslot:string, index:number) => {
 
                     let formattedTime = timeslot.slice(0, -3);
+                    let i =index % 2;
               //        var isBetween = bookedTimeslot.some(({ starttime, endtime }) => {
 
               //         return timeslot >= starttime && timeslot <= endtime
@@ -2652,8 +2657,13 @@ if(isBetween && ! isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].d
 
 
 return(<>
-  <td style={{ backgroundColor: index < 7 && isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}>
+  <td style={{ backgroundColor: index < 7 &&  isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}>
+
+
+  {index % 2 === 0 ? (
+    <>
                      <div className="blue-event">
+                      
                            <p><span>{ matchingStarttime} - {matchingEndtime} </span> </p>
 
                       
@@ -2698,16 +2708,28 @@ return(<>
 ) : null}
                        
                         </div>
+                        </>)
+                        : (
+                          <p style={{'textAlign':'center'}}>free time</p>
+                        )} 
                       </td>
                       </>
+
                       )
                       else
-                      if(index2 < 7){
+                      if(index2 < 7 ){
                         return(
-<><td style={{ backgroundColor:  index2 < 7 && isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}></td></>
-                      
+<><td style={{ backgroundColor:  index2 < 7 && isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}>{ !isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) && index %2!==0? <p style={{'textAlign':'center'}}>free time</p>:null}
+</td>
+
+</>
+                    
                         )
+
+                     
                       }
+                     
+                    
 
 })}
 
@@ -2716,6 +2738,7 @@ return(<>
                         {/* <div className="green-event">
                           <p>personal event <span>09:00 - 10:00 </span></p>
                         </div> */}
+                        
                       </td>
 
                     </tr>
