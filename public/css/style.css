@@ -1315,7 +1315,7 @@ h4{color:#f79632;}
   margin: 30px auto;
 }
 .meeting-schedule .tick-icon {
-  border-bottom: 1px solid #0f2540; text-align: center; margin-bottom: 30px;
+  border-bottom: 0; text-align: center; margin-bottom: 30px;
 }
 .meeting-schedule .tick-icon i {
   padding: 20px;
@@ -3299,7 +3299,7 @@ button{font-family: Gothic A1 !important;}
    .login-info .btn:after{background-color: #f69532;}
    .frontend-change .profile-button{padding:0 5px;}
    .frontend-change .profile-button .dropdown{min-width: inherit !important;}
-   .frontend-change .profile-button .inner{width: inherit; top: 0; position:relative; background:none; border-radius:0;}
+   .frontend-change .profile-button .inner{width: inherit; top: 0; position:relative; background:none; border-radius:0; border: 0 !important;}
    .frontend-change .profile-button .inner .btn{width: 76px !important; min-width: inherit !important; font-size: 10px; padding: 6px 15px;}
    .frontend-change .profile-button .inner ul{position: absolute; border: 0 !important; background: #f7f0e4 !important; border-radius: 22px; right: 0; top: 120%; padding: 5px 0;}
    .frontend-change .profile-button ul li a{border-bottom: 0 !important; padding: 5px 0; font-size: 12px;}
