@@ -587,7 +587,7 @@ setend_time_minute(parts2[1])
           
           <Box>
                 <ButtonStyled className='btn' component='label' variant='contained' htmlFor='account-settings-upload-image'>
-                  upload new photo
+                  upload new photo n
                   <input name='pro_image'
                     hidden
                     type='file'

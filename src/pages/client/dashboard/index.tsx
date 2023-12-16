@@ -11,8 +11,8 @@ import {ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"
 import { countries } from 'countries-list';
 import { Select, MenuItem } from '@mui/material';
 import { sendMail } from "../../../services/sendMail";  
-
-
+import { styled } from '@mui/material/styles'
+import Button, { ButtonProps } from '@mui/material/Button'
 import allCountries from '../../../@core/utils/countries'
 import country_data from '../../../@core/utils/all-countries'
 import {
@@ -121,6 +121,10 @@ const Dashboard = () => {
     setClientCountry(userDoc.data().client_country),
     setClientLanguage(userDoc.data().client_language),
     setClientTimeZone(userDoc.data().client_zone)
+
+    if(userDoc.data().client_profile){
+      setImage(userDoc.data().client_profile);
+    }
   };
 
  
@@ -140,7 +144,8 @@ const Dashboard = () => {
       client_phone : clientPhone,
       client_country : clientCountry,
       client_zone : clientTimeZone,
-      client_language : clientLanguage
+      client_language : clientLanguage,
+      client_profile : fileUrl2,
     })
     .then(() => {
       toast.success('Client details updated successfully!')
@@ -188,6 +193,21 @@ const Dashboard = () => {
   const [isSeeNotes, setisSeeNotes] = useState(false);
   const [isUpdateBilling, setisUpdateBilling] = useState(false);
 
+  const ButtonStyled = styled(Button)<ButtonProps & { component?: ElementType; htmlFor?: string }>(({ theme }) => ({
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      textAlign: 'center'
+    }
+  }))
+
+  
+  const ImgStyled = styled('img')(({ theme }) => ({
+    width: 120,
+    height: 120,
+    marginRight: theme.spacing(6.25),
+    borderRadius: theme.shape.borderRadius
+  }))
+  
 
   const [isVideoCallVisible, setIsVideoCallVisible] = useState(false);
   const [open, setOpen] = useState(false);
@@ -223,7 +243,7 @@ const Dashboard = () => {
 
   const [modal_action, setmodal_action] = useState("");
   const [res_action, setres_action] = useState("");
-
+  const [proImage,setImage] = useState('../../images/dummy-user.png');
 
   //const [coachesCalUsername, setcoachesCalUsername] = useState('abhinav-kumar-r6xoe0');
   const [coachesCalDefaultScheduleId, setcoachesCalDefaultScheduleId] =
@@ -267,6 +287,9 @@ const Dashboard = () => {
   const resourceRef = collection(database, 'resources');
 
   const [file, setFile] = useState(null);
+  const [file2, setFile2] = useState(null);
+  const [fileUrl2, setfileUrl2] = useState("");
+  const MAX_FILE_SIZE = 800 * 1024;
   const [showpercent, setshowpercent] = useState(false);
   const [showfile, setshowfile] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -1222,6 +1245,14 @@ const getMeetingSession = async () => {
     }
   }, [coachesCalApiKey, userId]);
 
+  useEffect(() => {
+
+   
+    if(file2 != null){
+      profile2();
+    }
+  
+  }, [file2]);
 
 
   useEffect(() => {
@@ -1234,7 +1265,7 @@ const getMeetingSession = async () => {
      console.log(cancelMeet);
     getCancelMeet()
 
-    }, 10000); // 10 seconds
+    }, 10000000); // 10 seconds
   
     //Cleanup function to clear interval when component unmounts
   return () => clearInterval(intervalId);
@@ -2060,11 +2091,62 @@ setarray1(timeslots);
   }
  
 
+
+
+  
+
 function handleFileChange(event) {
   //console.log('test');
   setFile(event.target.files[0]);
 //handleSubmit();
 }
+
+function handleFileChange2(event) {
+
+  const selectedFile = event.target.files[0];
+  const allowedTypes = ['image/jpeg', 'image/png'];
+
+  if (!allowedTypes.includes(selectedFile.type)) {
+    alert('Only JPEG and PNG files are allowed!');
+
+    return;
+  }
+  if (selectedFile && selectedFile.size > MAX_FILE_SIZE) {
+    alert("File size exceeds the limit of 800kb");
+
+    return;
+  }
+
+  setFile2(selectedFile);
+}
+
+
+function profile2(){
+  if (file2 != null) {
+
+    const storageRef = ref(storage, `/client/profile/${file2.name}`)
+    const uploadTask =  uploadBytesResumable(storageRef, file2);
+    uploadTask.on("state_changed",
+      (snapshot) => {
+
+        console.log('snapshot');
+
+      },
+  (err) => console.log(err),
+      () => {
+  // download url
+      getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+      console.log(url);
+      setfileUrl2(url);
+      console.log('File Uploaded!');
+  });
+  }
+  );
+
+}
+}
+
+
 
   function isReserved(time) {
     // assume reserved times are stored in an array called 'reservedTimes'
@@ -2209,6 +2291,8 @@ const year = today.getFullYear();
      getCancelMeet();
     }
       
+
+  
   return (
     <>
      <MeetingCancelled
@@ -2970,9 +3054,30 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
             </div>
             <div className="col-sm-4 right">
               <div className="info-basic">
-                <figure>
+              <figure>
+  {file2 ? (
+    <img src={URL.createObjectURL(file2)} alt='Profile Pic' />
+  ) : (
+    <img src={client.client_profile ? client.client_profile : proImage} alt="" />
+  )}
+</figure>
+                {/* <figure>
                   <img src="../../images/dummy-user.png" alt="" />
-                </figure>
+
+
+                </figure> */}
+ {editDetail ? (
+                <ButtonStyled   className='btn' component='label' variant='contained' htmlFor='account-settings-upload-image'>
+                  upload
+                  <input name='pro_image'
+                    hidden
+                    type='file'
+                    onChange={handleFileChange2}
+                    accept='image/png, image/jpeg'
+                    id='account-settings-upload-image'
+                  />
+                </ButtonStyled>) :null }
+                
                 <h3>{client ? <> {client.client_name} </> : null}</h3>
                 {/* { client ? ( <p> API key: {client.client_api} </p> )  : null }
                 { client ? ( <p> Cal Uname: {client.client_uname} </p> )  : null } */}
@@ -3857,9 +3962,27 @@ onClick={handleTimeClick}
   <div className="row">
     <div className="col-12">
       <div className="user-profile new-user-profile mrb-20">
-        <figure>
-          <img src="../../images/dummy-user.png" alt="" />
-        </figure>
+      <figure>
+  {file2 ? (
+    <img src={URL.createObjectURL(file2)} alt='Profile Pic' />
+  ) : (
+    <img src={client.client_profile ? client.client_profile : proImage} alt="" />
+  )}
+</figure>
+
+          
+{editDetail ? (
+
+        <ButtonStyled className='btn' component='label' variant='contained' htmlFor='account-settings-upload-image'>
+                  upload new photo
+                  <input name='pro_image'
+                    hidden
+                    type='file'
+                    onChange={handleFileChange2}
+                    accept='image/png, image/jpeg'
+                    id='account-settings-upload-image'
+                  />
+                </ButtonStyled> ):null }
         <h3>{client ? <> {client.client_name} </> : null}</h3>
         <div className="info-basic">
                 
@@ -4050,7 +4173,7 @@ onClick={handleTimeClick}
                  
       <p className="btn-p">
         <a href="#" className="btn btn-thulian-pink" onClick={() => saveD()}>
-         save Details
+         save details
         </a>
       </p>
       </>):
@@ -4110,7 +4233,7 @@ const timeRemaining = Math.floor((meetingDate - currentTime) / 60000);
         <div className="client-name mrb-50">
           <div className="info-name mrb-10">
             <h2>welcome  {client ? <> {clientFirebaseFirstName} </> : null}</h2>
-           <figure className="edit-figure"> <img src="../../images/dummy-user.png" alt="" /></figure>
+           <figure className="edit-figure">  <img src={client.client_profile ? client.client_profile : proImage} alt="" /></figure>
           </div>
           <p className="btn-p text-center">
             <a href="#" className="btn btn-maroon" onClick={toggleProfile}>
