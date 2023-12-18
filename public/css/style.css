@@ -1088,7 +1088,7 @@ h4{color:#f79632;}
 
 
 .session-history-modal .history-modal { display: flex; flex-direction: row; justify-content: center; }
-.session-history-modal .history-modal h4{color: #0f2540; font-weight: 500; text-transform: uppercase; font-size: 19px; letter-spacing: 2px;}
+.session-history-modal .history-modal h4{color: #0f2540; font-weight: 500; text-transform: lowercase; font-size: 19px; letter-spacing: 2px;}
 .session-history-modal .file-shared { display: flex; flex-direction: row; }
 .ant-modal-meeting .ant-modal-content{max-width: 500px !important; margin: 0 auto !important;}
 .ant-modal-content {background: #fcf5ec !important; border-radius: 25px !important; margin: 20px 0 !important; box-shadow: 0 3px 6px 0px #000 !important; }

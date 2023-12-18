@@ -3766,7 +3766,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                       <div className="resc-cal">
                         <h5>select a date &amp; time</h5>
                         <Calendar onChange={getTimeslots} value={date} minDate={today} />
-                        <h5>time zone</h5>
+                        <h5>time zone </h5>
                         <p>{coachesCalTimezone}</p>
                       </div>
                     </div>
@@ -3779,6 +3779,12 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                           {isUnavailable ? (
 
                           array1.map((timeSlot, index) => {
+
+                             // Extract hours and minutes from the timeSlot
+  const [hours, minutes] = timeSlot.split(':').slice(0, 2);
+
+  // Construct the formatted time without seconds
+  const formattedTime = `${hours}:${minutes}`;
                             return selectedTime == index ? (
                               <button
                                 className="btn btn-time"
@@ -3788,7 +3794,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                                 style={{ backgroundColor: "#6dc1a4" }}
                                 onClick={handleTimeClick}
                               >
-                                {timeSlot}
+                                {formattedTime}
                               </button>
                             ) : (
                               <button
@@ -3798,7 +3804,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                                 key={index}
                                 onClick={handleTimeClick}
                               >
-                                {timeSlot}
+                                {formattedTime}
                               </button>
                             );
                           })
