@@ -2656,6 +2656,7 @@ if(isBetween && ! isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].d
 
 
 
+
 return(<>
   <td style={{ backgroundColor: index < 7 &&  isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}>
 
@@ -2663,7 +2664,7 @@ return(<>
   {index % 2 === 0 ? (
     <>
                      <div className="blue-event">
-                      
+                     
                            <p><span>{ matchingStarttime} - {matchingEndtime} </span> </p>
 
                       

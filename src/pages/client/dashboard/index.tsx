@@ -648,7 +648,7 @@ function toggleProfile() {
         isMeetingEnd: 0,
         });
 
-
+        getMeeting();
     // setNext(true);
   };
  
@@ -680,6 +680,8 @@ function toggleProfile() {
     });
 
     setNext(true);
+
+    getMeeting();
 };
 
 
