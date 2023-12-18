@@ -2098,7 +2098,7 @@ setarray1(timeslots);
 function handleFileChange(event) {
   //console.log('test');
   setFile(event.target.files[0]);
-//handleSubmit();
+handleSubmit();
 }
 
 function handleFileChange2(event) {
@@ -2212,9 +2212,13 @@ function profile2(){
      (snapshot.bytesTransferred / snapshot.totalBytes) * 100
          );
  // update progress
+
+ console.log('workkk')
          setPercent(percent);
          },
-     (err) => //console.log(err),
+         (err) => {
+          console.error(err); // Log the error
+        },
          () => {
      // download url
          getDownloadURL(uploadTask.snapshot.ref).then((url) => {
@@ -2222,6 +2226,7 @@ function profile2(){
          setfileName(file.name);
          
          setfileType(file.type);
+         console.log(url);
          setfileUrl(url);
          setshowpercent(false);
          setfilecount(filecount + 1);
@@ -2237,7 +2242,7 @@ function profile2(){
 
      
      function addInFirebase() {
-       
+       console.log('before');
       const today = new Date();
 const date = today.getDate();
 const month = today.getMonth() + 1; // add 1 because months are zero-indexed
@@ -2255,6 +2260,8 @@ const year = today.getFullYear();
             //router.push('/client/login')
             setErrorMessage("File Uploaded");
             getFiles();
+
+            console.log('after');
           
           })
           .catch((err) => {
