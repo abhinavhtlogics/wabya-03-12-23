@@ -843,7 +843,7 @@ h4{color:#f79632;}
 .client-dashboard .banner-et .btn-schedule{ background: #d479a5; color: #f7f0e4; float: none;}
 .client-dashboard .banner-et .padd{margin: 20px 0; margin-bottom: 20px;}
 .client-dashboard .banner-et .padd-left{float: left;}
-.client-dashboard .banner-et .padd-right{ float: right;}
+.client-dashboard .banner-et .padd-right{ float: right;} 
 .client-dashboard .banner-et .table{ border-top: 1px solid #0f2540; }
 .client-dashboard .table-coach p{ letter-spacing: 2px; font-weight: 400;}
 .client-dashboard .table-coach .table-pad td{/*padding-bottom: 30px;*/ padding: .5rem .5rem 30px !important !important; vertical-align: middle;}
