@@ -3767,7 +3767,8 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                         <h5>select a date &amp; time</h5>
                         <Calendar onChange={getTimeslots} value={date} minDate={today} />
                         <h5>time zone </h5>
-                        <p>{coachesCalTimezone}</p>
+                        {/* <p>{coachesCalTimezone}</p> */}
+                        <p>{client ? <> {client.client_zone} </> : null}</p>
                       </div>
                     </div>
                     {isShow ? (
