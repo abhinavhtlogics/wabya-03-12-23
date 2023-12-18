@@ -2920,9 +2920,9 @@ const year = today.getFullYear();
 
                           <Video /> Join Video
                         </button> */}
-                         <Link href="#" onClick={showContactCoach}>
+                         {/* <Link href="#" onClick={showContactCoach}>
                           <a className="btn btn-coach my-4" onClick={showContactCoach}> contact coach</a>
-                        </Link>
+                        </Link> */}
                       </th>
                      
                     </tr>
@@ -2933,6 +2933,9 @@ const year = today.getFullYear();
                       <td>{mycoach ? mycoach[0].coach_name : null }</td>
                       <td></td>
                       <td>
+                      <Link href="#" onClick={showContactCoach}>
+                          <a className="btn btn-coach contact-coach-btn" onClick={showContactCoach}> contact coach</a>
+                        </Link>
                         {/* <Link href="#" onClick={showContactCoach}>
                           <a className="btn btn-coach" onClick={showContactCoach}> contact coach</a>
                         </Link> */}
