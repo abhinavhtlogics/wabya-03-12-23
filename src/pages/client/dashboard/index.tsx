@@ -3752,7 +3752,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                       <div className="coach-fig">
                         <figure>
                           <img
-                            src="../../images/dummy-user.png"
+                            src={client.client_profile ? client.client_profile : proImage}
                             alt="Coach Name"
                           />
                         </figure>
@@ -3774,7 +3774,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                       <div className="col-sm-4">
                         <div className="cal-time">
                           <p>
-                            {Day_} {Month} {Date_}
+                            {Day_.toLowerCase()} {Month.toLowerCase()} {Date_}
                           </p>
                           {isUnavailable ? (
 
