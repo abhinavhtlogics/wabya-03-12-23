@@ -442,6 +442,9 @@ h4{color:#f79632;}
   .timesheet-resources .file-info .fi-coll .inner h4 a:hover{color:#f79632;}
   .timesheet-resources .file-info::-webkit-scrollbar { background: transparent; border: 1px solid #0f2540; border-radius: 20px; width: 13px; }
   .timesheet-resources .file-info::-webkit-scrollbar-thumb{ background: #0f2540; border-radius: 20px;}
+  .timesheet-resources .left figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-08.png); background-repeat: no-repeat;
+    background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+
 
   .timesheet-resources .file-info-inner{background:#f7f0e4; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; height: 480px; overflow-y: scroll; overflow-x: hidden; padding:0; margin: 0 0 30px;}
   .timesheet-resources .file-info-inner::-webkit-scrollbar { background: transparent; border: 1px solid #0f2540; border-radius: 20px; width: 13px; }
