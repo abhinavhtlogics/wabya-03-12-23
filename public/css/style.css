@@ -833,25 +833,13 @@ h4{color:#f79632;}
     position: relative;
     z-index: 2;
 }
-.client-dashboard .banner-et .btn-session{
-    color: #0f2540;
-    background: #f7f0e4;
-}
-.client-dashboard .banner-et .btn-book{
-  color: #0f2540;
-  background: #6dc1a4; font-weight: 700; letter-spacing: 1px;
-}
+.client-dashboard .banner-et .btn-session{color: #0f2540; background: #f7f0e4;}
+.client-dashboard .banner-et .btn-book{color: #0f2540; background: #6dc1a4; font-weight: 700; letter-spacing: 1px;}
 .client-dashboard .banner-et{width: 77%;}
-.client-dashboard .banner-et th .btn-coach {
-  margin-left: 0;
-}
-.client-dashboard .banner-et .btn-coach {
-  background: #1d696c;
- color: #f7f0e4;
- float: none;
-  margin-left: 15px;
-}
+.client-dashboard .banner-et th .btn-coach{margin-left: 0;}
+.client-dashboard .banner-et .btn-coach{background: #1d696c; color: #f7f0e4; float: none; margin-left: 15px;}
 .client-dashboard .banner-et .btn-coach.contact-coach-btn{margin: 0;}
+.client-dashboard .banner-et .table td{vertical-align: middle;}
 .client-dashboard .banner-et .btn-schedule{ background: #d479a5; color: #f7f0e4; float: none;}
 .client-dashboard .banner-et .padd{margin: 20px 0; margin-bottom: 20px;}
 .client-dashboard .banner-et .padd-left{float: left;}
