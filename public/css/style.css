@@ -1220,8 +1220,8 @@ h4{color:#f79632;}
 .react-calendar__navigation button:nth-child(3){order: 1; text-align: left;}
 .react-calendar__navigation button:nth-child(4){order: 4;}
 .react-calendar__navigation button:nth-child(5){order: 5;}
-
-.react-calendar__navigation button:disabled{background-color: #f0f0f0;}
+.react-calendar__navigation button.react-calendar__navigation__label:hover{background: none !important;}
+.react-calendar__navigation button:disabled{background-color: #f0f0f0;  -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
   background-color: #e6e6e6; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
