@@ -1272,7 +1272,7 @@ h4{color:#f79632;}
   background: transparent;
   color: #0f2540;
 }
-.react-calendar__tile--now:enabled:hover abbr,
+.react-calendar__tile--now:enabled:hover abbr{background:#cbc7b8; color: #0f2540;}
 .react-calendar__tile--now:enabled:focus abbr{
    background: #0f2540;
   color: #f7f0e4;
