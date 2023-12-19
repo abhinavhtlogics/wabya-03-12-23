@@ -3200,6 +3200,7 @@ button{font-family: Gothic A1 !important;}
       .user-time-table{padding: 50px 0;position: relative;}
       .time-table-sec{padding-top: 20px;position: relative;}
       .user-time-table .table-heading h2,.table-heading p{color: #0e2540;}
+	  .user-time-table .table-heading p{margin:0;}
       .user-time-table .time-table-sec .table{width: 100%;text-align: center;}
       .user-time-table .time-table-sec .table tr th{text-transform: lowercase;font-weight: 600;letter-spacing: 0; font-size: 13px; padding: 5px;}
       .user-time-table .table span{display: block;font-size: 8px;}
