@@ -3214,6 +3214,7 @@ button{font-family: Gothic A1 !important;}
        .client-sec,.month-sec{position: relative;padding: 30px 0;}
        .client-sec .table{border-spacing: 0;width: 100%;text-align: left;position: relative;border-collapse: inherit;}
 	   .client-sec .table tbody tr:first-child th{padding: 15px 10px;}
+	   .user-time-table .month-sec .table tr th{padding: 8px 10px !important;}
 	   .month-sec
        .user-time-table .month-sec .table tr th,.client-sec .table tr th{font-weight: 600 !important;text-align: center; padding: 7px 10px 7px;}
        .user-time-table .month-sec .table tbody th{font-size: 14px;}
@@ -3253,9 +3254,9 @@ button{font-family: Gothic A1 !important;}
        .time-table-sec .page-link1:first-child{left: -15px;}
        .time-table-sec .page-link1:nth-child(2){right: -15px;}
 
-      .client-sec .page-link1{position: absolute;z-index: 99;top: 94px;}
+      .client-sec .page-link1{position: absolute;z-index: 99;top: 99px;}
       .client-sec .page-link1 img{width: 22px;}
-      .client-sec .prev{left: 33%;}
+      .client-sec .prev{left: 33.7%;}
       .client-sec .next{right: 3%;}
 	  
   .user-profile ul li a{border-bottom: none !important; padding: 0; font-size: 12px; background-color: transparent; text-transform: lowercase; border: 0;}
