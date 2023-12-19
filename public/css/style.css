@@ -1208,6 +1208,9 @@ h4{color:#f79632;}
   border: 0;
   outline: none;
 }
+.react-calendar .react-calendar__month-view button {
+  flex: inherit !important;
+}
 .react-calendar button:enabled:hover {
   cursor: pointer;
 }
