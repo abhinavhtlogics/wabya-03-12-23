@@ -1220,11 +1220,11 @@ h4{color:#f79632;}
   background: none;
 }
 
-.react-calendar__navigation button:nth-child(1){order: 2;}
+.react-calendar__navigation button:nth-child(1){order: 2; display: none;}
 .react-calendar__navigation button:nth-child(2){order: 3;}
 .react-calendar__navigation button:nth-child(3){order: 1; text-align: left;}
 .react-calendar__navigation button:nth-child(4){order: 4;}
-.react-calendar__navigation button:nth-child(5){order: 5;}
+.react-calendar__navigation button:nth-child(5){order: 5; display: none;}
 .react-calendar__navigation button.react-calendar__navigation__label:hover, .react-calendar__navigation button.react-calendar__navigation__label:hover{background: none !important;}
 .react-calendar__navigation button.react-calendar__navigation__label{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
 .react-calendar__navigation button:disabled{background-color: inherit;}
