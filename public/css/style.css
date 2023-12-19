@@ -57,7 +57,7 @@ h4{color:#f79632;}
 .desktop-hidden{display:block !important;}
 .mobile-hidden{display:none !important;}
 
-.background-dark{background: #ede7d6 !important;}
+.background-dark.ant-modal-contentbackground: #ede7d6 !important;}
 .background-dark .ant-modal-content{background: #ede7d6 !important;}
 
 /* admin header dashboard */
@@ -3426,10 +3426,10 @@ button{font-family: Gothic A1 !important;}
    
    .calendar-mobile{position:relative; margin:0; padding: 30px 15px 30px; z-index:1;}
    .calendar-mobile h2{color:#2d394c; font-weight:500;}
-   .calendar-mobile .calendar-profile figure{position:relative;}
+   .calendar-mobile .calendar-profile figure{position:relative; width: 64px;}
    .calendar-mobile .calendar-profile figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-08.png); background-repeat: no-repeat;
   background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
-  .calendar-mobile .calendar-profile figure img{width: 78px; height: 75px; object-fit: cover; object-position: center center; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
+  .calendar-mobile .calendar-profile figure img{width: 64px; height: 62px; object-fit: cover; object-position: center center; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
    .calendar-mobile .calendar-weeksheet{display:flex; gap: 1px; margin:0 -5px 20px;}
    .calendar-mobile .calendar-weeksheet .col-weeksheet{color:#2d394c; font-family: 'Gothic A1', sans-serif; font-weight:500; padding: 10px 1px; width: 14.2%; text-align: center; font-size: 14px; position:relative; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;}
    .calendar-mobile .calendar-weeksheet .col-weeksheet.active{background: #f7f0e5;}
