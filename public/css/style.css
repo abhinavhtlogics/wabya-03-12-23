@@ -3262,6 +3262,8 @@ button{font-family: Gothic A1 !important;}
   .session-history-modal .table-sess th{border-right: 1px solid #0f2540; padding: 7px 5px; letter-spacing: -0.3px;}
   .session-history-modal .table-sess thead td{font-size: 12px !important; text-transform: uppercase; font-weight: 700; letter-spacing: 0 !important; text-align: center;}
   .session-history-modal .table-sess td, .session-history-modal .table-sess th{padding: 7px 5px; font-size: 12px; letter-spacing: -0.3px;}
+  .session-history .session-btn{text-align: center;}
+  .session-history .session-btn .btn{min-width: 205px;}
 
    .react-calendar button:enabled:hover abbr{width: 30px; height: 30px; line-height: 30px;}
    
