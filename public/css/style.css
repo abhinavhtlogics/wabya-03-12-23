@@ -3213,9 +3213,11 @@ button{font-family: Gothic A1 !important;}
 
        .client-sec,.month-sec{position: relative;padding: 30px 0;}
        .client-sec .table{border-spacing: 0;width: 100%;text-align: left;position: relative;border-collapse: inherit;}
-       .user-time-table .month-sec .table tr th,.client-sec .table tr th{font-weight: 500 !important;text-align: center;padding: 10px;}
+	   .client-sec .table tbody tr:first-child th{padding: 15px 10px;}
+	   .month-sec
+       .user-time-table .month-sec .table tr th,.client-sec .table tr th{font-weight: 600 !important;text-align: center; padding: 7px 10px 7px;}
        .user-time-table .month-sec .table tbody th{font-size: 14px;}
-       .client-sec h2{letter-spacing: 4px;margin: 10px 0 20px;color:#0e2540; font-size: 20px; font-weight: 400;}
+       .client-sec h2{letter-spacing: 2px; margin: 10px 0 20px;color:#0e2540; font-size: 20px; font-weight: 400;}
        .client-sec > .table tr:nth-child(1) th,.client-sec > .table tr:nth-child(2) th:nth-child(1){border-top: 1px solid #000;}
        .client-sec > .table tr:nth-child(1) th,.client-sec > .table tr:nth-child(2) th:nth-child(1),.client-sec > .table tr:last-child td:nth-child(2){border-left: 1px solid #000;}
        .client-sec > .table tr td:nth-child(1){border-left: 1px solid #000;}
