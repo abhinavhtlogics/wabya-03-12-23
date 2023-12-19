@@ -1224,7 +1224,7 @@ h4{color:#f79632;}
 .react-calendar__navigation button:disabled{background-color: #f0f0f0;}
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
-  background-color: #e6e6e6;
+  background-color: #e6e6e6; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
 }
 .react-calendar__month-view__weekdays {
   text-align: center;
