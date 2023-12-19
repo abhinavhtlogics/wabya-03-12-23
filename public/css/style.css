@@ -3279,7 +3279,7 @@ button{font-family: Gothic A1 !important;}
   .reschedule-zone .cal-time p{text-align: left;}
   
   .react-calendar button.react-calendar__navigation__label{font-size: 13px; font-weight: 400; text-transform: lowercase; padding: 0;}
-  .react-calendar button.react-calendar__navigation__label abbr{text-decoration: none !important;}}
+  .react-calendar__month-view__weekdays__weekday abbr{text-decoration: none !important;}
   .react-calendar__month-view__weekdays__weekday{padding: 10px 0; font-size: 12px; font-weight: 700;}
   .cal-time .btn-time{background: #f6efe3; font-weight: 400; font-size: 13px; text-shadow: none; text-transform: uppercase; letter-spacing: 1px; box-shadow: none; border: 1px solid #0f2540; min-width: inherit; text-align: center!important; border-radius: 20px; margin: 0 10px 12px 0; padding: 9px 20px; position: relative; z-index: 2; display: inline-block; color: #0f2540; width: 46%;}
   .cal-time .btn-time:focus, .cal-time .btn-time:hover, .cal-time .btn-time:visited{background: #f6efe3 !important; border: 1px solid #0f2540 !important; color: #fff !important;}
