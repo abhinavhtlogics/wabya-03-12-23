@@ -3263,7 +3263,7 @@ button{font-family: Gothic A1 !important;}
   .edit-password form .btn:after{background: #0e2540;}
 
   .resources-wrap{position:relative; margin:0; padding: 30px 15px 30px; z-index:1;}
-  .reschedule-zone .cal-time{height: auto; overflow-x: unset; overflow-y: unset; padding: 0; margin: 0 -10px 0 0;}
+  .reschedule-zone .cal-time{height: auto; overflow-x: unset; overflow-y: unset; padding: 0; margin: 0 -10px 0 0; text-align: left;}
   .reschedule-zone .cal-time p{text-align: left;}
   
   .react-calendar button.react-calendar__navigation__label{font-size: 13px; font-weight: 400; text-transform: lowercase; padding: 0;}
