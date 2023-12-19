@@ -2947,7 +2947,8 @@ button{font-family: Gothic A1 !important;}
    .react-calendar__tile abbr{width: 30px; height: 30px; line-height: 30px; font-size: 13px;}
    .reschedule-zone .resc-cal{border-left: 0; height: 100%; padding-left: 0;}
    .reschedule-zone .col-sm-6{}
-   .reschedule-zone .resc-cal h5{text-align: left;}
+   .reschedule-zone .resc-cal h5{text-align: left; font-size: 15px;}
+   .reschedule-zone p{font-size: 14px;}
    .session-history-modal .history-modal h4{letter-spacing: 0;}
    .session-history-modal .history-modal{justify-content: start;}
 	.reschedule-zone .coach-fig{display: flex; align-items: center; gap: 15px; margin: 0 0 20px;}
@@ -3264,7 +3265,7 @@ button{font-family: Gothic A1 !important;}
   
   .react-calendar button.react-calendar__navigation__label{font-size: 13px; font-weight: 500; text-transform: lowercase; padding: 0;}
   .react-calendar__month-view__weekdays__weekday{padding: 10px 0; font-size: 12px; font-weight: 700;}
-  .cal-time .btn-time{background: #f6efe3; font-weight: 400; font-size: 14px; text-shadow: none; text-transform: uppercase; letter-spacing: 2px; box-shadow: none; border: 1px solid #0f2540; min-width: inherit; text-align: center!important; border-radius: 20px; margin: 0 10px 12px 0; padding: 10px 20px; position: relative; z-index: 2; display: inline-block; color: #0f2540; width: 46%;}
+  .cal-time .btn-time{background: #f6efe3; font-weight: 400; font-size: 13px; text-shadow: none; text-transform: uppercase; letter-spacing: 1px; box-shadow: none; border: 1px solid #0f2540; min-width: inherit; text-align: center!important; border-radius: 20px; margin: 0 10px 12px 0; padding: 9px 20px; position: relative; z-index: 2; display: inline-block; color: #0f2540; width: 46%;}
   .cal-time .btn-time:focus, .cal-time .btn-time:hover, .cal-time .btn-time:visited{background: #f6efe3 !important; border: 1px solid #0f2540 !important; color: #fff !important;}
   .session-history-modal .table-sess th{border-right: 1px solid #0f2540; padding: 7px 5px; letter-spacing: -0.3px;}
   .session-history-modal .table-sess thead td{font-size: 12px !important; text-transform: uppercase; font-weight: 700; letter-spacing: 0 !important; text-align: center;}
