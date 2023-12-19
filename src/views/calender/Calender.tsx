@@ -3551,7 +3551,7 @@ return(<>
          
         >
   <section className="schedule-session-new">
-    <div className="container">
+    <div className="">
       <div className="row">
         <div className="col-12">
           <h3 className="mrb-20">schedule a session</h3>
@@ -3562,7 +3562,7 @@ return(<>
           {/*/ form-group */}
           <div className="form-group mrb-30">
             <h4 className="mrb-5">select the time</h4>
-            <div className="inner">
+           
            
             <select name="cars" class="form-control" onChange={handleTimeClick}>
             
@@ -3579,7 +3579,7 @@ return(<>
     
   ))}
                </select>
-            </div>
+          
             {/*/ inner */}
           </div>
           {/*/ form-group */}
