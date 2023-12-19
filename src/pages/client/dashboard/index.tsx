@@ -3548,10 +3548,19 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
         </div>
 
 
-        <Modal
+        {/* <Modal
           centered
           className="session-history-modal"
           visible={isModalVisible}
+          onOk={handleOk}
+          onCancel={handleCancel2}
+          width={1100}
+        > */}
+
+<Modal
+          centered
+          className="session-history-modal"
+          visible={false}
           onOk={handleOk}
           onCancel={handleCancel2}
           width={1100}
@@ -3612,11 +3621,11 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
           </div> */}
 
 <>
-  <section className="session-history">
+  <section className="session-history" style={{'display':'none'}}>
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <h3 className="mrb-20">history</h3>
+          <h3 className="mrb-20">history h</h3>
           <div className="session-info">
 
           {meetingSession.length === 0 ? (
