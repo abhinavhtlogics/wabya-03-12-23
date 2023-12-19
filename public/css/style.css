@@ -1208,9 +1208,6 @@ h4{color:#f79632;}
   border: 0;
   outline: none;
 }
-.react-calendar .react-calendar__month-view button {
-  flex: inherit !important;
-}
 .react-calendar button:enabled:hover {
   cursor: pointer;
 }
@@ -1275,7 +1272,7 @@ h4{color:#f79632;}
   height: 55px;
   line-height: 55px;
   text-align: center;
-  border-radius: 100%;
+  border-radius: 100%; margin: 0 auto;
 }
 .react-calendar__tile:disabled{background-color: inherit;}
 .react-calendar__tile:disabled abbr{background-color: #cbc7b8; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; color: #0f2540;}
