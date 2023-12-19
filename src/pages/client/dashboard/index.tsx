@@ -3768,10 +3768,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                             alt="Coach Name"
                           />
                         </figure>
-                        <p>{coachesCalName}</p>
-                        <p>
-                          <strong>next session</strong>
-                        </p>
+                        <div className="coach-name"><h4>Coach Name</h4><p><strong>next session</strong></p></div>
                       </div>
                     </div>
                     <div className="col-sm-6">
