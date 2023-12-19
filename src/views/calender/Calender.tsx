@@ -3553,7 +3553,7 @@ return(<>
           <>
           <Modal
           centered
-          className="session-modal"
+          className="session-modal background-dark"
           visible={isSesShow}
           onOk={handleSchedule}
           onCancel={handleScheduleCancel}
