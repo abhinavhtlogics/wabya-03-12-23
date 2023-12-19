@@ -843,7 +843,7 @@ h4{color:#f79632;}
 .client-dashboard .banner-et .btn-schedule{ background: #d479a5; color: #f7f0e4; float: none;}
 .client-dashboard .banner-et .padd{margin: 20px 0; margin-bottom: 20px;}
 .client-dashboard .banner-et .padd-left{float: left;}
-.client-dashboard .banner-et .padd-right{ float: right;} 
+.client-dashboard .banner-et .padd-right{ float: right;}
 .client-dashboard .banner-et .table{ border-top: 1px solid #0f2540; }
 .client-dashboard .table-coach p{ letter-spacing: 2px; font-weight: 400;}
 .client-dashboard .table-coach .table-pad td{/*padding-bottom: 30px;*/ padding: .5rem .5rem 30px !important !important; vertical-align: middle;}
@@ -2943,8 +2943,15 @@ button{font-family: Gothic A1 !important;}
    .react-calendar__tile abbr{width: 30px; height: 30px; line-height: 30px; font-size: 13px;}
    .reschedule-zone .resc-cal{border-left: 0; height: 100%; padding-left: 0;}
    .reschedule-zone .col-sm-6{padding: 0 5px;}
-   .reschedule-zone .resc-cal h5{text-align: center;}
+   .reschedule-zone .resc-cal h5{text-align: left; padding: 0 5px;}
    .session-history-modal .history-modal h4{letter-spacing: 0;}
+   .session-history-modal .history-modal{justify-content: start;}
+	.reschedule-zone .coach-fig{display: flex; align-items: center; gap: 15px; margin: 0 0 20px;}
+	.reschedule-zone .coach-fig h4{color: rgba(0, 0, 0, 0.6); font-size: 16px; margin: 0 0 5px;}
+	.reschedule-zone .coach-fig figure{margin:0; width: 95px;}
+	.reschedule-zone .coach-fig figure img{width: 95px; height: 92px;}
+	.react-calendar__navigation button:nth-child(1){display: none;}
+    .react-calendar__navigation button:nth-child(5){display: none;}
    
    .header-mobile-coach .menu-head .navbar-toggler{border: 0; background: none !important; color: #fff; position: absolute; right: 0; top: 19px; margin: 0;}
   .header-mobile{background:#0e2540; display: block; position:relative; left:0; top:0; width:100%; z-index:5; padding:0;} 
