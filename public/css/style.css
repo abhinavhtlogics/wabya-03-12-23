@@ -551,6 +551,7 @@ h4{color:#f79632;}
 .timesheet-buttons .btn.btn-chestnutred{background:#ef7655; color: #0f2540;}
 .timesheet-buttons .btn.btn-thulian-pink{background:#d37aa5; color: #0f2540;}
 .timesheet-buttons .btn.btn-darkblue{background:#0f2540;}
+.timesheet-buttons .btn.btn-darkblue:after{background:#f59633;}
 
 /*.timesheet-buttons .btn{font-weight: 500; font-size: 15px; text-shadow: none; text-transform: lowercase; letter-spacing: 3px; color: #0f2540; box-shadow: none; border: 0; min-width: 190px; border-radius: 20px; text-align: center; margin: 0 0 0 15px; padding: 9px 20px 8px; position: relative; z-index: 2;}
 .timesheet-buttons .btn-one{background: #f59533;}
