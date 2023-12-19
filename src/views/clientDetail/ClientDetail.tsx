@@ -378,13 +378,13 @@ console.log(currentDate);
           <a href="#" className="file-link" target="_blank" />
           <div className="inner">
             <figure>
-              <img src={`../../images/${image_}.${img_ext}`} alt="" />
+              <img src={`../../../images/${image_}.${img_ext}`} alt="" />
             </figure>
             <h4>
               {myfile.fileName}<span>{myfile.uploadDate}</span>
             </h4>
             <figure className="download-right">
-              <img src={`../../images/${image_}.${img_ext}`} alt="" />
+              <img src={`../../../images/${image_}.${img_ext}`} alt="" />
             </figure>
           </div>
         </div>
