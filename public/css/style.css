@@ -3023,7 +3023,7 @@ button{font-family: Gothic A1 !important;}
   background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
   .user-detail-mobile .client-name .info-name img{min-width: 60px; width: 60px; height: 58px; min-height: 58px; object-fit: cover; object-position: center center;}
   .user-detail-mobile .client-name img{/*-webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; width: 75px; margin: 0 5px 0 0; border: 3px solid #fff;*/}
-  .user-detail-mobile h4{color: #0e2540; font-weight:600; font-size: 20px; margin: 0 0 5px;}
+  .user-detail-mobile h4{color: #0e2540; font-weight:600; font-size: 24px; margin: 0 0 5px;}
   .user-detail-mobile .session-info h3{color: #296c6f; font-size: 20px;}
   .user-detail-mobile .session-info ul{margin:0; padding:0 0 0 15px;}
   .user-detail-mobile .session-info ul li{margin:0; padding:0 0 5px; list-style: circle;}
@@ -3034,6 +3034,7 @@ button{font-family: Gothic A1 !important;}
   .user-detail-mobile .session-info .probono-text{position: relative; background:#f7f0e4; padding: 20px 20px 10px; margin:0; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px;}
   .user-detail-mobile .session-info .probono-text h3{border-bottom: 1px solid #0e2540; padding: 0 20px 15px; margin: 0 -20px 15px;}
   
+  .user-detail-mobile h4{font-size: 24px;}
   .notes-list h4{color: #0e2540; font-weight: 600; font-size: 20px; margin: 0 0 5px;}
   .notes-search form{position:relative; z-index:2;}
   .notes-search form i{position: absolute; right: 10px; top: 12px; z-index: 5; font-size: 18px; color:#0b233f;}
