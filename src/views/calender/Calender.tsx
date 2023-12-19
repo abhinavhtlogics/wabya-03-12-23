@@ -102,6 +102,18 @@ const options = {
 };
 
 
+const options22 = {
+  items: 1,
+  loop: true,
+  nav: true,
+  rewind: true,
+
+  // navText: [
+  //   "<i class='fa fa-angle-left'></i>",
+  //   "<i class='fa fa-angle-right'></i>"
+  // ]
+};
+
 
 
 const getCurrentWeek = () => {
@@ -2947,7 +2959,7 @@ footer={[]}
       </div>
 
       <div className="timesheet-carousel" >
-          <OwlCarousel options={options}>
+          <OwlCarousel options={options22}>
 
           { forloops.map((floop, index) => {
             let i=(index)*7;
