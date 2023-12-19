@@ -3623,7 +3623,7 @@ return(<>
 
 <Modal
           centered
-          className="session-modal "
+          className="session-modal background-dark"
           visible={isAvblShow}
           onOk={handleavbl}
           onCancel={handleavblCancel}
@@ -3665,7 +3665,9 @@ return(<>
               </div>
 
              
-              <div className="inner inner-edit">
+              <div className="inner"
+              
+              >
                
                   
                 { ! isEdit ?
