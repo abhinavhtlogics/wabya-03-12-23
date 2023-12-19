@@ -57,6 +57,9 @@ h4{color:#f79632;}
 .desktop-hidden{display:block !important;}
 .mobile-hidden{display:none !important;}
 
+.background-dark{background: #ede7d6 !important;}
+.background-dark .ant-modal-content{background: #ede7d6 !important;}
+
 /* admin header dashboard */
 .admin-header{position:relative; background:#0f2540; left:0; top:0; width:100%; z-index:5; padding:0;}
 
