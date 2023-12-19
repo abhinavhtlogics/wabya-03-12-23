@@ -2949,6 +2949,7 @@ button{font-family: Gothic A1 !important;}
    .reschedule-zone .resc-cal{border-left: 0; height: 100%; padding-left: 0;}
    .reschedule-zone .col-sm-6{}
    .reschedule-zone .resc-cal h5{text-align: left; font-size: 15px;}
+   .reschedule-zone .resc-cal p{margin: 0 0 5px;}
    .reschedule-zone p{font-size: 14px;}
    .session-history-modal .history-modal h4{letter-spacing: 0;}
    .session-history-modal .history-modal{justify-content: start;}
