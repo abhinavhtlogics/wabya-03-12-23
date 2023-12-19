@@ -1212,11 +1212,11 @@ h4{color:#f79632;}
 }
 .react-calendar__navigation {
   display: flex;
-  height: 44px;
-  margin-bottom: 1em; font-size: 20px;
+  height: inherit; min-height: 28px;
+  margin-bottom: 1em; font-size: 26px;
 }
 .react-calendar__navigation button {
-  min-width: 44px;
+  min-width: 24px;
   background: none;
 }
 
@@ -1227,11 +1227,9 @@ h4{color:#f79632;}
 .react-calendar__navigation button:nth-child(5){order: 5;}
 .react-calendar__navigation button.react-calendar__navigation__label:hover, .react-calendar__navigation button.react-calendar__navigation__label:hover{background: none !important;}
 .react-calendar__navigation button.react-calendar__navigation__label{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
-.react-calendar__navigation button:disabled{background-color: #f0f0f0; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;}
+.react-calendar__navigation button:disabled{background-color: inherit;}
 .react-calendar__navigation button:enabled:hover,
-.react-calendar__navigation button:enabled:focus {
-  background-color: #e6e6e6; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
-}
+.react-calendar__navigation button:enabled:focus{background-color: inherit;}
 .react-calendar__month-view__weekdays {
   text-align: center;
   text-transform: lowercase;
@@ -1267,9 +1265,8 @@ h4{color:#f79632;}
   text-align: center;
   border-radius: 100%;
 }
-.react-calendar__tile:disabled {
-  background-color: #f0f0f0;
-}
+.react-calendar__tile:disabled{background-color: inherit;}
+.react-calendar__tile:disabled abbr{background-color: #cbc7b8; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; color: #0f2540;}
 .react-calendar__tile:enabled:hover abbr{background:#cbc7b8; color: #0f2540;}
 .react-calendar__tile:enabled:focus abbr  {
   background-color: #0f2540;
@@ -3265,7 +3262,7 @@ button{font-family: Gothic A1 !important;}
   .reschedule-zone .cal-time{height: auto; overflow-x: unset; overflow-y: unset; padding: 0; margin: 0 -10px 0 0;}
   .reschedule-zone .cal-time p{text-align: left;}
   
-  .react-calendar button.react-calendar__navigation__label{font-size: 12px; font-weight: 700; text-transform: lowercase;}
+  .react-calendar button.react-calendar__navigation__label{font-size: 13px; font-weight: 500; text-transform: lowercase; padding: 0;}
   .react-calendar__month-view__weekdays__weekday{padding: 10px 0; font-size: 12px; font-weight: 700;}
   .cal-time .btn-time{background: #f6efe3; font-weight: 400; font-size: 14px; text-shadow: none; text-transform: uppercase; letter-spacing: 2px; box-shadow: none; border: 1px solid #0f2540; min-width: inherit; text-align: center!important; border-radius: 20px; margin: 0 10px 12px 0; padding: 10px 20px; position: relative; z-index: 2; display: inline-block; color: #0f2540; width: 46%;}
   .cal-time .btn-time:focus, .cal-time .btn-time:hover, .cal-time .btn-time:visited{background: #f6efe3 !important; border: 1px solid #0f2540 !important; color: #fff !important;}
