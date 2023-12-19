@@ -3250,7 +3250,7 @@ button{font-family: Gothic A1 !important;}
        .time-table-sec .page-link1:first-child{left: -15px;}
        .time-table-sec .page-link1:nth-child(2){right: -15px;}
 
-      .client-sec .page-link1{position: absolute;z-index: 99;top: 99px;}
+      .client-sec .page-link1{position: absolute;z-index: 99;top: 94px;}
       .client-sec .page-link1 img{width: 22px;}
       .client-sec .prev{left: 50%; margin: 0 0 0 -50px;}
       .client-sec .next{right: 3%;}
