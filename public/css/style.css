@@ -1246,7 +1246,8 @@ h4{color:#f79632;}
   font-size: 17px;
   letter-spacing: 2px;
 }
-.react-calendar__month-view__weekdays__weekday { padding: 10px 0; }
+.react-calendar__month-view__weekdays__weekday{padding: 10px 0;}
+.react-calendar__month-view__weekdays__weekday abbr{text-decoration: none;}
 .react-calendar__month-view__weekNumbers .react-calendar__tile {
   display: flex;
   align-items: center;
