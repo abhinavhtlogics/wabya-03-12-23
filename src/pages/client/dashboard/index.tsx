@@ -376,9 +376,7 @@ function toggleProfile() {
     console.log('response',response);
   }    	
 
-  function onClickYear(value, event){
-    alert('Clicked year: ', value)
-  }
+  
 
   const scheduleNext = async () => {
     setbookingLoad(true);
@@ -3781,9 +3779,9 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                       <div className="resc-cal">
                         <h5>select a date</h5>
                         <Calendar onChange={getTimeslots} value={date} minDate={today} />
-                        {/* <h5>time zone </h5> */}
+                        <h5 className="desktop-hidden timezone">time zone </h5>
                         {/* <p>{coachesCalTimezone}</p> */}
-                        {/* <p>{client ? <> {client.client_zone} </> : null}</p> */}
+                        <p className="desktop-hidden timezone">{client ? <> {client.client_zone} </> : null}</p>
                       </div>
                     </div>
                     {isShow ? (
@@ -3872,8 +3870,8 @@ onClick={handleTimeClick}
                             <div className="btn btn-time"> Loading...</div>
                           ) : null}
                         </div>
-<h5>time zone </h5>
-                         <p>{client ? <> {client.client_zone} </> : null}</p>
+<h5 className="mobile-hidden">time zone </h5>
+                         <p className="mobile-hidden">{client ? <> {client.client_zone} </> : null}</p>
                         <button className="btn btn-next" onClick={scheduleNext}  disabled={!meetingtime && isUnavailable}>
                           next <i className="fa fa-arrow-right"></i>
                         </button>
