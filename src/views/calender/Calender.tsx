@@ -3584,7 +3584,24 @@ return(<>
           {/*/ form-group */}
 
 
-          <div class="availability-wrap availability-wrap-session"><h4>select the time</h4><div class="availability-box availability-box-edit"><div class="inner"><span><small>from</small>09 : 00</span><span><small>to</small>17: 00</span></div></div></div>
+          <div class="availability-wrap availability-wrap-session"><h4>select the time</h4>
+          <div class="availability-box availability-box-edit">
+            <div class="inner">
+              <span><small>from</small>09 : 00</span>
+              <span><small>to</small>17: 00</span>
+              </div>
+              </div>
+              
+              {/* {array2.map((timeSlot, index) => (
+    
+    <option   data-key={index}
+    key={index}
+    data-time={timeSlot}
+   
+    >{timeSlot}</option>
+  
+))} */}
+              </div>
 
 
 
