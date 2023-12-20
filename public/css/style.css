@@ -1,5 +1,5 @@
 html{overflow-x:hidden;}
-html, body {height: 100%;} 
+html, body {height: 100%;}
 
 body{background:#ece6d3 !important; font-size: 16px !important; font-family: 'Gothic A1', sans-serif !important; font-weight:400 !important; color: #1b1b1b !important;}
 
@@ -3391,7 +3391,7 @@ button{font-family: Gothic A1 !important;}
    .get-paid .session-grid .dropdown-toggle{font-size:16px;}
    
    .coaching-journey{padding: 0 0 30px;}
-   .coaching-journey .inner{text-align:center;}
+   .coaching-journey .inner{text-align:center; padding: 30px 25px 15px;}
    .coaching-journey .inner p{text-align: center;}
    .philosophy{padding: 0 0 100px;}
    
