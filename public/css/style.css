@@ -1174,7 +1174,7 @@ h4{color:#f79632;}
 .reschedule-zone .btn-next:hover:after{width: 100%; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px;}
 
 .reschedule-zone .resc-cal h5 {
-  margin-bottom: 10px; font-weight: 500;
+  margin-bottom: 10px; font-weight: 500; padding-left: 5px;
 }
 .react-calendar {
   width: 100%;
@@ -2960,7 +2960,7 @@ button{font-family: Gothic A1 !important;}
    .react-calendar__tile abbr{width: 30px; height: 30px; line-height: 30px; font-size: 12px;}
    .reschedule-zone .resc-cal{border-left: 0; height: 100%; padding-left: 0;}
    .reschedule-zone .col-sm-6{}
-   .reschedule-zone h5{text-align: left; font-size: 15px;}
+   .reschedule-zone h5{text-align: left; font-size: 15px; padding-left: 0;}
    .reschedule-zone .resc-cal p{margin: 0 0 5px;}
    .react-calendar__navigation{margin-bottom: 0;}
    .reschedule-zone p{font-size: 14px;}
