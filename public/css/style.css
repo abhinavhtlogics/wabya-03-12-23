@@ -3324,6 +3324,9 @@ button{font-family: Gothic A1 !important;}
    .meet-team .row{padding: 50px 35px 20px;}
    .meet-team .meet-client-box{background: #fcf8f2; -webkit-border-radius: 30px; -moz-border-radius: 30px;
   border-radius: 30px; padding: 20px 20px; margin: 0 0 30px;}
+   .meet-team{padding: 15px 0 20px;}
+   .pvmv{padding: 25px 0 40px;}
+   .pvmv .row{padding: 40px 15px 20px;}
   
    .about-coaching .left{margin:0 0 30px; width: 100%;}
    .about-coaching .right{width: 100%;}
