@@ -2094,7 +2094,7 @@ img.tree-image {
    .pricing-wrap h2{font-size: 40px;}
    .pricing-wrap .row{margin:0 -15px;}
    .pricing-wrap .top{padding:0 15px;}
-   .pricing-wrap .pw-coll{padding:0 15px;}
+   .pricing-wrap .pw-coll{padding:0 15px; margin: 0 0 50px;}
 
    .faq-sec .accordion-top{max-width: inherit; margin: 0;}
    .faq-sec .accordion-top::after{height: 63px; width: 62px; top: -25px; right: 0;}
