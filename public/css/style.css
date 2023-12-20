@@ -628,9 +628,9 @@ h4{color:#f79632;}
 .month-overview-table .table-month th { border-right: 1px solid #0f2540; text-align: center;}
 .month-overview-table .table-month td { border-right: 1px solid #0f2540; text-align: center; border-bottom: none;}
 .month-overview-table .table-month td:last-child, .month-overview-table .table-month th:last-child{border-right: none;}
-.month-overview-table .table-month td.bundle{border-left: 8px solid #6cc3a5;}
-.month-overview-table .table-month td.pay{border-left: 8px solid #f59533;}
-.month-overview-table .table-month td.probono{border-left: 8px solid #d479a6;}
+.month-overview-table .table-month td.bundle{border-left: 8px solid #6cc3a5; text-align: left; padding-left: 20px;}
+.month-overview-table .table-month td.pay{border-left: 8px solid #f59533; text-align: left; padding-left: 20px;}
+.month-overview-table .table-month td.probono{border-left: 8px solid #d479a6; text-align: left; padding-left: 20px;}
 
 /* calendar */
 .calendar{position:relative; margin:0; padding:70px 0 80px; z-index:1;}
