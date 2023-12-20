@@ -780,7 +780,7 @@ return (
 
       return (
         <tr key={index}>
-        <td className='bundle'>{cl.client_name}</td>
+        <td className={index % 3 === 0 ? "bundle aqua" : (index % 3 === 1 ? "bundle aqua orange" : "bundle aqua pink")}>{cl.client_name}</td>
 
         <td>{`${ (((filteredMeetingSessions2(1,7).filter(
         meet => meet.client_id === cl.client_id
@@ -815,11 +815,11 @@ return (
   })}
     <tr>
                           <td colSpan={3}></td>
-                          <td> <strong>Total</strong></td>
+                          <td> </td>
                           <td>{`${ (((filteredMeetingSessions3(1,31)).length * 30) / 60).toFixed(1)} HOURS`}</td>
 
                          
-                          <td> <strong>Total</strong> <span>£{ calculateEarnings('novice') + calculateEarnings('experienced')}.00</span></td>
+                          <td>£{ calculateEarnings('novice') + calculateEarnings('experienced')}.00</td>
 
                         </tr>
                       </tbody>

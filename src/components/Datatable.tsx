@@ -260,8 +260,9 @@ return (
               <td>£{experiencedCount * 50}.00</td>
           </tr>
           <tr>
-              <td colSpan={2}></td>
-              <td><strong>Total</strong> <span>£{(probonoCount * 0) + (noviceCount * 20)  + (experiencedCount * 50)}.00</span></td>
+              <td></td>
+              <td><strong>Total</strong></td>
+              <td> £{(probonoCount * 0) + (noviceCount * 20)  + (experiencedCount * 50)}.00</td>
           </tr>
       </>
   ) : null
