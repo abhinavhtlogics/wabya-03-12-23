@@ -3851,6 +3851,55 @@ return(<>
 </a>
 
             </p>
+
+
+
+<>
+            <h3 className="mrb-20">schedule a session</h3>
+          <div className="form-group mrb-30">
+            <h4 className="mrb-5">select the date</h4>
+            <Calendar  />
+          </div>
+          {/*/ form-group */}
+
+
+          <div class="availability-wrap availability-wrap-session"><h4>select the time</h4>
+          <div class="availability-box availability-box-edit">
+            <div class="inner">
+              <span><small>from</small>09 : 00</span>
+              <span><small>to</small>17: 00</span>
+              <span className='plus'> + </span>
+              </div>
+              </div>
+              </div>
+
+
+              <p className="text-center btn-p">
+
+           
+            <a href="#" className="btn btn-darkgreen" style={{
+    width: "auto",
+    background: "#f27553",
+    minWidth: "150px",  // Use camelCase for property names with dashes
+    borderRadius: "30px", // Use camelCase for property names with dashes
+    color: "#fff"
+}}>
+    save
+</a>
+
+            </p>
+
+</>
+
+
+
+
+
+
+
+
+
+
           </div>
           {/*/ availability-list */}
         </div>
