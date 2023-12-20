@@ -1048,7 +1048,7 @@ return (
 
       return (
         <tr key={index}>
-          <td className="aqua">{cl.client_name}</td>
+          <td className={index % 3 === 0 ? "aqua" : (index % 3 === 1 ? "aqua orange" : "aqua pink")}>{cl.client_name}</td>
           <td>{`${totalDurationHours.toFixed(1)} HOURS`}</td>
           <td>{`${earnings.toFixed(2)}`}</td>
         </tr>
@@ -1142,23 +1142,24 @@ return (
   index === 0 ? (
       <>
           <tr>
-              <td className='bundle'>probono </td>
+              <td className='bundle aqua'>probono </td>
               <td>{probonoCount} hours</td>
               <td>£00.00</td>
           </tr>
           <tr>
-              <td className='pay'>novice</td>
+              <td className='pay aqua orange'>novice</td>
               <td>{noviceCount * 0.5} hours</td>
               <td>£{noviceCount * 20}.00</td>
           </tr>
           <tr>
-              <td className='probono'>experienced</td>
+              <td className='probono aqua pink'>experienced</td>
               <td>{experiencedCount * 0.5} hours</td>
               <td>£{experiencedCount * 50}.00</td>
           </tr>
           <tr>
-              <td colSpan={2}></td>
-              <td><strong>Total</strong> <span>£{(probonoCount * 0) + (noviceCount * 20)  + (experiencedCount * 50)}.00</span></td>
+              <td></td>
+              <td><strong>Total</strong></td>
+              <td> £{(probonoCount * 0) + (noviceCount * 20)  + (experiencedCount * 50)}.00</td>
           </tr>
       </>
   ) : null
