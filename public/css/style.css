@@ -1230,9 +1230,9 @@ h4{color:#f79632;}
 }
 
 .react-calendar__navigation button:nth-child(1){order: 2; display: none;}
-.react-calendar__navigation button:nth-child(2){order: 3; text-indent: -99999px; background-image: url(https://wabya-dev-site.netlify.app/images/arrow-right-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px;}
+.react-calendar__navigation button:nth-child(2){order: 3; text-indent: -99999px; background-image: url(https://wabya-dev-site.netlify.app/images/arrow-right-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px;}
 .react-calendar__navigation button:nth-child(3){order: 1; text-align: left;}
-.react-calendar__navigation button:nth-child(4){order: 4; text-indent: -99999px; background-image: url(https://wabya-dev-site.netlify.app/images/arrow-right-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px;}
+.react-calendar__navigation button:nth-child(4){order: 4; text-indent: -99999px; background-image: url(https://wabya-dev-site.netlify.app/images/arrow-right-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px;}
 .react-calendar__navigation button:nth-child(5){order: 5; display: none;}
 .react-calendar__navigation button.react-calendar__navigation__label:hover, .react-calendar__navigation button.react-calendar__navigation__label:hover{background: none !important;}
 .react-calendar__navigation button.react-calendar__navigation__label{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
@@ -3471,7 +3471,7 @@ button{font-family: Gothic A1 !important;}
    .calendar-mobile .calendar-timesheet ul{margin:0; padding:0;}
    .calendar-mobile .calendar-timesheet ul li{color:#677484; font-weight:500; font-size: 12px; margin:0; padding:0 0 25px; list-style:none;}
    .calendar-mobile .timesheet-fix{background: #75c3a8; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; color:#fff; font-weight:500; font-size: 12px; margin:0 0 30px; padding:10px 10px 5px; list-style:none;}
-   .calendar-mobile .timesheet-fix h3{color:#fff; font-weight:500; font-size: 14px; margin:0; padding:0; letter-spacing:1px;}
+   .calendar-mobile .timesheet-fix h3{color:#fff; font-weight:500; font-size: 14px; margin:0; padding:0; letter-spacing:1px; text-transform: lowercase;}
    .calendar-mobile .timesheet-fix h4{color:#fff; font-weight: bold; font-size: 14px; margin:0; padding:0 0 3px; letter-spacing:1px;}
    .calendar-mobile .timesheet-fix p{margin:0; letter-spacing:1px;}
    .calendar-mobile .calendar-btns .btn-orange{background:#f17c5d;}
