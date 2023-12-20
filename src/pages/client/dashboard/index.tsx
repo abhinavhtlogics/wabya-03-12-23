@@ -3773,7 +3773,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                     </div>
                     <div className="col-sm-6">
                       <div className="resc-cal">
-                        <h5>select a date &amp; time</h5>
+                        <h5>select a date</h5>
                         <Calendar onChange={getTimeslots} value={date} minDate={today} />
                         {/* <h5>time zone </h5> */}
                         {/* <p>{coachesCalTimezone}</p> */}
@@ -3783,6 +3783,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                     {isShow ? (
                       <div className="col-sm-4">
                         <div className="cal-time">
+                          <h5>select a time </h5>
                           <p>
                             {Day_.toLowerCase()} {Month.toLowerCase()} {Date_}
                           </p>
