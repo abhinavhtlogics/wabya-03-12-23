@@ -2957,7 +2957,7 @@ button{font-family: Gothic A1 !important;}
 
    .schedule-session-new{padding: 30px 0;}
    .schedule-session-new .MuiPaper-root{width: 100% !important;}
-   .react-calendar__tile abbr{width: 30px; height: 30px; line-height: 30px; font-size: 13px;}
+   .react-calendar__tile abbr{width: 30px; height: 30px; line-height: 30px; font-size: 12px;}
    .reschedule-zone .resc-cal{border-left: 0; height: 100%; padding-left: 0;}
    .reschedule-zone .col-sm-6{}
    .reschedule-zone h5{text-align: left; font-size: 15px;}
