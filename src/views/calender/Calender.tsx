@@ -3672,7 +3672,6 @@ return(<>
 
 
 
-
 <Modal
           centered
           className="session-modal background-dark"
@@ -3840,13 +3839,7 @@ return(<>
             <p className="text-center btn-p">
 
             {scheduleSuccess &&  <Alert severity='success' style={{ margin :'0 0 20px 0',width:'70%'}}> Data Saved</Alert> }
-            <a href="#" className="btn btn-darkgreen" style={{
-    width: "auto",
-    background: "#f27553",
-    minWidth: "150px",  // Use camelCase for property names with dashes
-    borderRadius: "30px", // Use camelCase for property names with dashes
-    color: "#fff"
-}} onClick={updateSchedule}>
+            <a href="#" className="btn btn-darkblue" onClick={updateSchedule}>
     save
 </a>
 
@@ -3863,7 +3856,7 @@ return(<>
           {/*/ form-group */}
 
 
-          <div class="availability-wrap availability-wrap-session"><h4>select the time</h4>
+          <div class="availability-wrap availability-wrap-session availability-wrap-session2"><h4>select the time</h4>
           <div class="availability-box availability-box-edit">
             <div class="inner">
               <span><small>from</small>09 : 00</span>
@@ -3877,13 +3870,7 @@ return(<>
               <p className="text-center btn-p">
 
            
-            <a href="#" className="btn btn-darkgreen" style={{
-    width: "auto",
-    background: "#f27553",
-    minWidth: "150px",  // Use camelCase for property names with dashes
-    borderRadius: "30px", // Use camelCase for property names with dashes
-    color: "#fff"
-}}>
+            <a href="#" className="btn btn-darkblue" >
     save
 </a>
 
