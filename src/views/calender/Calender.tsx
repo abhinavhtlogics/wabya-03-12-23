@@ -2477,7 +2477,7 @@ console.log('day',nextSevenDay[index].date);
 
 
           <div className="timesheet-carousel">
-          <OwlCarousel options={options}>
+          {/* <OwlCarousel options={options}> */}
 
           { forloops.map((floop, index) => {
             let i=(index)*7;
@@ -2498,7 +2498,7 @@ console.log('day',nextSevenDay[index].date);
             }
 
           })}
-          </OwlCarousel>
+          {/* </OwlCarousel> */}
           </div>
 
 
@@ -2969,7 +2969,7 @@ footer={[]}
       </div>
 
       <div className="timesheet-carousel" >
-          <OwlCarousel options={options22}>
+          {/* <OwlCarousel options={options22}> */}
 
           { forloops.map((floop, index) => {
             let i=(index)*7;
@@ -2990,7 +2990,7 @@ footer={[]}
             }
 
           })}
-          </OwlCarousel>
+          {/* </OwlCarousel> */}
           </div>
 
       {days.map((day) => (
@@ -3582,6 +3582,53 @@ return(<>
             <Calendar onChange={getTimeslots} value={date} minDate={today} />
           </div>
           {/*/ form-group */}
+
+
+          <div className="availability-box availability-box-edit">
+              <div className="accepting-availability">
+              <span className="span">select the time</span>
+               
+              </div>
+
+             
+              <div className="inner"
+              
+              >
+               
+              
+                 <span>
+                  <small>from</small>
+                 09 : 00
+                 </span>
+                 <span>
+                  <small>to</small>  
+                17: 00
+                 </span>
+                
+                
+                
+              
+
+                 
+                  
+                 
+               
+               
+
+                
+               
+              </div>
+</div>
+
+
+
+
+
+
+
+
+
+
           <div className="form-group mrb-30">
             <h4 className="mrb-5">select the time</h4>
            
