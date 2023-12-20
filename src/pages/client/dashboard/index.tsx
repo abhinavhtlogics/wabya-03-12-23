@@ -3775,9 +3775,9 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                       <div className="resc-cal">
                         <h5>select a date &amp; time</h5>
                         <Calendar onChange={getTimeslots} value={date} minDate={today} />
-                        <h5>time zone </h5>
+                        {/* <h5>time zone </h5> */}
                         {/* <p>{coachesCalTimezone}</p> */}
-                        <p>{client ? <> {client.client_zone} </> : null}</p>
+                        {/* <p>{client ? <> {client.client_zone} </> : null}</p> */}
                       </div>
                     </div>
                     {isShow ? (
@@ -3864,6 +3864,8 @@ onClick={handleTimeClick}
                             <div className="btn btn-time"> Loading...</div>
                           ) : null}
                         </div>
+<h5>time zone </h5>
+                         <p>{client ? <> {client.client_zone} </> : null}</p>
                         <button className="btn btn-next" onClick={scheduleNext}  disabled={!meetingtime && isUnavailable}>
                           next <i className="fa fa-arrow-right"></i>
                         </button>
