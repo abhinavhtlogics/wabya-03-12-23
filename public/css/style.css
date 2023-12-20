@@ -2946,17 +2946,13 @@ button{font-family: Gothic A1 !important;}
    .client-pass-mobile form{position:relative;}
    .user-detail-mobile{display: block;}
    .user-details-desktop{display: none;}
-
-
-   .maping-sec .info h4 {
    
-    font-size: 6px;
-  }
-
-  .maping-sec{margin: 0 0 30px;}
-.maping-sec .row{display: flex !important;}
-.maping-sec .col-sm-3{width: 25%;}
-
+   .maping-sec{margin: 0 0 30px;}
+   .maping-sec .row{display: flex !important;}
+   .maping-sec .col-sm-3{width: 25%;}
+   .maping-sec .info figcaption{padding: 10px;}
+   .maping-sec .info h4{font-size: 6px !important;}
+   .maping-sec .info h4 span{font-size: 12px; letter-spacing: -0.2px;}
 
    .schedule-session-new{padding: 30px 0;}
    .schedule-session-new .MuiPaper-root{width: 100% !important;}
