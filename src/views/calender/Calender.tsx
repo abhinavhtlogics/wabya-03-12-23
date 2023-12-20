@@ -3613,10 +3613,10 @@ return(<>
 
 
           <div className="form-group mrb-30">
-            <h4 className="mrb-5">select the time</h4>
+            {/* <h4 className="mrb-5">select the time</h4> */}
            
            
-            <select name="cars" class="form-control" onChange={handleTimeClick}>
+            {/* <select name="cars" class="form-control" onChange={handleTimeClick}>
             
             <option value="">
           Select Time
@@ -3630,7 +3630,7 @@ return(<>
       >{timeSlot}</option>
     
   ))}
-               </select>
+               </select> */}
           
             {/*/ inner */}
           </div>
