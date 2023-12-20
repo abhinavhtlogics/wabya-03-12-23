@@ -3584,41 +3584,7 @@ return(<>
           {/*/ form-group */}
 
 
-          <div className="availability-box availability-box-edit">
-              <div className="accepting-availability">
-              <span className="span">select the time</span>
-               
-              </div>
-
-             
-              <div className="inner"
-              
-              >
-               
-              
-                 <span>
-                  <small>from</small>
-                 09 : 00
-                 </span>
-                 <span>
-                  <small>to</small>  
-                17: 00
-                 </span>
-                
-                
-                
-              
-
-                 
-                  
-                 
-               
-               
-
-                
-               
-              </div>
-</div>
+          <div class="availability-wrap availability-wrap-session"><h4>select the time</h4><div class="availability-box availability-box-edit"><div class="inner"><span><small>from</small>09 : 00</span><span><small>to</small>17: 00</span></div></div></div>
 
 
 
