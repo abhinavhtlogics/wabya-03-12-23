@@ -376,6 +376,9 @@ function toggleProfile() {
     console.log('response',response);
   }    	
 
+  function onClickYear(value, event){
+    alert('Clicked year: ', value)
+  }
 
   const scheduleNext = async () => {
     setbookingLoad(true);

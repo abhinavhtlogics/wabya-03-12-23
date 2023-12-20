@@ -117,7 +117,7 @@ if(plan_detail != null){
     setjourney_type(event.target.value);
   };
   return (
-    <section className="client-password">		
+    <section className="client-password payment-now">		
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
