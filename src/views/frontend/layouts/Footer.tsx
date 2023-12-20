@@ -60,10 +60,10 @@ const Footer = () => {
                     <h4>FAQ</h4>
                     <ul>
                       <li>
-                        <Link href='/frontend/faq/#faq'>privacy policy</Link>
+                        <Link target='_blank' href='https://wabya.com/docs/privacy-policy.pdf'>privacy policy</Link>
                       </li>
                       <li>
-                        <Link href='/frontend/faq/#faq'>terms & conditions</Link>
+                        <Link target='_blank' href='https://wabya.com/docs/privacy-policy.pdf'>terms & conditions</Link>
                       </li>
                     </ul>
                   </div>

@@ -3786,7 +3786,8 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                     {isShow ? (
                       <div className="col-sm-4">
                         <div className="cal-time">
-                          <h5>select a time </h5>
+                        {array1.length > 0 ? (
+                          <h5>select a time </h5>) : null }
                           <p>
                             {Day_.toLowerCase()} {Month.toLowerCase()} {Date_}
                           </p>
