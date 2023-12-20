@@ -3309,7 +3309,7 @@ button{font-family: Gothic A1 !important;}
    .prob-from .btn{background: #f79632;}
    .prob-from .btn:hover{background: #106166; color:#fff !important;}
    
-   .login-info{position: relative; display: flex; order: 2; padding: 0; justify-content: inherit; width: auto; margin: 10px 0 0;}
+   .login-info{position: relative; display: flex; order: 2; padding: 0; justify-content: inherit; width: auto; margin: 10px 0 0 auto;}
    .login-info .btn{border:1px solid #fffff3; color: #fffff3; margin:7px 5px; padding: 4px;}
    .login-info .btn:after{background-color: #f69532;}
    .frontend-change .profile-button{padding:0 5px;}
