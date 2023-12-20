@@ -230,6 +230,16 @@ const Calender = () => {
     sun: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false }
   });
 
+  const dayMappings = {
+    "mon": "monday",
+    "tue": "tuesday",
+    "wed": "wednesday",
+    "thu": "thursday",
+    "fri": "friday",
+    "sat": "saturday",
+    "sun": "sunday"
+  };
+
   // const handleHourChange = (event,day) => {
   //   const value = parseInt(event.target.value, 10);
   //   //const end_value = parseInt(end_time_hour, 10);
@@ -3664,7 +3674,7 @@ return(<>
             {days.map((day) => (
             <div className="availability-box availability-box-edit">
               <div className="accepting-availability">
-                <span className="span">{day.toUpperCase()}</span>
+              <span className="span">{dayMappings[day]}</span>
                 <label className="switch">
                   <input className="switch-input" type="checkbox" />
                   <span
