@@ -2477,7 +2477,7 @@ console.log('day',nextSevenDay[index].date);
 
 
           <div className="timesheet-carousel">
-          {/* <OwlCarousel options={options}> */}
+          <OwlCarousel options={options}>
 
           { forloops.map((floop, index) => {
             let i=(index)*7;
@@ -2498,7 +2498,7 @@ console.log('day',nextSevenDay[index].date);
             }
 
           })}
-          {/* </OwlCarousel> */}
+          </OwlCarousel>
           </div>
 
 
@@ -2969,7 +2969,7 @@ footer={[]}
       </div>
 
       <div className="timesheet-carousel" >
-          {/* <OwlCarousel options={options22}> */}
+          <OwlCarousel options={options22}>
 
           { forloops.map((floop, index) => {
             let i=(index)*7;
@@ -2990,7 +2990,7 @@ footer={[]}
             }
 
           })}
-          {/* </OwlCarousel> */}
+          </OwlCarousel>
           </div>
 
       {days.map((day) => (
