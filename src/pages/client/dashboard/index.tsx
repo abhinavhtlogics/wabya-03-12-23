@@ -2413,9 +2413,10 @@ const year = today.getFullYear();
   // Convert the Unix timestamp to a readable time for each session
   const timestamp = session.meeting_start_time.seconds * 1000; // Convert seconds to milliseconds
   const date = new Date(timestamp);
-  const readableTime = date.toLocaleTimeString(); 
+  // const readableTime = date.toLocaleTimeString(); 
+  const readableTime=`${date.getHours().toString().padStart(2, '0')}h${date.getMinutes().toString().padStart(2, '0')}`;
 
-  // const readableDate = date.toLocaleDateString(); 
+  //  const readableDate = date.toLocaleDateString(); 
   const readableDate=`${date.getFullYear()}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}`;
 
 
