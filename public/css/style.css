@@ -1230,7 +1230,7 @@ h4{color:#f79632;}
 
 .react-calendar__navigation button:nth-child(1){order: 2; display: none;}
 .react-calendar__navigation button:nth-child(2){order: 3; text-indent: -99999px; background-image: url(https://wabya-dev-site.netlify.app/images/arrow-left-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px;}
-.react-calendar__navigation button:nth-child(3){order: 1; text-align: left;}
+.react-calendar__navigation button:nth-child(3){order: 1; text-align: left; pointer-events: none;}
 .react-calendar__navigation button:nth-child(4){order: 4; text-indent: -99999px; background-image: url(https://wabya-dev-site.netlify.app/images/arrow-right-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px;}
 .react-calendar__navigation button:nth-child(5){order: 5; display: none;}
 .react-calendar__navigation button.react-calendar__navigation__label:hover, .react-calendar__navigation button.react-calendar__navigation__label:hover{background: none !important;}
