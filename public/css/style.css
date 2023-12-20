@@ -1172,9 +1172,9 @@ h4{color:#f79632;}
 .reschedule-zone .btn-next:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #0f2540; z-index: -1; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px;}
 .reschedule-zone .btn-next:hover:after{width: 100%; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px;}
 
-.reschedule-zone .resc-cal h5 {
-  margin-bottom: 10px; font-weight: 500; padding-left: 5px;
-}
+.reschedule-zone .resc-cal h5{margin-bottom: 10px; font-weight: 500; padding-left: 5px;}
+.reschedule-zone .resc-cal .timezone{padding-left: 5px;}
+.reschedule-zone .resc-cal .timezone h5{padding-left: 0;}
 .react-calendar {
   width: 100%;
   max-width: 100%;
