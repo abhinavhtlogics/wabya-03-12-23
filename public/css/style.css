@@ -2825,6 +2825,7 @@ button{font-family: Gothic A1 !important;}
 /* Transition ========================== */
 .availability-wrap .availability-box .switch-label, .availability-wrap .availability-box .switch-handle{transition: All 0.3s ease; -webkit-transition: All 0.3s ease; -moz-transition: All 0.3s ease; -o-transition: All 0.3s ease;}
 .availability-wrap .availability-box .inner{background: #f7f0e4; padding: 20px 35px 20px 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: flex; align-items: center; justify-content: space-between; position: relative;}
+.availability-wrap.availability-wrap-session{padding: 0;}
 .availability-wrap.availability-wrap-session .availability-box .inner{padding: 10px 20px 15px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
 .availability-wrap .availability-box .inner:after{content: "\f105"; font-family: FontAwesome; position: absolute; font-size: 30px; right: 0; left: 0; margin: 0 auto; width: 15px; text-align: center; opacity: 0.3; bottom: 25px;}
 .availability-wrap .availability-box.availability-box-edit .inner::after{bottom: 10px;}
