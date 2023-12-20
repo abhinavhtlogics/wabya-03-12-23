@@ -275,8 +275,8 @@ const getClients = async () => {
       const shouldRenderClient = cl.status === isActiveFilter || isActiveFilter === 'all';
       return shouldRenderClient ? (
         <div className="col-6 cl-coll" key={index}>
-          {/* <Link href={`${router.basePath}/coach/clientDetail/${cl.client_id}`} passHref> */}
-          <Link href="#" passHref>
+          <Link href={`${router.basePath}/coach/clientDetail/${cl.client_id}`} passHref>
+          {/* <Link href="#" passHref> */}
             <div className="info">
               <figure>
                 <img src="../../images/dummy-user.png" alt="" />
