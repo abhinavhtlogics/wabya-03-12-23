@@ -2415,7 +2415,9 @@ const year = today.getFullYear();
   const date = new Date(timestamp);
   const readableTime = date.toLocaleTimeString(); 
 
-  const readableDate = date.toLocaleDateString(); 
+  // const readableDate = date.toLocaleDateString(); 
+  const readableDate=`${date.getFullYear()}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}`;
+
 
   return (
             <div className="session-inner">
