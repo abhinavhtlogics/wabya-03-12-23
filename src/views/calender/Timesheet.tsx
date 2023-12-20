@@ -780,7 +780,7 @@ return (
 
       return (
         <tr key={index}>
-        <td className={index % 3 === 0 ? "bundle aqua" : (index % 3 === 1 ? "bundle aqua orange" : "bundle aqua pink")}>{cl.client_name}</td>
+        <td className={index % 3 === 0 ? "bundle" : (index % 3 === 1 ? "pay" : "probono")}>{cl.client_name}</td>
 
         <td>{`${ (((filteredMeetingSessions2(1,7).filter(
         meet => meet.client_id === cl.client_id
