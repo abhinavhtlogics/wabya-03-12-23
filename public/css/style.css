@@ -3359,6 +3359,7 @@ button{font-family: Gothic A1 !important;}
    .banner-info .container{padding:0;}
    .banner-info .row{margin: 0;}
    .banner-info .right{padding: 0;}
+   .banner-info .right::after{display:none;}
    
    .pvmv .inner{padding: 25px 25px 20px; min-height: 255px;}
    
