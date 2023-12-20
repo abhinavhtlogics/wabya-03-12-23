@@ -3219,6 +3219,9 @@ button{font-family: Gothic A1 !important;}
        .user-time-table .month-sec .table tr th,.client-sec .table tr th{font-weight: 600 !important;text-align: center; padding: 6px 10px 7px;}
        .user-time-table .month-sec .table tbody th{font-size: 14px;}
        .client-sec h2{letter-spacing: 2px; margin: 10px 0 20px;color:#0e2540; font-size: 20px; font-weight: 400;}
+	   .client-sec .table tbody tr:first-child th{font-size: 16px;}
+	   .client-sec .table tbody tr:nth-child(2) th{font-size: 14px;}
+	   .client-sec .month-sec .table tbody tr th{font-size: 14px;}
        .client-sec > .table tr:nth-child(1) th,.client-sec > .table tr:nth-child(2) th:nth-child(1){border-top: 1px solid #000;}
        .client-sec > .table tr:nth-child(1) th,.client-sec > .table tr:nth-child(2) th:nth-child(1),.client-sec > .table tr:last-child td:nth-child(2){border-left: 1px solid #000;}
        .client-sec > .table tr td:nth-child(1){border-left: 1px solid #000;}
@@ -3230,9 +3233,9 @@ button{font-family: Gothic A1 !important;}
        .client-sec .table tr:last-child td:nth-child(3){border-bottom-right-radius: 12px;}
        .client-sec .table tr:nth-child(3) td:first-child,  .client-sec .table tr:nth-child(4) td:first-child,.client-sec .table tr:nth-child(5) td:first-child{position: relative;z-index: 0;}
 	   .client-sec .table tr .aqua{text-align:left !important; padding-left: 20px }
-       .client-sec .table tr .aqua::after{content:' '; position: absolute;z-index: 1;width: 8px;height: 35px;background-color: #6bc2a5;left: 0;transform: translate(.5px, -10px);}
-      .client-sec .table tr .orange::after{content:' '; position: absolute;z-index: 1;width: 8px;height: 35px;background-color: #f59632;left: 0;transform: translate(.5px, -10px);}
-      .client-sec .table tr .pink::after{content:' '; position: absolute;z-index: 1;width: 8px;height: 35px;background-color: #d479a6;left: 0;transform: translate(.5px, -10px);}
+       .client-sec .table tr .aqua::after{content:' '; position: absolute;z-index: 1;width: 8px; height: 100%; left: 0; transform: inherit; top: 0;}
+      .client-sec .table tr .orange::after{background-color: #f59632;}
+      .client-sec .table tr .pink::after{background-color: #d479a6;}
       
 
 
