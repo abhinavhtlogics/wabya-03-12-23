@@ -3848,7 +3848,7 @@ return(<>
 
 
 <>
-            <h3 className="mrb-20">schedule a session</h3>
+            <h3 className="mrb-20">custom availability</h3>
           <div className="form-group mrb-30">
             <h4 className="mrb-5">select the date</h4>
             <Calendar  />
@@ -3856,9 +3856,23 @@ return(<>
           {/*/ form-group */}
 
 
-          <div class="availability-wrap availability-wrap-session availability-wrap-session2"><h4>select the time</h4>
+          <div class="availability-wrap availability-wrap-session availability-wrap-session2">
+         
           <div class="availability-box availability-box-edit">
+          <div className="accepting-availability">
+              <span className="span">select the time</span>
+                <label className="switch">
+                  <input className="switch-input" type="checkbox" />
+                  <span
+                    className="switch-label"
+                    data-on="unavailable"
+                    data-off="unavailable"
+                  />
+                  <span className="switch-handle" />
+                </label>
+              </div>
             <div class="inner">
+
               <span><small>from</small>09 : 00</span>
               <span><small>to</small>17: 00</span>
               <span className='plus'> + </span>
