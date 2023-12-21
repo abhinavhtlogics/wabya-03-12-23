@@ -489,7 +489,7 @@ h4{color:#f79632;}
 .timesheet{position:relative; margin:0; padding:70px 0 80px; z-index:1;}
 .timesheet .container{max-width:1300px;}
 .timesheet h2{color:#0f2540; font-size: 40px; margin:15px 0 10px; position:relative; text-align: left; letter-spacing: 5px; text-transform: lowercase;}
-.timesheet-carousel{background: rgb(248, 243, 231); height: 60px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; position: relative; margin-bottom: 20px;}
+.timesheet-carousel{background: #f7f0e4; height: 60px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; position: relative; margin-bottom: 20px;}
 .availability-popup .timesheet-carousel{background: #fff; border: 1px solid #0b233f; box-shadow: none; font-weight: 500; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; color: #0b233f; height: 44px; padding: 0; letter-spacing: 1px; display: inline-block; width: 100%;}
 
 .availability-popup .timesheet-carousel .owl-stage-outer{padding: 11px 60px 11px 20px;}
@@ -500,8 +500,9 @@ h4{color:#f79632;}
 .availability-popup .timesheet-carousel .owl-theme .owl-nav div.owl-next{right: 0;}
 .availability-popup .timesheet-carousel .owl-theme .owl-nav div.owl-prev::before{left: 0; top: 0; background-size: 24px 24px;}
 .availability-popup .timesheet-carousel .owl-theme .owl-nav div.owl-next::before{right: 0; top: 0; background-size: 24px 24px;}
-
-.week th{ text-align: center; text-transform: capitalize;}
+.week th{font-size: 14px; font-weight: 500; text-align: center; text-transform: capitalize; border-right: 1px solid #616d7a;}
+.week th:last-child{border-right: 0;}
+.week th span{display: block;}
 /* owl slider */
 .timesheet-carousel .owl-stage-outer {   padding: 3px 45px; }
 .timesheet-carousel .owl-dots { display: none; }
@@ -564,11 +565,8 @@ h4{color:#f79632;}
 .timesheet-buttons .btn-four{background: #f27553;}
 .timesheet-buttons .btn-five{background: #0f2540; color: rgb(248, 243, 231);}*/
 
-.calendar-box {
-  background: rgb(248, 243, 231);
-  border-radius: 30px;
-  padding: 0 20px;
-}
+.calendar-box{margin: 0 0 40px; background: #f7f0e4; border-radius: 20px; padding: 0;}
+.calendar-box .table{margin: auto;}
 .calendar-box tr.week td span {
   text-transform: uppercase;
   font-size: 18px;
@@ -581,18 +579,14 @@ h4{color:#f79632;}
   margin: 10px 0;}
 .calendar-box .third{background: #d479a6; border-radius: 10px;
   margin: 10px 0;}
-.calendar-box tr.week {
-  border-top: 1px solid #0f2540;
-}
+.calendar-box tr.week{border-top: 1px solid #616d7a;}
 .calendar-box .first p, .calendar-box .second p, .calendar-box .third p{
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 14px;
   text-align: center;
 }
-.calendar-box .table-border tr td {
-  border-right: 1px solid #0f2540; padding: 20px; text-align: center;
-}
+.calendar-box .table-border tr td{border-right: 1px solid #616d7a; padding: 20px; text-align: center;}
 .calendar-box .table-border tr td:last-child {
   border: none;
 }
