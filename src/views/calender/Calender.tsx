@@ -3708,7 +3708,7 @@ return(<>
                   <input className="switch-input" type="checkbox" />
                   <span
                     className="switch-label"
-                    data-on="unavailable"
+                    data-on="available"
                     data-off="unavailable"
                   />
                   <span className="switch-handle" />
@@ -3865,7 +3865,7 @@ return(<>
                   <input className="switch-input" type="checkbox" />
                   <span
                     className="switch-label"
-                    data-on="unavailable"
+                    data-on="available"
                     data-off="unavailable"
                   />
                   <span className="switch-handle" />
