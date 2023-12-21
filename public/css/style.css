@@ -523,22 +523,17 @@ h4{color:#f79632;}
 .center-arrow span::after{content: ""; background: #0f2540; width: 1px; height: 17px; right: -10px; top: 0; position: absolute;}
 .center-arrow span:last-child::after{display: none;}
 
-.left-arrow .fa {
-  position: absolute;
-  top: 12px;
-  left: 20px;
-  color: #0f2540;
-  font-size: 25px;
-  font-weight: 300;
-}
-.right-arrow .fa {
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  color: #0f2540;
-  font-size: 25px;
-  font-weight: 300;
-}
+/*.left-arrow .fa{position: absolute; top: 12px; left: 20px; color: #0f2540; font-size: 25px; font-weight: 300;}
+.right-arrow .fa{position: absolute; top: 12px; right: 20px; color: #0f2540; font-size: 25px; font-weight: 300;}*/
+
+.left-arrow{text-align: left;}
+.left-arrow .fa{background-image: url(https://wabya-dev-site.netlify.app/images/arrow-l-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px; width: 30px; height: 60px; cursor: pointer;}
+.left-arrow .fa::before{display: none;}
+
+.right-arrow{text-align: left;}
+.right-arrow .fa{background-image: url(https://wabya-dev-site.netlify.app/images/arrow-r-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px; width: 30px; height: 60px; cursor: pointer;}
+.right-arrow .fa::before{display: none;}
+
 .center-arrow{position: absolute; top: 18px; left: 0; letter-spacing: 3px; right: 0; text-align: center; color: #0f2540 !important;}
 .timesheet-buttons {
   margin-bottom: 20px;
@@ -1228,9 +1223,9 @@ h4{color:#f79632;}
 }
 
 .react-calendar__navigation button:nth-child(1){order: 2; display: none;}
-.react-calendar__navigation button:nth-child(2){order: 3; text-indent: -99999px; background-image: url(https://wabya-dev-site.netlify.app/images/arrow-left-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px;}
+.react-calendar__navigation button:nth-child(2){order: 3; text-indent: -99999px; background-image: url(https://wabya-dev-site.netlify.app/images/arrow-l-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px;}
 .react-calendar__navigation button:nth-child(3){order: 1; text-align: left; pointer-events: none;}
-.react-calendar__navigation button:nth-child(4){order: 4; text-indent: -99999px; background-image: url(https://wabya-dev-site.netlify.app/images/arrow-right-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px;}
+.react-calendar__navigation button:nth-child(4){order: 4; text-indent: -99999px; background-image: url(https://wabya-dev-site.netlify.app/images/arrow-r-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px;}
 .react-calendar__navigation button:nth-child(5){order: 5; display: none;}
 .react-calendar__navigation button.react-calendar__navigation__label:hover, .react-calendar__navigation button.react-calendar__navigation__label:hover{background: none !important;}
 .react-calendar__navigation button.react-calendar__navigation__label{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
