@@ -500,9 +500,6 @@ h4{color:#f79632;}
 .availability-popup .timesheet-carousel .owl-theme .owl-nav div.owl-next{right: 0;}
 .availability-popup .timesheet-carousel .owl-theme .owl-nav div.owl-prev::before{left: 0; top: 0; background-size: 24px 24px;}
 .availability-popup .timesheet-carousel .owl-theme .owl-nav div.owl-next::before{right: 0; top: 0; background-size: 24px 24px;}
-.week th{font-size: 14px; font-weight: 500; text-align: center; text-transform: capitalize; border-right: 1px solid #616d7a;}
-.week th:last-child{border-right: 0;}
-.week th span{display: block;}
 /* owl slider */
 .timesheet-carousel .owl-stage-outer {   padding: 3px 45px; }
 .timesheet-carousel .owl-dots { display: none; }
@@ -565,14 +562,12 @@ h4{color:#f79632;}
 .timesheet-buttons .btn-four{background: #f27553;}
 .timesheet-buttons .btn-five{background: #0f2540; color: rgb(248, 243, 231);}*/
 
+.week th{font-size: 14px; font-weight: 500; text-align: center; text-transform: capitalize; border-right: 1px solid #616d7a;}
+.week th:last-child{border-right: 0;}
+.week th span{display: block; padding: 15px 10px;}
 .calendar-box{margin: 0 0 40px; background: #f7f0e4; border-radius: 20px; padding: 0;}
 .calendar-box .table{margin: auto;}
-.calendar-box tr.week td span {
-  text-transform: uppercase;
-  font-size: 18px;
-  letter-spacing: 3px;
-  font-weight: 700;
-}
+.calendar-box tr.week td span{text-transform:uppercase; font-size:18px; letter-spacing: 3px; font-weight: 700;}
 .calendar-box .first{background: #6cc3a5; border-radius: 10px;
   margin: 10px 0;}
 .calendar-box .second{background: #f59533; border-radius: 10px;
