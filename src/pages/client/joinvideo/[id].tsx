@@ -134,33 +134,13 @@ const VideoCallPage = () => {
                 width: '100%',
                 height: '100%',
                 border: 'none',
-                backgroundColor: '#d37aa5',
-              },
-              theme: {
-                colors: {
-                  accent: '#d37aa5',
-                },
+                backgroundColor: '#f6f6f6',
               },
             });
 
             setCallObject(callObj);
 
-            callObj.join({ url: dynamicURL, theme: {
-              colors: {
-                accent: '#d37aa5',
-                
-              },
-            }, });
-
-            call.setTheme({
-              light: {
-                colors: {
-                  accent: '#d37aa5',
-                  backgroundColor: '#001122',
-                },
-              }
-            });
-            
+            callObj.join({ url: dynamicURL });
 
             // Set the iframe as loaded
             setIframeLoaded(true);
