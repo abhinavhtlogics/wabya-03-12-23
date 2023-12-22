@@ -702,6 +702,9 @@ h4{color:#f79632;}
   /* display: none; */
 }
 
+
+#calendar-wrap .table-calendar .blue-event.free-time{height: auto;}
+
 /* edit profile */
 .edit-profile {position:relative; margin:0; padding:70px 0 80px; z-index:1;}
 .edit-profile .container{max-width:1300px;}

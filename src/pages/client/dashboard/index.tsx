@@ -179,7 +179,7 @@ const Dashboard = () => {
         event.target.getAttribute("data-coach_event_id")
       );
     } else {
-      setcoachesEventTimeInterval(30);
+      setcoachesEventTimeInterval(45);
     }
 
     setCoach(false);
@@ -234,7 +234,7 @@ const Dashboard = () => {
   
   const [coachesFirebaseName, setcoachesFirebaseName] = useState("");
   const [coachesEvents, setcoachesEvents] = useState([]);
-  const [coachesEventTimeInterval, setcoachesEventTimeInterval] = useState(30);
+  const [coachesEventTimeInterval, setcoachesEventTimeInterval] = useState(45);
   const [coachesCalUsername, setcoachesCalUsername] = useState("");
   const [coachesCalName, setcoachesCalName] = useState("");
   const [coachesCalEmail, setcoachesCalEmail] = useState("");
@@ -2046,7 +2046,7 @@ console.log(now.getDate(),now.getFullYear(),now.getMonth());
       }else{
         var starttime = "09:00:00";
       }
-var interval = "45";
+var interval = "60";
 if(mycoach[0].start_time){
   var endtime = mycoach[0].end_time;
        }else{
@@ -2056,7 +2056,7 @@ if(mycoach[0].start_time){
       }
       else{
         var starttime = "09:00:00";
-        var interval = "45";
+        var interval = "60";
         var endtime = "17:00:00";
       }
 //var endtime = "17:00:00";

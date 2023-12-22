@@ -1941,7 +1941,7 @@ if(data.start_time != undefined){
         }
 
 
-var interval = "45";
+var interval = "60";
   if(data.start_time){
     var endtime = data.end_time;
          }else{
@@ -1952,8 +1952,8 @@ var interval = "45";
   var timeslots = [starttime];
   let index = 0;
   while (starttime < endtime) {
-    const interval = index % 2 === 0 ? 45 : 15;
-  
+    // const interval = index % 2 === 0 ? 45 : 15;
+    const interval = 60;
     starttime = addMinutes(starttime, interval);
   
     if (starttime < endtime) {
@@ -2689,9 +2689,9 @@ return(<>
   <td style={{ backgroundColor: index < 7 &&  isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}>
 
 
-  {index % 2 === 0 ? (
+  {index % 2 === 0 || index % 2 === 1 ? (
     <>
-                     <div className="blue-event">
+                     <div className="blue-event mrb-10">
                      
                            <p><span>{ matchingStarttime} - {matchingEndtime}  </span> </p>
 
@@ -2737,11 +2737,13 @@ return(<>
 ) : null}
                        
                         </div>
+
+                        <div class="blue-event free-time"><p class="calendar-clientcanel mrb-0">free time</p></div>
                         </>)
                         : (
                           isBetween_2 ? (
                             <>
-                              <p style={{ textAlign: 'center' }}>free time</p>
+                              {/* <p style={{ textAlign: 'center' }}>free time </p> */}
                             </>
                           ) : (
                             null
@@ -2754,7 +2756,7 @@ return(<>
                       else
                       if(index2 < 7 ){
                         return(
-<><td style={{ backgroundColor:  index2 < 7 && isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}>{ !isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) && index %2!==0  && isBetween_2? <p style={{'textAlign':'center'}}>free time</p>:null}
+<><td style={{ backgroundColor:  index2 < 7 && isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}>{ !isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) && index %2!==0  && isBetween_2? <p style={{'textAlign':'center'}}></p>:null}
 </td>
 
 </>

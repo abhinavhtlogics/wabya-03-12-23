@@ -31,6 +31,7 @@ const CoachSessionBasic = () => {
   const coachRef = collection(database, 'coaches_user');
 const planRef = collection(database, 'admin_plans');
 const [coachData, setCoachData] = useState(null);
+const [clientData, setClientData] = useState(null);
 
 const [coachFilterData, setcoachFilterData] = useState(null);
 const [randomNo, setrandomNo] = useState(0);
@@ -103,7 +104,7 @@ const [modal_action, setmodal_action] = useState("");
   const [clientLanguage, setClientLanguage] = useState("");
 
 
-  const [coachesEventTimeInterval, setcoachesEventTimeInterval] = useState(30);
+  const [coachesEventTimeInterval, setcoachesEventTimeInterval] = useState(45);
   const [meetingendtime, setmeetingendtime] = useState("");
   const [showNext, setshowNext] = useState(false);
 
@@ -135,6 +136,7 @@ const [modal_action, setmodal_action] = useState("");
 
   const [client_emailId, setclient_emailId] = useState('');
   const [client_detail, setclient_detail] = useState(null);
+  const [coachClientCounts, setCoachClientCounts] = useState({});
   const today = new Date();
 
   async function sendMailFunc (email,content,$subject){   
@@ -297,8 +299,8 @@ if(clientRegisteredId != ''){
 
   useEffect(() => {
    
-    var starttime = "11:00:00";
-   var interval = "45";
+    var starttime = "09:00:00";
+   var interval = "60";
    var endtime = "17:00:00";
    var timeslots = [starttime];
    
@@ -360,6 +362,21 @@ if(clientRegisteredId != ''){
         })
       }
 
+
+      const getAllClientData = async () => {
+        console.log('test');
+            const queryDoc = query(clientRef, where('assign_coach_id', '!=', ''));
+        
+            await getDocs(queryDoc).then(response => {
+              console.log(response.docs.length);
+              setClientData(
+                response.docs.map(data => {
+                  return { ...data.data(), client_idd: data.id }
+                })
+              )
+            })
+          }
+
 // coach data fetch
 const getAllPlans = async () => {
   console.log('testsss');
@@ -380,6 +397,8 @@ const getAllPlans = async () => {
 
 
         getCoachData();
+
+        getAllClientData();
     
       //  getAllPlans();
     
@@ -396,12 +415,75 @@ const getAllPlans = async () => {
         
         setrandomNo(Math.floor(Math.random() * (coachData.length - 0 + 1)) + 0);
          
-        setcoachId(coachData[0].coach_idd);
-        setcoachEmail(coachData[0].coach_email);
+       // setcoachId(coachData[0].coach_idd);
+       // setcoachEmail(coachData[0].coach_email);
         }
     
       }, [coachData])
+    
 
+
+
+      useEffect(() => {
+    
+        if(clientData != null){
+    
+        console.log('clientData',clientData);
+
+        if (coachData.length > 0 && clientData.length > 0) {
+          // Create a mapping of coachId to client count
+          const coachClientCountMap = {};
+    
+          // Initialize counts to 0 for each coach
+          coachData.forEach((coach) => {
+            coachClientCountMap[coach.coach_idd] = 0;
+          });
+    
+          // Count clients for each coach
+          clientData.forEach((client) => {
+            if (coachClientCountMap.hasOwnProperty(client.assign_coach_id)) {
+              coachClientCountMap[client.assign_coach_id]++;
+            }
+          });
+    
+          setCoachClientCounts(coachClientCountMap);
+        }
+        
+       
+        }
+    
+      }, [clientData])
+
+
+      // Sort coaches based on the number of clients in ascending order
+const sortedCoaches = coachData && clientData ? coachData.slice().sort((a, b) => {
+    const countA = coachClientCounts[a.coach_idd] || 0;
+    const countB = coachClientCounts[b.coach_idd] || 0;
+
+    console.log(`Coach ${a.coach_idd} - Clients: ${countA}`);
+    console.log(`Coach ${b.coach_idd} - Clients: ${countB}`);
+
+    return countA - countB; // Change to countB - countA for descending order
+  })
+: null;
+
+
+
+useEffect(() => {
+    
+  if(sortedCoaches != null ){
+
+  console.log('coachData',sortedCoaches);
+
+
+  
+ // setrandomNo(Math.floor(Math.random() * (sortedCoaches.length - 0 + 1)) + 0);
+   
+  setcoachId(sortedCoaches[0].coach_idd);
+  setcoachEmail(sortedCoaches[0].coach_email);
+  }
+
+}, [sortedCoaches])
 
       useEffect(() => {
     
@@ -962,6 +1044,16 @@ if(client_emailId != ""){
                 <form>
                 <div className="col-sm-12 date-time">
                   <h3>select your date & time</h3>
+
+                  {/* {sortedCoaches && sortedCoaches.map((coach) => (
+        <div key={coach.coach_idd}>
+          <h1>Coach: {coach.coach_name}  </h1>
+          <p>Number of Clients: {coachClientCounts[coach.coach_idd]}</p>
+        </div>
+      ))}
+
+assign coach - {coachId} */}
+      
                 <div className="time-btn"><button className="btn" id="myButton" onClick={scheduleNewSes}>select an available time</button></div>
                 </div>
 {/* scheduleNewSes */}
