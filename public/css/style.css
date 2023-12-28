@@ -454,7 +454,8 @@ h4{color:#f79632;}
   .timesheet-resources .file-info-inner{background:#f7f0e4; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; height: 480px; overflow-y: scroll; overflow-x: hidden; padding:0; margin: 0 0 30px;}
   .timesheet-resources .file-info-inner::-webkit-scrollbar { background: transparent; border: 1px solid #0f2540; border-radius: 20px; width: 13px; }
   .timesheet-resources .file-info-inner::-webkit-scrollbar-thumb{ background: #0f2540; border-radius: 20px;}
-  .file-info-no-scroll {height: auto !important;overflow: hidden !important;}
+  .file-info-no-scroll{height: auto !important;overflow: hidden !important;}
+  .file-info-no-scroll .file-info-inner{height: auto !important;overflow: hidden !important;}
 
 .product_search_form{
   position: relative;
