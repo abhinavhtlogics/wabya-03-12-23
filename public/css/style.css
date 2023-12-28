@@ -493,7 +493,7 @@ h4{color:#f79632;}
 /* timesheet page */
 .timesheet{position:relative; margin:0; padding:70px 0 80px; z-index:1;}
 .timesheet .container{/*max-width:1300px;*/}
-.timesheet h2{color:#0f2540; font-size: 40px; margin:15px 0 10px; position:relative; text-align: left; letter-spacing: 5px; text-transform: lowercase;}
+.timesheet h2{color:#0f2540; font-size: 40px; margin:0 0 25px; position:relative; text-align: left; letter-spacing: 5px; text-transform: lowercase;}
 .timesheet-carousel{background: #f7f0e4; height: 60px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; position: relative; margin-bottom: 20px;}
 .availability-popup .timesheet-carousel{background: #fff; border: 1px solid #0b233f; box-shadow: none; font-weight: 500; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; color: #0b233f; height: 44px; padding: 0; letter-spacing: 1px; display: inline-block; width: 100%;}
 
@@ -610,6 +610,11 @@ h4{color:#f79632;}
 .month-overview-table .table-month tr:last-child{border-bottom: none;}
 .month-overview-table .table-month th{background: #f8f3e7; border-right: 1px solid #0f2540; text-align: center;}
 .month-overview-table .table-month thead tr:first-child th:nth-child(1){visibility: hidden; border: 0;}
+
+.month-overview .month-overview-table .table-month thead tr:first-child th:nth-child(1){visibility: visible; border-top-left-radius: 12px; border-top: 1px solid #0f2540; border-left: 1px solid #0f2540; border-bottom: 1px solid #0f2540;}
+.month-overview .month-overview-table .table-month thead tr:first-child th:nth-child(2){border-top-left-radius: 0; border-top-right-radius: 0;}
+.month-overview .month-overview-table .table-month thead tr:first-child th:nth-child(3){border-top-right-radius: 12px; border-top: 1px solid #0f2540;}
+
 .month-overview-table .table-month thead tr:first-child th:nth-child(2){border-top-left-radius: 12px; border-top-right-radius: 12px; border-top: 1px solid #0f2540; border-left: 1px solid #0f2540;}
 .month-overview-table .table-month thead tr:nth-child(2) th:nth-child(1){border-top-left-radius: 12px; border-top: 1px solid #0f2540; border-left: 1px solid #0f2540;}
 .month-overview-table .table-month td{background: #f8f3e7; border-right: 1px solid #0f2540; border-bottom: 1px solid #0f2540; text-align: center;}
