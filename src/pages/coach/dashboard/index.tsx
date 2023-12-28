@@ -25,6 +25,19 @@ const Dashboard = () => {
 
   const [scheduleMeeting, setScheduleMeeting] = useState([]);
   const [newClient, setnewClient] = useState([]);
+
+  useEffect(() => {
+    // Check if the last URL was '/coch/login'
+    const lastUrl = document.referrer;
+    console.log(lastUrl);
+    if (lastUrl == '/coach/login/') {
+      // Reload the current page
+      console.log('yes');
+      router.reload();
+    }
+  }, [router.path]); // Empty dependency array means this effect runs once after the initial render
+
+
   useEffect(() => {
 
     const coachId = sessionStorage.getItem('coachId')
@@ -74,15 +87,15 @@ const updateNewClientNotified = async (c_id: any) =>{
 }
 
 
-const updateNotified = async (meet_id: any) =>{
-  console.log('notified',meet_id);
+const updateNotified = async () =>{
+  //console.log('notified',meet_id);
   let a=0;
 
  
 
-  
+  for (const meeting of scheduleMeeting) {
  
-
+    const { meet_id } = meeting;
 
 
   const userDocRef = doc(collection(database, 'meeting'), meet_id);
@@ -91,6 +104,8 @@ const updateNotified = async (meet_id: any) =>{
     isNotified:1
   };
   await updateDoc(userDocRef, updatedData);
+
+}
  // editAdmin();
  getScheduleMeeting();
 }

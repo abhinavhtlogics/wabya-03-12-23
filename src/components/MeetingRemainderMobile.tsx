@@ -68,7 +68,7 @@ new client ({new_c.client_name}) joined.
          ({scheduleMeeting.length})new meeting schedule <a href="/coach/new-meeting">detail</a>
             {/* <span>45 minutes : Coach Name</span> */}
           </p>
-          <div className='dismiss' onClick={() => updateNotified(meet.meet_id)}>
+          <div className='dismiss' onClick={() => updateNotified()}>
             {/* <h5><Link href={`/coach/coach-video-call/${meet.meeting_id}`}>Join</Link></h5> */}
             <i className="fa-solid fa fa-remove"></i>
           </div>

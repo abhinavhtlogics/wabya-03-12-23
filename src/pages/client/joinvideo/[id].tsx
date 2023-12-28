@@ -127,6 +127,7 @@ const VideoCallPage = () => {
             const callObj = await DailyIframe.createFrame({
               url: dynamicURL,
               showLeaveButton: true,
+
               iframeStyle: {
                 position: 'absolute',
                 top: '63px',
@@ -135,6 +136,22 @@ const VideoCallPage = () => {
                 height: '100%',
                 border: 'none',
                 backgroundColor: '#f6f6f6',
+              },
+              theme: {
+                colors: {
+                 
+                
+                  accent: '#f79632',
+                 
+                 
+                
+                  baseText: '#0f2540',
+                  border: '#f79632',
+                  mainAreaBg: '#0f2540',
+                 
+              
+                 
+                },
               },
             });
 

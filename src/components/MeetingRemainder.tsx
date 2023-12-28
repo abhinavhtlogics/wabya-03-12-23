@@ -35,7 +35,7 @@ const MeetingReminder = ({ meeting, newClient, scheduleMeeting, updateNewClientN
           </div>
         ))}
 
-      {scheduleMeeting.length > 0 &&
+      {/* {scheduleMeeting.length > 0 &&
         scheduleMeeting.map((meet) => (
           <div className="meeting-reminder" key={meet.meet_id}>
             <div className="info">
@@ -49,7 +49,25 @@ const MeetingReminder = ({ meeting, newClient, scheduleMeeting, updateNewClientN
               </a>
             </div>
           </div>
-        ))}
+        ))} */}
+
+
+{scheduleMeeting.length > 0 ? scheduleMeeting.map((meet, index) => (
+  index === 0 ? (
+          <div className="meeting-reminder" key={meet.meet_id}>
+            <div className="info">
+              <div className="title"> ({scheduleMeeting.length})new meeting schedule </div>
+             
+            </div>
+            <div className="meeting-link">
+              <a href="/coach/new-meeting">detail</a>
+              <a href="#" onClick={() => updateNotified()}>
+                dismiss
+              </a>
+            </div>
+          </div>
+       ) : null
+       )) : null}
     </>
   );
 };

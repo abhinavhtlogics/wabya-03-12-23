@@ -3594,7 +3594,7 @@ return(<>
               </div>
               </div>
               
-              {/* {array2.map((timeSlot, index) => (
+              {array2.map((timeSlot, index) => (
     
     <option   data-key={index}
     key={index}
@@ -3602,7 +3602,7 @@ return(<>
    
     >{timeSlot}</option>
   
-))} */}
+))}
               </div>
 
 

@@ -51,6 +51,10 @@ const Dashboard = () => {
   const billingRef3 = collection(database, "billingInfo");
 
 
+  const [meetingday, setmeetingday] = useState("");
+  const [coachAvailability, setCoachAvailability] = useState(null);
+
+
   const [SearchVal, setSearchVal] = useState('');
   const [requestPlanId, setrequestPlanId] = useState('');
   const [helpText, sethelpText] = useState('');
@@ -1121,6 +1125,7 @@ const getMeetingSession = async () => {
   const showUploadNotes = (event) => {
     //console.log('testtttt');
     event.preventDefault();
+    setisSeeNotes(false);
     setisUploadNotes(true);
   };
 
@@ -1128,6 +1133,7 @@ const getMeetingSession = async () => {
   const showSeeNotes = (event) => {
     //console.log('testtttt');
     event.preventDefault();
+    setisUploadNotes(false);
     setisSeeNotes(true);
   };
 
@@ -1868,11 +1874,64 @@ setmypreferplanName(mypreferplan[0].plan_name);
 
   const getTimeslots = async (date) => {
     settimeslot_load(true);
+// after 26-12-2023
+    console.log(date);
+    // setmeetingtime('');
+      var tomorrow = new Date(date);
     
-
-    var tomorrow = new Date(date);
-    tomorrow.setDate(date.getDate() + 1);
-    var todayDate = new Date(tomorrow).toISOString().slice(0, 10);
+      var t_date = new Date();
+    
+      console.log('t date', t_date);
+    
+    
+      if(tomorrow.getDay() == 0){
+        setmeetingday('sun');
+      }
+      
+    if(tomorrow.getDay() == 1){
+      setmeetingday('mon');
+    }
+    
+    
+    if(tomorrow.getDay() == 2){
+      setmeetingday('tue');
+    }
+    if(tomorrow.getDay() == 3){
+      setmeetingday('wed');
+    }
+    if(tomorrow.getDay() == 4){
+      setmeetingday('thu');
+    }
+    if(tomorrow.getDay() == 5){
+      setmeetingday('fri');
+    }
+    
+    if(tomorrow.getDay() == 6){
+      setmeetingday('sat');
+    }
+    
+    if(t_date.getDate() != tomorrow.getDate()){
+      tomorrow.setDate(date.getDate() + 1);
+    }
+      
+    
+    console.log(tomorrow.getDay(),'tommorow');
+    
+    
+    
+    console.log(meetingday);
+    
+    
+    
+    
+      var todayDate = new Date(tomorrow).toISOString().slice(0, 10);
+    
+      //console.log(todayDate);
+    
+// 26-12-2023 old
+    // var tomorrow = new Date(date);
+    // tomorrow.setDate(date.getDate() + 1);
+    // var todayDate = new Date(tomorrow).toISOString().slice(0, 10);
 
     //console.log(todayDate);
 
@@ -1894,7 +1953,7 @@ setmypreferplanName(mypreferplan[0].plan_name);
     var included = 1;
     setarray1([]);
 
-   
+   getCoachAvailability(todayDate);
 
       // ////console.log(res);
       ////console.log(data);
@@ -2015,14 +2074,127 @@ setmypreferplanName(mypreferplan[0].plan_name);
 
 
 
-  
-  useEffect(() => {
-    // Get the current time
-    let now = new Date();
-    let currentHours = now.getHours();
-    let currentMinutes = now.getMinutes();
 
-    // Given date and time in Indian Standard Time (IST)
+
+
+const getCoachAvailability = async (todayDate :string) => {
+
+  // Parse the string into a Date object
+const dateObject = new Date(todayDate);
+
+// Get the two-digit date
+const twoDigitDate = ('0' + dateObject.getDate()).slice(-2);
+  console.log('testtt',todayDate,coachesFirebaseId);
+  //console.log(nextSevenDay[0].date, nextSevenDay[1].date,nextSevenDay[2].date,nextSevenDay[3].date,nextSevenDay[4].date,nextSevenDay[5].date,nextSevenDay[6].date);
+  const coachId = coachesFirebaseId;
+  const schedulesCollection = collection(database, 'schedules');
+  const queryDoc = query(schedulesCollection, where("coach_id", "==", coachId), where("date","==",twoDigitDate));
+  console.log('coach avbl');
+  try {
+    const response = await getDocs(queryDoc);
+    const fetchedAvailability = response.docs.map((data) => {
+      console.log(data.data());
+      console.log('coach avbl2');
+      return { ...data.data(), availability_id: data.id };
+    });
+    setCoachAvailability(fetchedAvailability);
+  } catch (error) {
+    console.log('coach avbl3');
+    console.error('Error fetching data:', error);
+  }
+};
+
+
+
+
+
+
+
+
+
+  
+//   useEffect(() => {
+//     // Get the current time
+//     let now = new Date();
+//     let currentHours = now.getHours();
+//     let currentMinutes = now.getMinutes();
+
+//     // Given date and time in Indian Standard Time (IST)
+// const givenDate =date;
+
+// // Convert the given date and time to South Africa Standard Time (SAST)
+// const saTimeZone = 'Africa/Johannesburg';
+// const saFormattedDate = givenDate.toLocaleString('en-US', { timeZone: saTimeZone });
+
+// console.log(`Given date and time in IST: ${givenDate}`);
+// console.log(`Converted date and time in SAST: ${saFormattedDate}`);
+//     let currentTime=`00:00:00`;
+//     if(date.getDate() == now.getDate() && date.getFullYear() == now.getFullYear() && date.getMonth() == now.getMonth()){
+//     currentTime = `${currentHours}:${currentMinutes < 10 ? '0' : ''}${currentMinutes}:00`;
+//     }else{
+//       currentTime = `00:00:00`;
+//     }
+//     console.log(date.getDate(),date.getFullYear(),date.getMonth());
+// console.log(now.getDate(),now.getFullYear(),now.getMonth());
+//     console.log('terrr');
+//     if(mycoach != null){
+//       if(mycoach[0].start_time){
+//  var starttime = mycoach[0].start_time;
+//       }else{
+//         var starttime = "09:00:00";
+//       }
+// var interval = "60";
+// if(mycoach[0].start_time){
+//   var endtime = mycoach[0].end_time;
+//        }else{
+//          var endtime = "17:00:00";
+//        }
+
+//       }
+//       else{
+//         var starttime = "09:00:00";
+//         var interval = "60";
+//         var endtime = "17:00:00";
+//       }
+// //var endtime = "17:00:00";
+
+// if (starttime >= currentTime) {
+// var timeslots = [starttime];
+// }else{
+//   var timeslots = [];
+// }
+// //console.log(meetingByDate);
+
+// while (starttime < endtime) {
+
+//   starttime = addMinutes(starttime, interval); 
+//   if (starttime >= currentTime) {
+//   if(starttime < endtime){
+    
+//       console.log(currentTime);
+
+//   if(!isReserved(starttime)){
+//   timeslots.push(starttime);
+//   }
+//   }
+// }
+//   settimeslot_load(false);
+// }
+
+// setarray1(timeslots);
+
+
+//   }, [meetingByDate]);
+
+
+
+useEffect(() => {
+  // Get the current time
+  let now = new Date();
+  let currentHours = now.getHours();
+  let currentMinutes = now.getMinutes();
+
+  // Given date and time in Indian Standard Time (IST)
 const givenDate =date;
 
 // Convert the given date and time to South Africa Standard Time (SAST)
@@ -2031,63 +2203,105 @@ const saFormattedDate = givenDate.toLocaleString('en-US', { timeZone: saTimeZone
 
 console.log(`Given date and time in IST: ${givenDate}`);
 console.log(`Converted date and time in SAST: ${saFormattedDate}`);
-    let currentTime=`00:00:00`;
-    if(date.getDate() == now.getDate() && date.getFullYear() == now.getFullYear() && date.getMonth() == now.getMonth()){
-    currentTime = `${currentHours}:${currentMinutes < 10 ? '0' : ''}${currentMinutes}:00`;
-    }else{
-      currentTime = `00:00:00`;
-    }
-    console.log(date.getDate(),date.getFullYear(),date.getMonth());
+  let currentTime=`00:00:00`;
+  if(date.getDate() == now.getDate() && date.getFullYear() == now.getFullYear() && date.getMonth() == now.getMonth()){
+  currentTime = `${currentHours}:${currentMinutes < 10 ? '0' : ''}${currentMinutes}:00`;
+  }else{
+    currentTime = `00:00:00`;
+  }
+  console.log(date.getDate(),date.getFullYear(),date.getMonth());
 console.log(now.getDate(),now.getFullYear(),now.getMonth());
-    console.log('terrr');
-    if(mycoach != null){
-      if(mycoach[0].start_time){
- var starttime = mycoach[0].start_time;
-      }else{
-        var starttime = "09:00:00";
-      }
-var interval = "60";
-if(mycoach[0].start_time){
-  var endtime = mycoach[0].end_time;
-       }else{
-         var endtime = "17:00:00";
-       }
+  console.log('terrr');
+//   if(mycoach != null){
+//     if(mycoach[0].start_time){
+// var starttime = mycoach[0].start_time;
+//     }else{
+//       var starttime = "09:00:00";
+//     }
+// var interval = "60";
+// if(mycoach[0].start_time){
+// var endtime = mycoach[0].end_time;
+//      }else{
+//        var endtime = "17:00:00";
+//      }
 
+//     }
+//     else{
+//       var starttime = "09:00:00";
+//       var interval = "60";
+//       var endtime = "17:00:00";
+//     }
+//var endtime = "17:00:00";
+
+// after 26-12-2023
+
+if(coachAvailability && coachAvailability.length !=0){
+
+  for (let index = 0; index < coachAvailability.length; index++) {
+    
+    console.log('meetingday',meetingday);
+    if(coachAvailability[index].day == 'wed'){
+
+
+      if(! coachAvailability[index].isUnAvbl){
+
+      var starttime = coachAvailability[index].startHour + ":" + coachAvailability[index].startMinute + ":00";
+
+      var endtime = coachAvailability[index].endHour + ":" + coachAvailability[index].endMinute + ":00";
       }
       else{
-        var starttime = "09:00:00";
-        var interval = "60";
-        var endtime = "17:00:00";
+        var starttime = '';
+        var endtime = '';
+
       }
-//var endtime = "17:00:00";
+      break;
+    }
+    else{
+      var starttime = "09:00:00";
+      var endtime = "17:00:00";
+    }
+    
+  }
+
+  var interval = "60";
+
+
+
+
+  }
+  else{
+    var starttime = "09:00:00";
+    var interval = "60";
+    var endtime = "17:00:00";
+  }
 
 if (starttime >= currentTime) {
 var timeslots = [starttime];
 }else{
-  var timeslots = [];
+var timeslots = [];
 }
 //console.log(meetingByDate);
 
 while (starttime < endtime) {
 
-  starttime = addMinutes(starttime, interval); 
-  if (starttime >= currentTime) {
-  if(starttime < endtime){
-    
-      console.log(currentTime);
+starttime = addMinutes(starttime, interval); 
+if (starttime >= currentTime) {
+if(starttime < endtime){
+  
+    console.log(currentTime);
 
-  if(!isReserved(starttime)){
-  timeslots.push(starttime);
-  }
-  }
+if(!isReserved(starttime)){
+timeslots.push(starttime);
 }
-  settimeslot_load(false);
+}
+}
+settimeslot_load(false);
 }
 
 setarray1(timeslots);
 
 
-  }, [meetingByDate]);
+}, [coachAvailability]);
 
   if(!client){
     return <div><img src={`${router.basePath}/images/loading.gif`} style={{ display:"block", margin:"0px auto"}} /></div>;
@@ -2654,7 +2868,8 @@ const year = today.getFullYear();
                     
                   <div className="col-sm-4"></div>
                     <div className="col-sm-6">
-                    <h2>upload notes</h2>
+                    <h2>upload notes <span className="upload_notes_client" onClick={showSeeNotes}>See Notes</span></h2>
+                    
                       </div>   
                     </div>
 
@@ -3476,7 +3691,14 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
         >
           <div className="client-bg">
             <div className="file-scroll">
+            
               <div className="row">
+              <div className="col-sm-4"></div>
+                    <div className="col-sm-6">
+                    <h2>see notes <span className="upload_notes_client" onClick={showUploadNotes}>Upload Notes</span></h2>
+                    
+                      </div>   
+                    
                 <div className="col-sm-12">
                   <div className="product_search_form">
                     <form id="searchForm" action="" method="POST">
@@ -3497,7 +3719,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
                     </form>
                   </div>
                 </div>
-
+ 
                 {allFiles.length> 0 ? allFiles.map((myfile, index) => {
              return (
               myfile.fileName.toLowerCase().indexOf(SearchVal.toLowerCase()) !== -1
@@ -4387,7 +4609,7 @@ const timeRemaining = Math.floor((meetingDate - currentTime) / 60000);
         </div>
         {/*/ session-info */}
         <div className="notes-list mrb-50">
-          <h4 className="mrb-15">my notes</h4>
+          <h4 className="mrb-15">my notes <span className="upload_notes_client" onClick={showUploadNotes}>Upload Notes</span></h4>
           <div className="notes-search mrb-20">
             <form>
               <input

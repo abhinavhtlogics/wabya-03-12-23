@@ -282,21 +282,20 @@ const year = today.getFullYear();
         <div className="col-sm-10 right mrb-30">
           
         <div className="top">
-            <div className="inner-info">
-              <h2>Resources</h2>
-            </div>
+        <h2>Resources</h2>
+            {/* <div className="inner-info">
+             
+            </div> */}
           </div>
           
-          </div>
+         
 
         {/* <div className="col-sm-2 left mrb-30">
           <figure><img src={userProfile} alt=""/></figure>
         </div>  */}
 
-<div className="col-sm-2">
-         
-        </div> 
-        <div className="col-sm-10 right mrb-30">
+
+       
          
 
           <div className="col-sm-12">
