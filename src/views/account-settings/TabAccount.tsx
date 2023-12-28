@@ -488,6 +488,7 @@ setend_time_minute(parts2[1])
   name='clientCountry'
   id='clientCountry'
   label='Country'
+  className='coach-country'
   sx={{ marginBottom: 4 }}
   value={country_sel}
   onChange={handleChangeCountry}
@@ -507,25 +508,25 @@ setend_time_minute(parts2[1])
             <TextField fullWidth type='text' label='Time Zone' placeholder='Time Zone' name='pro_timezone' id='pro_timezone' value={proTimeZone} onChange={event => setTimeZone(event.target.value)} />
           </Grid>
 
-          <Grid item xs={12} sm={2}>
+          {/* <Grid item xs={12} sm={2}>
             <TextField fullWidth type='number' label='Start Time Hour'  value={start_time_hour} name='pro_timezone' id='pro_timezone' onChange={handleStartTimeHour}  />
           </Grid>
         
        
           <Grid item xs={12} sm={2}>
             <TextField fullWidth type='number' label='Start Time Minute' placeholder='00' name='pro_timezone' id='pro_timezone' value={start_time_minute} onChange={handleStartTimeMin} />
-          </Grid>
+          </Grid> */}
 
 
 
-          <Grid item xs={12} sm={2}>
+          {/* <Grid item xs={12} sm={2}>
             <TextField fullWidth type='number' label='End Time Hour' placeholder='09' name='pro_timezone' id='pro_timezone' value={end_time_hour} onChange={handleEndTimeHour} />
           </Grid>
         
        
           <Grid item xs={12} sm={2}>
             <TextField fullWidth type='number' label='End Time Minute' placeholder='00' name='pro_timezone' id='pro_timezone' value={end_time_minute} onChange={handleEndTimeMin} />
-          </Grid>
+          </Grid> */}
 
           <Grid item xs={12}>
             <TextField
