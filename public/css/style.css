@@ -118,6 +118,7 @@ h4{color:#f79632;}
   .menu-head .navbar-brand img{margin:auto; max-width: 190px; position: relative; z-index: 3;}
   .menu-head .navbar-header{position: relative;}
   .menu-head nav{background: none; border: none; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin: 0; padding: 0 20px; -webkit-box-shadow: none; box-shadow: none;}
+  .client-header .menu-head nav{padding: 0;}
   .menu-head .navbar-collapse{padding:0;}
   .menu-head .navbar-nav{text-align:center; margin-left: auto; margin-right: auto; float: none; align-items: center;}
   .menu-head .navbar-nav > li{display:inline-block; float:none; list-style:none; padding: 0 18px; margin: 0; position: relative; vertical-align: middle;}
