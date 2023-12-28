@@ -612,7 +612,7 @@ h4{color:#f79632;}
 .month-overview-table .table-month thead tr:first-child th:nth-child(1){visibility: hidden; border: 0;}
 .month-overview-table .table-month thead tr:first-child th:nth-child(2){border-top-left-radius: 12px; border-top-right-radius: 12px; border-top: 1px solid #0f2540; border-left: 1px solid #0f2540;}
 .month-overview-table .table-month thead tr:nth-child(2) th:nth-child(1){border-top-left-radius: 12px; border-top: 1px solid #0f2540; border-left: 1px solid #0f2540;}
-.month-overview-table .table-month td{background: #f8f3e7; border-right: 1px solid #0f2540; border-bottom: 1px solid #0f2540; text-align: center; border-bottom: none;}
+.month-overview-table .table-month td{background: #f8f3e7; border-right: 1px solid #0f2540; border-bottom: 1px solid #0f2540; text-align: center;}
 .month-overview-table .table-month tbody tr:last-child td:nth-child(1), .month-overview-table .table-month tbody tr:last-child td:nth-child(2){visibility: hidden; border: 0;}
 .month-overview-table .table-month tbody tr:last-child td:nth-child(3){border-bottom-left-radius: 12px; border-left: 1px solid #0f2540;}
 .month-overview-table .table-month tbody tr:last-child td:nth-child(4){border-bottom-right-radius: 12px;}
