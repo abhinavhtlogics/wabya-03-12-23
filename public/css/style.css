@@ -603,6 +603,7 @@ h4{color:#f79632;}
   margin-bottom: 60px;
 }
 .month-overview-table{/*background: rgb(248, 243, 231); border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid #0f2540;*/}
+.month-overview-table .table{border-collapse: inherit; border-spacing: 0;}
 .month-overview-table .table-month {  margin-bottom: 0; }
 .month-overview-table .table-month tr{border-bottom: 1px solid #0f2540; text-transform: lowercase;
   letter-spacing: 3px;}
