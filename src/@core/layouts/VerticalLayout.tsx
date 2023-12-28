@@ -238,9 +238,9 @@ const VerticalLayout = (props: LayoutProps) => {
       {scrollToTop ? (
         scrollToTop(props)
       ) : (
-        <ScrollToTop className='mui-fixed'>
+        <ScrollToTop className='mui-fixed client-arrow'>
           <Fab color='primary' size='small' aria-label='scroll back to top'>
-            <ArrowUp />
+            <ArrowUp className='client-arrow-icon'/>
           </Fab>
         </ScrollToTop>
       )}
