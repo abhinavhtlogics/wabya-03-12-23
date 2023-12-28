@@ -716,7 +716,11 @@ h4{color:#f79632;}
 .edit-profile .inner-info figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-05.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
 .edit-profile .inner-info figure img{width: 120px !important; height: 116px !important; object-fit: cover; object-position: center center;}
 .edit-profile .inner-info .btn{font-weight: 400; font-size: 14px; text-shadow: none; text-transform: uppercase; letter-spacing: 1px; background: #f59533; color: #f7f0e4; box-shadow: none; border: 0; min-width: 198px; border-radius: 20px; text-align: center; padding: 9px 20px 8px; position: relative; z-index: 2; margin: 0 10px 0 0;}
-.edit-profile .inner-info .reset-btn { border: 2px solid #f59533 !important; color: #0f2540 !important; background: #f7f0e4 !important; }
+.edit-profile .inner-info .btn:hover{color: #fff;}
+.edit-profile .inner-info .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #0f2540; z-index: -1;}
+.edit-profile .inner-info .btn:hover:after{width: 100%;}
+
+.edit-profile .inner-info .reset-btn{border: 2px solid #f59533 !important; color: #0f2540 !important; background: #f7f0e4 !important;}
 
 /* client dashboard */
 .client-dashboard {position:relative; margin:0; padding:70px 0 80px; z-index:1;}
