@@ -438,6 +438,7 @@ h4{color:#f79632;}
   .timesheet-resources .inner-info{background:#f7f0e4; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; color:#0f2540; position: relative; margin: 0 0 30px; padding:25px 40px;}
   .timesheet-resources h2{color:#0f2540; font-size:30px; margin:40px 0; position:relative; text-align: left;}
   .timesheet-resources h2 span{display:block; font-size:20px; margin:5px 0 0; text-transform: uppercase; font-weight:500;}
+  .timesheet-resources .right{text-align: left;}
   .timesheet-resources .file-info{background:#f7f0e4; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; height: 480px; overflow-y: scroll; overflow-x: hidden; padding:0; margin: 0 0 30px;}
   .timesheet-resources .file-scroll{color:#0f2540; position: relative; padding:50px 40px 20px;}
   .timesheet-resources .file-info .fi-coll .inner{background: #fff; -webkit-border-radius:15px; -moz-border-radius:15px; border-radius:15px; padding: 20px 55px 20px 15px; display: flex; align-items: center; align-content: end; margin:0 0 30px; word-break: break-all; position:relative;}
@@ -1433,15 +1434,11 @@ span.pass-eye {
 .coaches-list .table-coaches-list .btn-delete{background: #d479a6; color: #f8f3e7;}
 .coaches-list .btn-add-new{ background: #0f2540; color: #f8f3e7; font-weight: 600; font-size: 15px; text-shadow: none; text-transform: uppercase; letter-spacing: 2px; box-shadow: none; border: 0; min-width: 190px; text-align: center; border-radius: 20px; margin: 0; padding: 9px 20px 8px; position: relative;  z-index: 2; float: right;}
 
-
-
-
-
-
-
 /* change password */
+.client-password.upload-notes{padding: 0 0 10px;}
 .client-password {position:relative; margin:0; padding:70px 0 80px; z-index:1;}
 .client-password h2{color:#0f2540; font-size:30px; margin:40px 0; position:relative; text-align: left; letter-spacing: 5px;}
+.client-password.upload-notes h3{margin: 0 0 10px;}
 .client-password h3{color:#0f2540; font-size:24px; margin:0 0 40px; position:relative; text-align: left; letter-spacing: 3px;}
 .client-password .inner-info {
   background: #f7f0e4;
@@ -1451,23 +1448,11 @@ span.pass-eye {
   margin: 0 0 30px;
   padding: 25px 40px;
 }
-.client-password .form-password .btn {
-  font-weight: 400;
-  font-size: 15px;
-  text-shadow: none;
-  letter-spacing: 2px;
-  background: #1d696c;
-  color: #fff;
-  box-shadow: none;
-  border: 0;
-  min-width: 100px;
-  border-radius: 20px;
-  text-align: center;
-  padding: 9px 20px 8px;
-  position: relative;
-  z-index: 2;
-  float: right;
-}
+.client-password .form-password .btn{font-weight: 400; font-size: 15px; text-shadow: none; letter-spacing: 1px; background: #1d696c; color: #fff; box-shadow: none; border: 0; min-width: 100px; border-radius: 30px; text-align: center; padding: 9px 20px 8px; position: relative; z-index: 2; overflow: hidden; float: right;}
+.client-password .form-password .btn:hover{color: #f7f0e4;}
+.client-password .form-password .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #0f2540; z-index: -1;}
+.client-password .form-password .btn:hover:after{width: 100%;}
+
 .client-password .form-password label {
   font-size: 16px;
   font-weight: 600;
