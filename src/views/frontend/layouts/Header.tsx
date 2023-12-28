@@ -94,7 +94,7 @@ const Header = () => {
  // 1 second delay
   }, [router.pathname])
   return(
-  <header className="header">
+  <header className={`header ${coach ? 'header-login' : ''}`}>
   <div className="menu-head">
     <div className="container">
 
