@@ -1449,9 +1449,7 @@ span.pass-eye {
   padding: 25px 40px;
 }
 .client-password .form-password .btn{font-weight: 400; font-size: 15px; text-shadow: none; letter-spacing: 1px; background: #1d696c; color: #fff; box-shadow: none; border: 0; min-width: 100px; border-radius: 30px; text-align: center; padding: 9px 20px 8px; position: relative; z-index: 2; overflow: hidden; float: right;}
-.client-password .form-password .btn:hover{color: #f7f0e4;}
-.client-password .form-password .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #0f2540; z-index: -1;}
-.client-password .form-password .btn:hover:after{width: 100%;}
+.client-password .form-password .btn-save:hover{color: #f7f0e4; background-color: #0f2540; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s;}
 
 .client-password .form-password label {
   font-size: 16px;
