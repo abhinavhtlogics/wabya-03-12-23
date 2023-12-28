@@ -776,7 +776,7 @@ h4{color:#f79632;}
   border-radius: 60px;
   color: #0f2540;
   position: relative;
-  padding: 40px 20px 20px;
+  padding: 40px 25px 30px; font-size: 14px;
 }
 .client-dashboard .info-basic .MuiButtonBase-root {
   background: none !important;
@@ -790,7 +790,7 @@ h4{color:#f79632;}
 .client-dashboard .info-basic figure{display: block; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; width: 111px; margin: 0 15px 0 0; border: 0; position: absolute; right: -2px; top: -53px;}
 .client-dashboard .info-basic figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-07-1.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
 .client-dashboard .info-basic figure img{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; width: 111px; height: 107px; object-fit: cover; object-position: center center;}
-.client-dashboard .info-basic h3 {
+.client-dashboard .info-basic h3 {font-size: 30px;
   color: #0f2540;
   text-align: left;
   margin: 0 0 20px;
@@ -803,7 +803,7 @@ h4{color:#f79632;}
   margin-bottom: 15px;
 }
 .client-dashboard .info-basic p span{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
     display: block;
