@@ -159,6 +159,7 @@ h4{color:#f79632;}
   .profile-button{position: relative; left: 0; top: 0; z-index: 3; order:3;}
   .profile-button > figure{display: inline-block; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius:0; vertical-align: middle; width: 70px; border: 0; margin: 0 14px 0 0; position:relative;}
   .header-login .profile-button > figure::before{background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-08.png);}
+  .header-login .frontend-change .profile-button .inner .btn:after{display:none;}
   .profile-button > figure::before{content: ""; background-image: url(https://wabya-dev-site.netlify.app/images/shape-bg-01.png); background-repeat: no-repeat; background-position: center center; background-attachment: scroll; background-size: cover; height: 100%; width: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
   .profile-button > figure img{-webkit-border-radius: 0; -moz-border-radius: 0; border-radius:0; width: 70px; height: 67px; object-fit: cover; object-position: center center;}
   .profile-button .dropdown{display: inline-block; min-width: 164px; vertical-align: middle;}
