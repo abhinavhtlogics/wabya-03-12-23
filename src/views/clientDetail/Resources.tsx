@@ -281,12 +281,12 @@ const year = today.getFullYear();
 
         <div className="col-sm-10 right mrb-30">
           
-        <div className="top">
+        {/* <div className="top"> */}
         <h2>Resources</h2>
             {/* <div className="inner-info">
              
             </div> */}
-          </div>
+          {/* </div> */}
           
          
 
@@ -298,13 +298,13 @@ const year = today.getFullYear();
        
          
 
-          <div className="col-sm-12">
-          <section className="client-password">
          
-            <div className="row">
+          <section className="client-password upload-notes">
+         
            
-              <div className="col-sm-12">
-              <h3 style={{ textAlign: 'left' }}>upload notes</h3>
+           
+              
+              <h3>upload notes</h3>
                 <div className='inner-info'>
                 
                 <form noValidate autoComplete='off' onSubmit={e => e.preventDefault()} className='form-password'>
@@ -344,12 +344,12 @@ const year = today.getFullYear();
                   </div>
                 </form>
                 </div>
-              </div>
              
-            </div>
+             
+           
             </section>
-          </div>
-          <h3 style={{ textAlign: 'left' }}>my notes</h3>
+         
+          <h3 >my notes</h3>
           <div className="file-info file-info-no-scroll">
 
 
