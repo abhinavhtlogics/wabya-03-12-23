@@ -1187,7 +1187,7 @@ h4{color:#f79632;}
 .cal-time .btn-time:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #0f2540; z-index: -1; border: 0; margin:0;}
 .cal-time .btn-time:focus:after, .cal-time .btn-time:visited:after, .cal-time .btn-time:hover:after{width: 100%;}
 
-.reschedule-zone .btn-next{background: #6dc1a4; font-weight: 400; font-size: 15px; text-shadow: none; text-transform: lowercase; letter-spacing: 2px; box-shadow: none; border: 1px solid #6dc1a4; min-width: 190px; text-align: center !important; margin: 16px auto; padding: 10px 20px 10px; position: relative; z-index: 2; color: #fff; display: block; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px;}
+.reschedule-zone .btn-next{background: #6dc1a4; font-weight: 400; font-size: 15px; text-shadow: none; text-transform: lowercase; letter-spacing: 2px; box-shadow: none; border: 1px solid #6dc1a4; min-width: 210px; text-align: center !important; margin: 16px auto; padding: 10px 20px 10px; position: relative; z-index: 2; color: #fff; display: block; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px;}
 
 .reschedule-zone .btn-next:hover{
   background: #0f2540;
