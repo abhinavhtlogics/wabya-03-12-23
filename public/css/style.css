@@ -478,8 +478,8 @@ h4{color:#f79632;}
 }
 .product_search_form #searchForm .fa-search {
   position: absolute;
-  right: 10px;
-  top: 3px;
+  right: 0;
+  top: 4px;
   background: none;
   font-weight: 500;
   padding: 6px 25px;
@@ -873,13 +873,14 @@ h4{color:#f79632;}
 .client-bg .fi-coll .inner {
   background: #fff;
   border-radius: 15px;
-  padding: 20px 15px;
+  padding: 20px 55px 20px 15px;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/ position: relative;
   align-items: center;
   align-content: end; word-break: break-all;
   margin: 0 0 30px;
 }
+.client-bg .fi-coll .inner .download-right{position: absolute; right: 15px; top: 22px; width: 35px;}
 .client-bg .fi-coll .inner figure { width: 35px;
  margin: 0 10px 0 0;
  min-width: 35px; }
