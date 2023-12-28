@@ -126,7 +126,7 @@ const Header = () => {
             <div className='container'>
               <nav className='navbar navbar-expand-lg'>
                 <div className='container-fluid'>
-                  <a href='/coach/dashboard' passHref>
+                  <a href='/' passHref>
                     <a className='navbar-brand'>
 
                     {router.pathname.startsWith('/coach/clientDetail/') ? (
@@ -307,7 +307,7 @@ const Header = () => {
       <div className="container">
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
-            <a className="navbar-brand" href={`${router.basePath}/coach/dashboard`}>
+            <a className="navbar-brand" href={`${router.basePath}`}>
             {router.pathname.startsWith('/coach/clientDetail/') ? (
           <img src="../../../images/admin.png"alt='Wabya Logo' />
         ) : (
