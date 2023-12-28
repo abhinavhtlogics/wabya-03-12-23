@@ -599,20 +599,14 @@ h4{color:#f79632;}
   position: relative;
   margin-bottom: 60px;
 }
-.month-overview-table {
-  background: rgb(248, 243, 231);
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border: 1px solid #0f2540;
-}
+.month-overview-table{/*background: rgb(248, 243, 231); border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid #0f2540;*/}
 .month-overview-table .table-month {  margin-bottom: 0; }
 .month-overview-table .table-month tr{border-bottom: 1px solid #0f2540; text-transform: lowercase;
   letter-spacing: 3px;}
 .month-overview-table .table-month tr:last-child{border-bottom: none;}
-.month-overview-table .table-month th { border-right: 1px solid #0f2540; text-align: center;}
-.month-overview-table .table-month td { border-right: 1px solid #0f2540; text-align: center; border-bottom: none;}
-.month-overview-table .table-month td:last-child, .month-overview-table .table-month th:last-child{border-right: none;}
+.month-overview-table .table-month th{background: #f8f3e7; border-top: 1px solid #0f2540; border-right: 1px solid #0f2540; text-align: center;}
+.month-overview-table .table-month td{background: #f8f3e7; border-right: 1px solid #0f2540; text-align: center; border-bottom: none;}
+/*.month-overview-table .table-month td:last-child, .month-overview-table .table-month th:last-child{border-right: none;}*/
 .month-overview-table .table-month td.bundle{border-left: 8px solid #6cc3a5; text-align: left; padding-left: 20px;}
 .month-overview-table .table-month td.pay{border-left: 8px solid #f59533; text-align: left; padding-left: 20px;}
 .month-overview-table .table-month td.probono{border-left: 8px solid #d479a6; text-align: left; padding-left: 20px;}
