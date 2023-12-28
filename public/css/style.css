@@ -433,7 +433,7 @@ h4{color:#f79632;}
   .client-resources .file-info .fi-coll .inner h4 a:hover{color:#f79632;}
 
 .timesheet-resources{position:relative; margin:0; padding:70px 0 80px; z-index:1;}
-  .timesheet-resources .container{max-width:1300px;}
+  .timesheet-resources .container{/*max-width:1300px;*/}
   .timesheet-resources .left figure{position: relative; margin:0;}
   .timesheet-resources .inner-info{background:#f7f0e4; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; color:#0f2540; position: relative; margin: 0 0 30px; padding:25px 40px;}
   .timesheet-resources h2{color:#0f2540; font-size:30px; margin:40px 0; position:relative; text-align: left;}
@@ -492,7 +492,7 @@ h4{color:#f79632;}
 
 /* timesheet page */
 .timesheet{position:relative; margin:0; padding:70px 0 80px; z-index:1;}
-.timesheet .container{max-width:1300px;}
+.timesheet .container{/*max-width:1300px;*/}
 .timesheet h2{color:#0f2540; font-size: 40px; margin:15px 0 10px; position:relative; text-align: left; letter-spacing: 5px; text-transform: lowercase;}
 .timesheet-carousel{background: #f7f0e4; height: 60px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; position: relative; margin-bottom: 20px;}
 .availability-popup .timesheet-carousel{background: #fff; border: 1px solid #0b233f; box-shadow: none; font-weight: 500; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; color: #0b233f; height: 44px; padding: 0; letter-spacing: 1px; display: inline-block; width: 100%;}
@@ -650,7 +650,7 @@ h4{color:#f79632;}
 
 /* calendar */
 .calendar{position:relative; margin:0; padding:70px 0 80px; z-index:1;}
-.calendar .container{max-width:1300px;}
+.calendar .container{/*max-width:1300px;*/}
 .calendar h2{color:#0f2540; font-size:30px; margin:40px 0; position:relative; text-align: left; letter-spacing: 5px; text-transform: capitalize;}
 .upcoming-event {
   margin-bottom: 20px;
