@@ -2689,9 +2689,14 @@ button{font-family: Gothic A1 !important;}
 
 .react-calendar__month-view__days{min-height: 252px;}
 
+.notification-container .coach-dash-desktop{text-align: right;}
+.notification-container .notification-desktop{float: none; width: auto; display: inline-block; margin: 20px 0 0 !important;}
+.notification-container p{display: inline-block; vertical-align: middle; border-left: 1px solid #0f2540; margin: 0; padding: 13px 17px 12px;}
+.notification-container p:first-child{border: 0; padding-left: 0;}
+.notification-container .notification-desktop a{font-weight: 500; text-decoration: none;}
+
 .notification-desktop{margin-top: 10px !important;margin-bottom: 10px !important; align-items: center;
-  gap: 0px;
-  padding-right: 10px; background: #d479a5 !important;}
+  gap: 0px; padding: 0; background: #d479a5 !important; -webkit-box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2); box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);}
 
   .notification-desktop .dismiss{
     border: none !important;
