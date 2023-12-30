@@ -2525,8 +2525,8 @@ color: #fff !important;
  .custom-class .profile-button .dropdown .inner .btn{ color: white !important;} 
  
 .upload-notes-popup h2{color: #1d696c; margin: 0 0 25px; text-align: center;}
-.upload-notes-popup h2 .btn{max-width: 200px; display: block; margin: 15px auto 0; padding: 12px 11px 10px;}
-.upload-notes-popup .btn{cursor: pointer; background:#0e2540; border:0; text-decoration: none; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; font-size:15px; font-weight:600; position: relative; z-index: 1; display: inline-block; text-align: center; color: #eae3d1; padding: 12px 25px 11px; letter-spacing:1px; margin:0; overflow:hidden; text-shadow:none; box-shadow:none; text-transform: inherit;}
+.upload-notes-popup h2 .btn{max-width: 200px; display: block; margin: 15px auto 0;}
+.upload-notes-popup .btn{cursor: pointer; background:#0e2540; border:0; text-decoration: none; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; font-size:15px; font-weight:600; position: relative; z-index: 1; display: inline-block; text-align: center; color: #eae3d1; padding: 12px 25px; letter-spacing:1px; margin:0; overflow:hidden; text-shadow:none; box-shadow:none; text-transform: inherit;}
   .upload-notes-popup .btn:hover, .upload-notes-popup .btn:focus, .upload-notes-popup .btn:visited{color: #0e2540 !important; background:#0e2540;}
   .upload-notes-popup .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #f79632; z-index: -1; border: 0; margin:0;}
   .upload-notes-popup .btn:focus:after, .upload-notes-popup .btn:visited:after, .upload-notes-popup .btn:hover:after{width: 100%;}
