@@ -503,7 +503,7 @@ h4{color:#f79632;}
 .availability-popup .timesheet-carousel .owl-theme .owl-nav div{left: inherit; right: 0; top: 0; margin: 0; padding: 0; width: 30px; height: 43px;}
 .availability-popup .timesheet-carousel .owl-theme .owl-nav div.owl-prev{right: 30px;}
 .availability-popup .timesheet-carousel .owl-theme .owl-nav div.owl-next{right: 0;}
-.availability-popup .timesheet-carousel .unavbl-time{font-size: 12px;}
+.availability-popup .unavbl-time{font-size: 12px;}
 /* owl slider */
 .timesheet-carousel .owl-stage-outer{padding: 17px 45px;}
 .timesheet-carousel .owl-dots{display: none;}
@@ -3726,7 +3726,7 @@ button{font-family: Gothic A1 !important;}
 
 
 .PROBONO-modal .modal-dialog { max-width: 80%;}
-.PROBONO-modal .modal-content { background: transparent; } 
+.PROBONO-modal .modal-content { background: transparent; }
 .PROBONO-modal  .btn-close {background: none;position: absolute; right: 30px;}
 
 
