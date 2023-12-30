@@ -1547,6 +1547,10 @@ function isTimeWithinRange(time, startTime, endTime) {
 }
 
 
+// Function to check if a given time is within a specified time range
+function isTimeWithinRange2(time, startTime, endTime) {
+  return time >= startTime && time < endTime;
+}
 useEffect(() => {
   // Get the current time
   let now = new Date();
@@ -1610,10 +1614,26 @@ if(myAvailability && myAvailability.length !=0){
       var starttime = myAvailability[index].startHour + ":" + myAvailability[index].startMinute + ":00";
 
       var endtime = myAvailability[index].endHour + ":" + myAvailability[index].endMinute + ":00";
+
+      var starttime2 = myAvailability[index].startHour2 + ":" + myAvailability[index].startMinute2 + ":00";
+
+      var endtime2 = myAvailability[index].endHour2 + ":" + myAvailability[index].endMinute2 + ":00";
+
+      var starttime3 = myAvailability[index].startHour3 + ":" + myAvailability[index].startMinute3 + ":00";
+
+      var endtime3 = myAvailability[index].endHour3 + ":" + myAvailability[index].endMinute3 + ":00";
+
+
       }
       else{
         var starttime = '';
         var endtime = '';
+
+        var starttime2 = '';
+        var endtime2 = '';
+
+        var starttime3 = '';
+        var endtime3 = '';
 
       }
       break;
@@ -1621,6 +1641,11 @@ if(myAvailability && myAvailability.length !=0){
     else{
       var starttime = "09:00:00";
       var endtime = "17:00:00";
+      var starttime2 = '';
+      var endtime2 = '';
+
+      var starttime3 = '';
+      var endtime3 = '';
     }
     
   }
@@ -1653,8 +1678,19 @@ if(starttime < endtime){
     console.log(currentTime);
 
 if(!isReserved(starttime)){
-timeslots.push(starttime);
+
+  if (!isTimeWithinRange2(starttime, starttime2, endtime2)) {
+    // If the time slot is reserved, return true
+   
+
+    if (!isTimeWithinRange2(starttime, starttime3, endtime3)) {
+      // If the time slot is reserved, return true
+      timeslots.push(starttime);
+    }
+  }
+
 }
+
 }
 }
 //settimeslot_load(false);
@@ -2121,7 +2157,7 @@ var interval = "60";
    }, [meeting]);
 
 
-
+   const [isCancelled, setIsCancelled] = useState(false);
    const cancelMeet = (meet_iddd,clientName,clientEmail,meet_date,meet_day,meet_month,meeting_start_time,meeting_end_time) => {
     console.log(meet_iddd);
     console.log(clientName);
@@ -2151,6 +2187,8 @@ var interval = "60";
     .catch((err) => {
       console.log(err);
     })
+
+    getMyMeeting();
    }
 
 
@@ -2767,7 +2805,7 @@ return(<>
 
 {isCoachCancel_ != undefined && isCoachCancel_ !== 1 ? (
   <p className='calendar-clientcanel'>
-    <u onClick={() => cancelMeet(meet_iddd,clientName,clientEmail,nextSevenDay[index2].date,nextSevenDay[index2].day,nextSevenDay[index2].month,matchingStarttime,matchingEndtime)}>Cancel</u>
+    <u  style={{'cursor':'pointer'}} onClick={() => cancelMeet(meet_iddd,clientName,clientEmail,nextSevenDay[index2].date,nextSevenDay[index2].day,nextSevenDay[index2].month,matchingStarttime,matchingEndtime)}>Cancel</u>
   </p>
 ) : null}
 
@@ -3801,7 +3839,7 @@ return(<>
                   <small>to</small>  
                  {availability[day].endHour} : {availability[day].endMinute} 
                  </span>
-                 <div className='plus' onClick={() => handleIsMoreToggle(day)}> + </div>
+                 {/* <div className='plus' onClick={() => handleIsMoreToggle(day)}> + </div> */}
                  </> 
                 
                 </>
@@ -3845,19 +3883,56 @@ return(<>
 
              </> }
                
+
+
+
+
+
+
+
+
+               
                
 
                 
                
               </div>
 
-              { availability[day].isMore || availability[day].startHour2 != '00' || availability[day].startMinute2 != '00' || availability[day].endHour2 != '10' || availability[day].endMinute2 != '00' ?
 
 
-              <div className="inner inner-edit">
-              <>
-              <span><small>from</small>
-               <span className="input-edit">
+
+
+
+
+
+              <div className="inner inner-edit"
+              
+              >
+               
+                  
+                { ! isEdit ?
+                <>
+                  
+                  <>
+                 <span>
+                  <small>from</small>
+                 {availability[day].startHour2} : {availability[day].startMinute2}  
+                 </span>
+                 <span>
+                  <small>to</small>  
+                 {availability[day].endHour2} : {availability[day].endMinute2} 
+                 </span>
+                 <div className='plus' onClick={() => handleIsMoreToggle(day)}> + </div>
+                 {/* <div className='plus' onClick={() => handleIsMoreToggle(day)}> + </div> */}
+                 </> 
+                
+                </>
+
+                 :
+                  
+                  <>
+                
+                  <span className="input-edit">
                    <input type='number' value={availability[day].startHour2}  name='startHour2'
               className='standard-in-num'
               onChange={(e) => handleHourChange2(e, day)}/>  <input
@@ -3867,12 +3942,10 @@ return(<>
               className='standard-in-num'
               onKeyUp={(e) => handleMinuteChange2(e, day)}
             />
-            </span> </span>
+            </span>
 
 
-
-
-            <span><small>to</small>
+        
             <span className="input-edit">
                    <input
               type='number'
@@ -3888,9 +3961,122 @@ return(<>
             onChange={(e) => handleMinuteChange2(e, day)}
           /> 
            </span>
-</span>
+
+
+
+
+             </> }
+               
+
+
+
+
+
+
+
+
+               
+               
+
+                
+               
+              </div>
+
+
+
+
+
+
+
+
+
+
+            
+               
+                  
+                { ! isEdit ?
+                 
+                <>
+                  {availability[day].isMore || availability[day].startHour3 != '00' || availability[day].startMinute3 != '00' || availability[day].endHour3 != '00' || availability[day].endMinute3 != '00' ?
+                  <>
+                    <div className="inner inner-edit"
+              
+              >
+                 <span>
+                  <small>from</small>
+                 {availability[day].startHour3} : {availability[day].startMinute3}  
+                 </span>
+                 <span>
+                  <small>to</small>  
+                 {availability[day].endHour3} : {availability[day].endMinute3} 
+                 </span></div>
+                 {/* <div className='plus' onClick={() => handleIsMoreToggle(day)}> + </div> */}
                  </> 
-</div> : null }
+                :null }
+                </>
+
+                 :
+                  
+                  <>
+                  <div className="inner inner-edit"
+              
+              >
+                  <span className="input-edit">
+                   <input type='number' value={availability[day].startHour3}  name='startHour3'
+              className='standard-in-num'
+              onChange={(e) => handleHourChange3(e, day)}/>  <input
+              type='number'
+              value={availability[day].startMinute3}
+              name='startMinute3'
+              className='standard-in-num'
+              onKeyUp={(e) => handleMinuteChange3(e, day)}
+            />
+            </span>
+
+
+        
+            <span className="input-edit">
+                   <input
+              type='number'
+              value={availability[day].endHour3}
+              name='endHour3'
+              className='standard-in-num'
+              onChange={(e) => handleHourChange3(e, day)}
+            /><input
+            type="number"
+            className="standard-in-num"
+            name="endMinute3"
+            value={availability[day].endMinute3}
+            onChange={(e) => handleMinuteChange3(e, day)}
+          /> 
+           </span>
+
+
+</div>
+
+             </> }
+               
+
+
+
+
+
+
+
+
+               
+               
+
+                
+               
+              
+
+
+            
+
+
+              
+        
 
               
             </div>
