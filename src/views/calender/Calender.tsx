@@ -3097,8 +3097,8 @@ footer={[]}
         }
         </div>
 
-       <div className="unavbl-time">Unavailable time</div>
-        <div className="col-sm-1 ap1" />
+      
+        <div className="col-sm-1 ap1"> <div className="unavbl-time">unavailable</div></div>
         <div className="col-sm-2 ap2">
         <input
             type="number"

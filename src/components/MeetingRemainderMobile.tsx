@@ -69,9 +69,10 @@ new client ({new_c.client_name}) joined.
       <div className='col-sm-12'>
         <div className='client-reminder notification-desktop'>
           <p>
-         ({scheduleMeeting.length})new meeting schedule <a href="/coach/new-meeting">detail</a>
+         ({scheduleMeeting.length})new meeting schedule 
             {/* <span>45 minutes : Coach Name</span> */}
           </p>
+          <p><a href="/coach/new-meeting">detail</a></p>
           <div className='dismiss' onClick={() => updateNotified()}>
             {/* <h5><Link href={`/coach/coach-video-call/${meet.meeting_id}`}>Join</Link></h5> */}
             <i className="fa-solid fa fa-remove"></i>

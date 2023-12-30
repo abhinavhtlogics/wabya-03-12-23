@@ -758,6 +758,7 @@ return (
 {weekDateRanges.map((dateRange, index) => (
         <th key={index}>{dateRange}</th>
       ))}
+      <th>total</th>
         </tr>
                       </thead>
                       <tbody>
@@ -806,7 +807,7 @@ return (
         meet => meet.client_id === cl.client_id
       )).length * 30) / 60).toFixed(1)} HOURS`}</td>
 
-       
+       <td>0.2 hours</td>
        
         
         
@@ -814,7 +815,7 @@ return (
     );
   })}
     <tr>
-                          <td colSpan={3}></td>
+                          <td colSpan={4}></td>
                           <td> </td>
                           <td>{`${ (((filteredMeetingSessions3(1,31)).length * 30) / 60).toFixed(1)} HOURS`}</td>
 
