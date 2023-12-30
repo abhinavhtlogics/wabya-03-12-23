@@ -3227,7 +3227,7 @@ button{font-family: Gothic A1 !important;}
        .client-sec > .table tr td:nth-child(1){border-left: 1px solid #000;}
        .client-sec .table td,.client-sec .table th{background-color:#f8f2e6;padding: 10px 12px;letter-spacing: 1.4px;border-right: 1px solid #000;border-bottom: 1px solid; text-align: center;}
        .client-sec .table tr:first-child th:nth-child(1),.client-sec .table tr:last-child td:nth-child(1){visibility: hidden;}
-       .client-sec .table tr:first-child th:nth-child(2){border-top-left-radius: 12px;border-top-right-radius: 12px;}
+       .client-sec .table tr:first-child th:nth-child(2){border-top-left-radius: 12px;border-top-right-radius: 12px; position: relative;}
        .client-sec .table tr:nth-child(2) th:first-child{border-top-left-radius: 12px;}
        .client-sec .table tr:last-child td:nth-child(2){border-bottom-left-radius: 12px;}
        .client-sec .table tr:last-child td:nth-child(3){border-bottom-right-radius: 12px;}
@@ -3257,10 +3257,10 @@ button{font-family: Gothic A1 !important;}
        .time-table-sec .page-link1:first-child{left: -15px;}
        .time-table-sec .page-link1:nth-child(2){right: -15px;}
 
-      .client-sec .page-link1{position: absolute;z-index: 99;top: 99px;}
+      .client-sec .page-link1{position: absolute;z-index: 99;top: 14px;}
       .client-sec .page-link1 img{width: 22px;}
-      .client-sec .prev{left: 33.7%;}
-      .client-sec .next{right: 3%;}
+      .client-sec .prev{left: 10px;}
+      .client-sec .next{right: 10px;}
 	  
   .user-profile ul li a{border-bottom: none !important; padding: 0; font-size: 12px; background-color: transparent; text-transform: lowercase; border: 0;}
   
