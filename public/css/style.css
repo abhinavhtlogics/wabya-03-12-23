@@ -610,7 +610,7 @@ h4{color:#f79632;}
 .month-overview-table .fa-angle-left::before{display: none;}
 
 .month-overview-table .table{border-collapse: inherit; border-spacing: 0;}
-.month-overview-table .table-month{margin-bottom: 0;}
+.month-overview-table .table-month{margin-bottom: 20px;}
 .month-overview-table .table-month tr{border-bottom: 1px solid #0f2540; text-transform: lowercase;
   letter-spacing: 3px;}
 .month-overview-table .table-month tr:last-child{border-bottom: none;}
