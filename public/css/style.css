@@ -604,9 +604,9 @@ h4{color:#f79632;}
 }
 .month-overview-table{/*background: rgb(248, 243, 231); border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid #0f2540;*/}
 
-.month-overview-table .fa-angle-left{background-image: url(https://wabya-dev-site.netlify.app/images/arrow-l-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px; width: 30px; height: 60px; cursor: pointer;}
+.month-overview-table .fa-angle-left{background-image: url(https://wabya-dev-site.netlify.app/images/arrow-l-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px; width: 8px; height: 17px; cursor: pointer; top: 3px; position: relative; margin: 0 10px 0 0;}
 .month-overview-table .fa-angle-left::before{display: none;}
-.month-overview-table .fa-angle-right{background-image: url(https://wabya-dev-site.netlify.app/images/arrow-r-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px; width: 30px; height: 60px; cursor: pointer;}
+.month-overview-table .fa-angle-right{background-image: url(https://wabya-dev-site.netlify.app/images/arrow-r-new.png); background-repeat: no-repeat; background-position: center center; background-size: 8px 17px; width: 8px; height: 17px; cursor: pointer; position: relative; margin: 0 10px 0 0;}
 .month-overview-table .fa-angle-right::before{display: none;}
 
 .month-overview-table .table{border-collapse: inherit; border-spacing: 0;}
