@@ -2530,7 +2530,8 @@ color: #fff !important;
   .upload-notes-popup .btn:hover, .upload-notes-popup .btn:focus, .upload-notes-popup .btn:visited{color: #0e2540 !important; background:#0e2540;}
   .upload-notes-popup .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #f79632; z-index: -1; border: 0; margin:0;}
   .upload-notes-popup .btn:focus:after, .upload-notes-popup .btn:visited:after, .upload-notes-popup .btn:hover:after{width: 100%;}
-
+  .upload-notes-popup .percent{position: absolute; right: -10px; top: -20px; background: #236a6d; z-index: 3; color: #fff; width: 40px; height: 40px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; text-align: center; line-height: 40px; font-size: 12px; letter-spacing: -0.5px; font-weight: 600;}
+  
 .upload-notes-popup form .form-control{padding: 10px 15px; font-size: 14px; height: 43px; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; outline: none !important; margin-bottom: 0; border: 1.24px solid #bcb4a2; color: #6C6C6C; background-color: #ece4d2;}
 .upload-notes-popup form .btn{background: #f79632; width:100%; font-size: 18px; padding: 8px 25px; font-weight: 600;}
 .upload-notes-popup form .btn:hover{background: #0e2540; color: #eae3d1 !important; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s;}
