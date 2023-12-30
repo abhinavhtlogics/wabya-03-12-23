@@ -1004,7 +1004,12 @@ return (
           </div>
           <div className="client-sec">
             <h2>client overview</h2>
-            <a className="page-link1 prev" href="#" aria-label="Previous" onClick={(e) => {
+          
+            <table className="table client-table-top">
+              <tbody>
+                <tr>
+                  <th />
+                  <th colSpan={2}>  <a className="page-link1 prev" href="#" aria-label="Previous" onClick={(e) => {
               e.preventDefault();
                 setCurrentMonth((prevMonth) => (prevMonth - 1 + 12) % 12);
                 if (currentMonth === 0) {
@@ -1013,7 +1018,11 @@ return (
               }}>
               <img src="../../images/timetable-prev.png" alt="" />
             </a>
-            <a className="page-link1 next" href="#" aria-label="Next" onClick={(e) => {
+
+           {" "}
+              {months[currentMonth]}{" "}
+              
+              <a className="page-link1 next" href="#" aria-label="Next" onClick={(e) => {
               e.preventDefault();
                 setCurrentMonth((prevMonth) => (prevMonth + 1) % 12);
                 if (currentMonth === 11) {
@@ -1021,13 +1030,7 @@ return (
                 }
               }}>
               <img src="../../images/timetable-next.png" alt="" />
-            </a>
-            <table className="table">
-              <tbody>
-                <tr>
-                  <th />
-                  <th colSpan={2}>{" "}
-              {months[currentMonth]}{" "}</th>
+            </a></th>
                 </tr>
                 <tr>
                   <th>name</th>
