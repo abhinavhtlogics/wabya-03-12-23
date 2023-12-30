@@ -497,9 +497,11 @@ const totalEarnings = filteredMeetingSessions.length * 20; // Assuming $20 per s
       <section className='timesheet timesheet-desktop lower-letter'>
         <div className='container'>
           <div className='row'>
-            <div className='col-sm-12 mrb-30'>
-              <h2>weekly overview</h2>
-            </div>
+            <div className='col-sm-12'>
+              <div className='timesheet-title mrb-30'>
+                <h2>weekly overview</h2>
+              </div>
+           
            <div className='timesheet-carousel'>
       <div className='row'>
         <div className='col-sm-1'>
@@ -833,7 +835,7 @@ return (
             </div>
 
             <DataTable datesArray={datesArray} meetingSession={meetingSession} coachName={proName}  />
-     
+            </div>
           </div>
         </div>
       </section>
