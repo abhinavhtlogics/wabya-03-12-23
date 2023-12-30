@@ -2528,7 +2528,7 @@ color: #fff !important;
   .upload-notes-button .btn:hover, .upload-notes-button .btn:focus, .upload-notes-button .btn:visited{color: #eae3d1 !important; background:#f79632;}
   .upload-notes-button .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #0e2540; z-index: -1; border: 0; margin:0;}
   .upload-notes-button .btn:focus:after, .upload-notes-button .btn:visited:after, .upload-notes-button .btn:hover:after{width: 100%;}
-  /*.upload_notes_client{font-size: 14px; color: #f79632; text-decoration: underline; cursor: pointer;}*/
+  .upload_notes_client{font-size: 14px; color: #f79632; text-decoration: underline; cursor: pointer;}
  
  .planactive{background: #f27553; border-radius: 30px;} 
  
