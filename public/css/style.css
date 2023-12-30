@@ -505,7 +505,7 @@ h4{color:#f79632;}
 .availability-popup .timesheet-carousel .owl-theme .owl-nav div.owl-next{right: 0;}
 .availability-popup .unavbl-time{font-size: 12px;}
 /* owl slider */
-.timesheet-carousel .owl-stage-outer{padding: 17px 45px;}
+.timesheet-carousel .owl-stage-outer{padding: 17px 0;}
 .timesheet-carousel .owl-dots{display: none;}
 .timesheet-carousel .owl-theme .owl-nav div:hover{background: transparent;}
 .timesheet-carousel .owl-theme .owl-nav div{display: block; background: none; border: 0; color: #000; position: absolute; left: 0; top: 0; height: 60px; width: 25px; opacity: 1; text-indent: -99999px; margin: 0; padding: 0;
