@@ -3493,6 +3493,8 @@ button{font-family: Gothic A1 !important;}
    .new-plans .plans-list ul{margin: 0; padding: 0 !important; display: block; gap: 0;}
    .new-plans .plans-list ul li{padding: 0 0 10px !important; list-style: none !important;}
    .schedule-session-new h3, .schedule-session-new h4{font-weight: 500;}
+   .timesheet-carousel .owl-stage-outer{padding: 20px 0;}
+   .timesheet-carousel .owl-item div::after{display: none;}
   
 }
 
