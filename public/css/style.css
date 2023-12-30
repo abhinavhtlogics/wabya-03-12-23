@@ -618,7 +618,7 @@ h4{color:#f79632;}
 .month-overview .month-overview-table .table-month thead tr:first-child th:nth-child(1){visibility: visible; border-top-left-radius: 12px; border-top: 1px solid #0f2540; border-left: 1px solid #0f2540; border-bottom: 1px solid #0f2540;}
 .month-overview .month-overview-table .table-month thead tr:first-child th:nth-child(2){border-top-left-radius: 0; border-top-right-radius: 0;}
 .month-overview .month-overview-table .table-month thead tr:first-child th:nth-child(3){border-top-right-radius: 12px; border-top: 1px solid #0f2540;}
-.month-overview .month-overview-table .table-month tbody tr:last-child td:nth-child(2){visibility: visible;   border-bottom-left-radius: 12px; border-left: 1px solid #0f2540; border-bottom: 1px solid #0f2540;}
+.month-overview .month-overview-table .table-month tbody tr:last-child td:nth-child(2){visibility: visible;   border-bottom-left-radius: 12px; border-left: 1px solid #0f2540; border-bottom: 1px solid #0f2540;   border-bottom-right-radius: 12px; border-right: 1px solid #0f2540;}
 .month-overview .month-overview-table .table-month tbody tr:last-child td:nth-child(3){border-bottom-right-radius: 12px; border-bottom-left-radius: 0;}
 
 .month-overview-table .table-month thead tr:first-child th:nth-child(2){border-top-left-radius: 12px; border-top-right-radius: 12px; border-top: 1px solid #0f2540; border-left: 1px solid #0f2540;}
@@ -628,6 +628,10 @@ h4{color:#f79632;}
 .month-overview-table .table-month tbody tr:last-child td:nth-child(3){border-bottom-left-radius: 12px; border-left: 1px solid #0f2540;}
 .month-overview-table .table-month tbody tr:last-child td:nth-child(4){border-bottom-right-radius: 12px;}
 /*.month-overview-table .table-month td:last-child, .month-overview-table .table-month th:last-child{border-right: none;}*/
+
+.month-overview-table .table-month .total-month{padding: 0;}
+.month-overview-table .table-month .total-month span{border-right: 1px solid #0f2540; width: 50%; display: inline-block; padding: 13px 10px;}
+.month-overview-table .table-month .total-month span:last-child{border: 0;}
 
 .month-overview-table .table-month td.bundle{border-left: 8px solid #6cc3a5; text-align: left; padding-left: 20px;}
 .month-overview-table .table-month td.pay{border-left: 8px solid #f59533; text-align: left; padding-left: 20px;}
