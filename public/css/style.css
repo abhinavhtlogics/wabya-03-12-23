@@ -2676,6 +2676,7 @@ button{font-family: Gothic A1 !important;}
 
 .react-calendar__month-view__days{min-height: 252px;}
 
+.container.notification-container{max-width: 97%;}
 .notification-container .coach-dash-desktop{text-align: right;}
 .notification-container .notification-desktop{float: none; width: auto; display: inline-block; margin: 20px 0 0 !important; position: relative;}
 .notification-container .notification-desktop .dismiss{position: absolute; right: -6px; top: -6px;}
