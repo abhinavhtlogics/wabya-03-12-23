@@ -3090,28 +3090,24 @@ const dialerCodes = {
         
 
             
-          <div className="row">
+          <div className="upload-notes-popup">
                     
-                  <div className="col-sm-4"></div>
-                    <div className="col-sm-6">
-                    <h2>upload notes <span className="upload_notes_client" onClick={showSeeNotes}>See Notes</span></h2>
+                 
+                    <h2>upload notes <span className="upload_notes_client btn" onClick={showSeeNotes}>See Notes</span>
+                   </h2>
                     
-                      </div>   
-                    </div>
+                     
 
                 {/* <i className="fa fa-angle-left"></i> */}
-                <form noValidate autoComplete='off' style={{'marginTop':'5%'}} onSubmit={e => e.preventDefault()} className='form-password'>
+                <form noValidate autoComplete='off'  onSubmit={e => e.preventDefault()} className='form-password'>
                 
                   <div className="row">
                     
-                  <div className="col-sm-2"></div>
-                    <div className="col-sm-6">
+                 
+                    <div className="col-sm-8 left-area">
                     
-                    {/* <label  className="custom-file-upload">
-    <i className="fa fa-cloud-upload"></i> choose File
-    <input id="file-upload" type="file" onChange={handleFileChange}/>
-</label> */}
-<input  type="file" onChange={handleFileChange} className='form-control' style={{width:'100%'}}/>
+                   
+<input  type="file" onChange={handleFileChange} className='form-control' />
 
 
 
@@ -3120,31 +3116,23 @@ const dialerCodes = {
                     </div>
                   
 
-                    <div className="col-sm-2">
+                    <div className="col-sm-4 right-area">
 
                       <input type="submit" value="save" className='btn btn-save btn-success' onClick={handleSubmit} />
+                      <div className="percent">
+<>
                     
-                     
+{ showpercent ?
+percent  : null}
+{ showpercent ?
+"%"  : null}</>
+</div>
                      </div>
 
-                     <div className="col-sm-2">
-
                     
-                      { showpercent ?
-    percent  : null}
-    { showpercent ?
-    "%"  : null}
-                     </div>
 </div>
 
-{/* <div className="row">
-                    
-                    <div className="col-sm-2"></div>
-                    <div className="col-sm-4">
-                    <input type="submit" value="SAVE" className='btn btn-primary' onClick={handleSubmit} />
-                   
-                    </div>
-</div> */}
+
 
 
                     
@@ -3158,7 +3146,7 @@ const dialerCodes = {
                   </div>
                 </form>
                 
-
+</div>
               
         </Modal>
 
@@ -3920,13 +3908,14 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
             <div className="file-scroll">
             
               <div className="row">
-              <div className="col-sm-4"></div>
-                    <div className="col-sm-6">
-                    <h2>see notes <span className="upload_notes_client" onClick={showUploadNotes}>Upload Notes</span></h2>
-                    
+              
+                    <div className="col-sm-5">
+                    <div class="upload-notes-button">
+                    <span className="upload_notes_client" onClick={showUploadNotes}>Upload Notes</span>
+                    </div>
                       </div>   
                     
-                <div className="col-sm-12">
+                <div className="col-sm-7">
                   <div className="product_search_form">
                     <form id="searchForm" action="" method="POST">
                       <input
