@@ -3911,7 +3911,7 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
               
                     <div className="col-sm-5">
                     <div class="upload-notes-button">
-                    <span className="upload_notes_client" onClick={showUploadNotes}>Upload Notes</span>
+                    <span className="upload_notes_client btn" onClick={showUploadNotes}>Upload Notes</span>
                     </div>
                       </div>   
                     
