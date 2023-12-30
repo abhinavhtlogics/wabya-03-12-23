@@ -131,7 +131,14 @@ console.log('working');
       // }
     };
 
-
+    useEffect(() => {
+      // Set the current URL as the previous URL when the component mounts
+      //setPreviousUrl();
+  
+      localStorage.setItem("last_login_page", '/coach/login');
+  console.log('last_login',localStorage.getItem("last_login_page"));
+      
+    }, []);
   return (
 <>
   <section className="login-wrap">

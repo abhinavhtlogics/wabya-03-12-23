@@ -2839,6 +2839,10 @@ const dialerCodes = {
         <div className="col-12">
           <h3 className="mrb-20">history</h3>
           <div className="session-info">
+
+
+          {clientIsDiscoveryDone != 0 ? (
+<>
           {meetingSession.map((session, index) =>{
   // Convert the Unix timestamp to a readable time for each session
   const timestamp = session.meeting_start_time.seconds * 1000; // Convert seconds to milliseconds
@@ -2877,7 +2881,14 @@ const dialerCodes = {
             </div>
 
 );
-})}
+})} </> ) :(
+<div className="row">
+           <div className="col-sm-12 mrb-10 text-center">
+            <h3 > complete your discovery session to see your session history.</h3>
+           </div>
+         </div>
+
+)}
           
           </div>
           {/*/ session-info */}
@@ -4141,8 +4152,9 @@ var myArr=new Date(data.meetingDate).toLocaleDateString().split('/');
 >
           <div className="modal-data">
 
-
-
+   
+          {clientIsDiscoveryDone != 0 ? (
+<>
             {next ? (
               <>
                 <div className="meeting-schedule">
@@ -4336,6 +4348,13 @@ onClick={handleTimeClick}
                 </div>
               </>
             )}
+</>
+           ):   ( <div className="row">
+           <div className="col-sm-12 mrb-10 text-center">
+            <h3 > complete your discovery session to book a new session.</h3>
+           </div>
+         </div>)     }       
+            
           </div>
         </Modal>
 

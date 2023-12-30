@@ -9,6 +9,7 @@ const MeetingReminderMobile = ({ meeting, newClient, scheduleMeeting, updateNewC
 {meeting.length > 0 ? meeting.map((meet, index) => (
 
 index == 0 ?(
+  <div class="container notification-container">
 <div className='row coach-dash-desktop' key={index}>
 <div className='col-sm-12'>
 <div className='client-reminder notification-desktop'>
@@ -26,6 +27,7 @@ index == 0 ?(
 </div>
 </div>
 </div> 
+</div>
 ) :null 
 )) : null}
 
@@ -34,7 +36,7 @@ index == 0 ?(
 
 {newClient.length > 0 ? newClient.map((new_c, index) => (
 
-
+<div class="container notification-container">
 <div className='row coach-dash-desktop' key={index}>
 <div className='col-sm-12'>
 <div className='client-reminder notification-desktop'>
@@ -52,6 +54,7 @@ new client ({new_c.client_name}) joined.
 </div>
 </div>
 </div> 
+</div>
 
 )) : null}
 
@@ -61,6 +64,7 @@ new client ({new_c.client_name}) joined.
 
 {scheduleMeeting.length > 0 ? scheduleMeeting.map((meet, index) => (
   index === 0 ? (
+    <div class="container notification-container">
     <div className='row coach-dash-desktop' key={index}>
       <div className='col-sm-12'>
         <div className='client-reminder notification-desktop'>
@@ -74,7 +78,7 @@ new client ({new_c.client_name}) joined.
           </div>
         </div>
       </div>
-    </div>
+    </div></div>
   ) : null
 )) : null}
 

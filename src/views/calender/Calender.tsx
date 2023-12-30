@@ -27,6 +27,7 @@ import { devNull } from 'os'
 
 import { Modal } from "antd";
 
+
 // ** Styled Menu component
 const Menu = styled(MuiMenu)<MenuProps>(({ theme }) => ({
   '& .MuiMenu-paper': {
@@ -229,6 +230,9 @@ const Calender = () => {
     sat: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false },
     sun: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false }
   });
+
+
+  
 
   const dayMappings = {
     "mon": "monday",
@@ -471,7 +475,7 @@ const Calender = () => {
   const isBetweenAvailabilityTimeslot = (timeslot, day) => {
     const validDays = ['tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'mon'];
   
-    console.log('my day', day);
+    //console.log('my day', day);
     // Convert the provided day to lowercase
     const lowercaseDay = day.toLowerCase();
   
@@ -504,7 +508,16 @@ if(isNotAvbl){
     // Handle form submission logic here
   };
 
-  const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat','sun'];
+  const dayname = ['sun','mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+
+  // Get the current day index
+const currentDayIndex = today.getDay(); // 0 for Sunday, 1 for Monday, ..., 6 for Saturday
+
+// Create a dynamic array starting from the current day
+const days = [
+  ...dayname.slice(currentDayIndex),
+  ...dayname.slice(0, currentDayIndex)
+];
   const handleEditClick = () => {
     // Toggle the value of isEdit
     setisEdit(!isEdit);
@@ -625,7 +638,7 @@ const getMyMeeting = async () => {
   
     const updatedAvailability = { ...availability };
     myAvailability.forEach((myData) => {
-      const { day, startHour, startMinute, endHour, endMinute, startHour2, startMinute2, endHour2, endMinute2, startHour3, startMinute3, endHour3, endMinute3, isUnAvbl } = myData;
+      const { day, startHour, startMinute, endHour, endMinute, startHour2, startMinute2, endHour2, endMinute2, startHour3, startMinute3, endHour3, endMinute3, isUnAvbl, date, month, year } = myData;
       updatedAvailability[day] = {
         startHour: startHour.padStart(2, '0'),
         startMinute: startMinute.padStart(2, '0'),
@@ -639,6 +652,9 @@ const getMyMeeting = async () => {
         startMinute3: startMinute3.padStart(2, '0'),
         endHour3: endHour3.padStart(2, '0'),
         endMinute3: endMinute3.padStart(2, '0'),
+        date:date,
+        month:month,
+        year:year,
         isMore: false,
         isUnAvbl: isUnAvbl,
       };
@@ -725,7 +741,30 @@ useEffect(() => {
     sun: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false }
    });
   getMyAvailability();
+
+  const reorderAvailability = () => {
+    const daysOrder = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    const currentDay = new Date().toLocaleString('en-us', { weekday: 'short' }).toLowerCase();
+    const currentDayIndex = daysOrder.indexOf(currentDay);
+
+    const reorderedDays = Array.from({ length: 7 }, (_, index) =>
+      daysOrder[(currentDayIndex + index) % 7]
+    );
+
+    const reorderedAvailability = {};
+    reorderedDays.forEach((day) => {
+      reorderedAvailability[day] = availability[day];
+    });
+
+    setAvailability(reorderedAvailability);
+  };
+
+  reorderAvailability();
 },[nextSevenDay[0].date])
+
+
+
+
 
 
 useEffect(() => {
@@ -813,7 +852,7 @@ useEffect(() => {
  //console.log();
  }
 
- console.log(next7Days);
+ console.log('next7days',next7Days);
 setnextSevenDay(next7Days);
     }
 
@@ -2314,7 +2353,9 @@ console.log('day',nextSevenDay[index].date);
 
 
          
-      console.log(data);
+      console.log('data',data);
+      console.log('date',nextSevenDay[index].date);
+
      
       addDoc(userDocRef, {
         
@@ -3040,7 +3081,7 @@ footer={[]}
         <div className="col-sm-1 ap4">
 
 
-          <section className="sec-plus" onClick={() => handleIsMoreToggle(day)}>+</section>
+          {/* <section className="sec-plus" onClick={() => handleIsMoreToggle(day)}>+</section> */}
         </div>
         <div className="col-sm-4 ap5 text-right">
 
@@ -3056,63 +3097,7 @@ footer={[]}
         }
         </div>
 
-       
-        <div className="col-sm-1 ap1" />
-        <div className="col-sm-2 ap2">
-        <input
-            type="number"
-            className="text-top form-control dates"
-            name="startHour3"
-           value={availability[day].startHour3}
-           onChange={(e) => handleHourChange3(e, day)}
-           />
-             <input
-            type="number"
-            className="text-top form-control dates"
-            name="startMinute3"
-            value={availability[day].startMinute3}
-            onChange={(e) => handleMinuteChange3(e, day)}
-          />
-        </div>
-        <div className="col-sm-1 ap3">
-          <span className="text-center">to</span>
-        </div>
-        <div className="col-sm-2 ap2">
-        <input
-            type="number"
-            className="text-top form-control dates"
-            name="endHour3"
-            value={availability[day].endHour3}
-            onChange={(e) => handleHourChange3(e, day)}
-          />
-          <input
-            type="number"
-            className="text-top form-control dates"
-            name="endMinute3"
-            value={availability[day].endMinute3}
-            onChange={(e) => handleMinuteChange3(e, day)}
-          />
-        </div>
-        <div className="col-sm-1 ap4">
-          {/* <section className="sec-plus" >+</section> */}
-        </div>
-        <div className="col-sm-4 ap5 text-right" />
-
-       
-      
-
-
-
-
-
-
-
-
-
-
-
-        { availability[day].isMore || availability[day].startHour2 != '00' || availability[day].startMinute2 != '00' || availability[day].endHour2 != '00' || availability[day].endMinute2 != '00' ?
-        <>
+       <div className="unavbl-time">Unavailable time</div>
         <div className="col-sm-1 ap1" />
         <div className="col-sm-2 ap2">
         <input
@@ -3147,6 +3132,63 @@ footer={[]}
             name="endMinute2"
             value={availability[day].endMinute2}
             onChange={(e) => handleMinuteChange2(e, day)}
+          />
+        </div>
+        <div className="col-sm-1 ap4">
+          {/* <section className="sec-plus" >+</section> */}
+          <section className="sec-plus" onClick={() => handleIsMoreToggle(day)}>+</section>
+        </div>
+        <div className="col-sm-4 ap5 text-right" />
+
+       
+      
+
+
+
+
+
+
+
+
+
+
+
+        { availability[day].isMore || availability[day].startHour3 != '00' || availability[day].startMinute3 != '00' || availability[day].endHour3 != '00' || availability[day].endMinute3 != '00' ?
+        <>
+        <div className="col-sm-1 ap1" />
+        <div className="col-sm-2 ap2">
+        <input
+            type="number"
+            className="text-top form-control dates"
+            name="startHour3"
+           value={availability[day].startHour3}
+           onChange={(e) => handleHourChange3(e, day)}
+           />
+             <input
+            type="number"
+            className="text-top form-control dates"
+            name="startMinute3"
+            value={availability[day].startMinute3}
+            onChange={(e) => handleMinuteChange3(e, day)}
+          />
+        </div>
+        <div className="col-sm-1 ap3">
+          <span className="text-center">to</span>
+        </div>
+        <div className="col-sm-2 ap2">
+        <input
+            type="number"
+            className="text-top form-control dates"
+            name="endHour3"
+            value={availability[day].endHour3}
+            onChange={(e) => handleHourChange3(e, day)}
+          />
+          <input
+            type="number"
+            className="text-top form-control dates"
+            name="endMinute3"
+            value={availability[day].endMinute3}
+            onChange={(e) => handleMinuteChange3(e, day)}
           />
         </div>
         <div className="col-sm-1 ap4">
@@ -3692,6 +3734,30 @@ return(<>
         <div className="col-12">
           <h3 className="mrb-5">standard availability</h3> <span onClick={handleEditClick}>Edit</span>
           <p></p>
+          <div className="timesheet-carousel" >
+          <OwlCarousel options={options22}>
+
+          { forloops.map((floop, index) => {
+            let i=(index)*7;
+            let j=i+6;
+            if (index== active) {
+              return (
+                <>
+                  <div className='active-owl cal-item' style={{fontSize:'12px'}} onClick={handleClick} data-id={index}>{ allWeekDay.length>i ? allWeekDay[i].month : null} { allWeekDay.length>i ? allWeekDay[i].date : null } -  { allWeekDay.length>j ?  allWeekDay[j].month : null} { allWeekDay.length>j ?  allWeekDay[j].date : null}</div>
+                </>
+              )
+            }else{
+              return (
+
+                <>
+                  <div className='cal-item' style={{fontSize:'12px'}} onClick={handleClick} data-id={index}>{ allWeekDay.length>i ? allWeekDay[i].month : null} { allWeekDay.length>i ? allWeekDay[i].date : null } -  { allWeekDay.length>j ?  allWeekDay[j].month : null} { allWeekDay.length>j ?  allWeekDay[j].date : null}</div>
+                </>
+              );
+            }
+
+          })}
+          </OwlCarousel>
+          </div>
           <div className="availability-list">
           
             {/*/ availability-box */}
