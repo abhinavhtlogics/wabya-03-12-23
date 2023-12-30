@@ -2524,9 +2524,9 @@ color: #fff !important;
  
  .custom-class .profile-button .dropdown .inner .btn{ color: white !important;} 
  
-.upload-notes-button .btn{cursor: pointer; background:#f79632; border:0; text-decoration: none; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; font-size:14px; font-weight:700; position: relative; z-index: 1; display: inline-block; text-align: center; color: #eae3d1; padding: 12px 11px 10px; letter-spacing:1px; width:100%; margin:0; overflow:hidden; text-shadow:none; box-shadow:none; text-transform: inherit;}
-  .upload-notes-button .btn:hover, .upload-notes-button .btn:focus, .upload-notes-button .btn:visited{color: #eae3d1 !important; background:#f79632;}
-  .upload-notes-button .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #0e2540; z-index: -1; border: 0; margin:0;}
+.upload-notes-button .btn{cursor: pointer; background:#0e2540; border:0; text-decoration: none; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; font-size:14px; font-weight:700; position: relative; z-index: 1; display: inline-block; text-align: center; color: #eae3d1; padding: 12px 11px 10px; letter-spacing:1px; min-width: 200px; margin:0; overflow:hidden; text-shadow:none; box-shadow:none; text-transform: inherit;}
+  .upload-notes-button .btn:hover, .upload-notes-button .btn:focus, .upload-notes-button .btn:visited{color: #0e2540 !important; background:#0e2540;}
+  .upload-notes-button .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #f79632; z-index: -1; border: 0; margin:0;}
   .upload-notes-button .btn:focus:after, .upload-notes-button .btn:visited:after, .upload-notes-button .btn:hover:after{width: 100%;}
   .upload_notes_client{font-size: 14px; color: #f79632; text-decoration: underline; cursor: pointer;}
  
