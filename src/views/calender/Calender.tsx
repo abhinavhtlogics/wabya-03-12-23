@@ -723,23 +723,23 @@ useEffect(() => {
 
    
   useEffect(() => {
+    setAvailability({ 
 
+      mon: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false, isUnAvbl :false },
+      tue: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00',isMore:false,isUnAvbl :false },
+      wed: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false, isUnAvbl :false },
+      thu: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00',isMore:false,isUnAvbl :false },
+      fri: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false },
+      sat: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false },
+      sun: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false }
+     });
     getWeek();
     
 
 }, [startLoop])
 
 useEffect(() => {
-  setAvailability({ 
-
-    mon: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false, isUnAvbl :false },
-    tue: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00',isMore:false,isUnAvbl :false },
-    wed: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false, isUnAvbl :false },
-    thu: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00',isMore:false,isUnAvbl :false },
-    fri: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false },
-    sat: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00', startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false },
-    sun: { startHour: '09', startMinute: '00', endHour: '17', endMinute: '00',startHour2: '00', startMinute2: '00', endHour2: '00', endMinute2: '00',startHour3: '00', startMinute3: '00', endHour3: '00', endMinute3: '00', isMore:false,isUnAvbl :false }
-   });
+ 
   getMyAvailability();
 
   const reorderAvailability = () => {

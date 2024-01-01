@@ -52,6 +52,7 @@ const Header = () => {
   const [logindropdown, setlogindropdown] = useState(false);
   const [signupdropdown, setsignupdropdown] = useState(false);
   const [menuCollapse, setmenuCollapse] = useState(false);
+  const [menuCollapse2, setmenuCollapse2] = useState(false);
   const setlogin = () => {
     setlogindropdown(logindropdown => !logindropdown);
 	setsignupdropdown(false);
@@ -84,6 +85,28 @@ const Header = () => {
 	  }, 200); // 1 second delay
   };
 
+
+  const Setmenu2 = (event) => {
+	event.preventDefault();
+	console.log('test2');
+	setTimeout(() => {
+
+		
+		if(menuCollapse2){
+		
+			setmenuCollapse2(menuCollapse2 => !menuCollapse2);
+		
+	}
+
+	if(!menuCollapse2){
+		
+			setmenuCollapse2(menuCollapse2 => !menuCollapse2);
+	
+	}
+
+		
+	  }, 10); // 1 second delay
+  };
   useEffect(() => {
 	
 
@@ -179,12 +202,12 @@ const Header = () => {
 		
 		</Link> */}
 
-<div className='profile-button'>
+<div className='profile-button' >
 	
                   { coach ? (
                   <>
-                    <figure>
-                      <img src={coach.coach_profile} alt={coach.coach_name} />
+                    <figure   onClick={Setmenu2}>
+                      <img src={coach.coach_profile} alt={coach.coach_name}  />
                     </figure>
                   </>
                   ) : null
@@ -195,10 +218,11 @@ const Header = () => {
                     <div className='dropdown'>
                       <div className='inner'>
                         <button
-                          className='btn btn-secondary dropdown-toggle'
+                          className={`btn btn-secondary dropdown-toggle ${menuCollapse2 ? 'show' : ''}`}
                           type='button'
                           data-bs-toggle='dropdown'
                           aria-expanded='false'
+						  onClick={Setmenu2}
                         >
                         {
                           coach ?
@@ -207,7 +231,7 @@ const Header = () => {
                           ) : null
                         }
                         </button>
-                        <ul className='dropdown-menu'>
+                        <ul className={`dropdown-menu ${menuCollapse2 ? 'show' : ''}`}>
                           <li>
                             <Link href='/coach/dashboard' passHref>
                               <a className='dropdown-item'>profile</a>
