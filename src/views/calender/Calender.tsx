@@ -1427,6 +1427,9 @@ const [BookedId, setBookedId] = useState();
 const getTimeslots = async (date) => {
   
   console.log(date);
+
+  setmeetingendtime('');
+  setmeetingtime('');
 // setmeetingtime('');
   var tomorrow = new Date(date);
 
@@ -3670,6 +3673,7 @@ return(<>
           <div className="availability-box availability-box-edit">
             <div className="inner">
               <span><small>from</small>  <select name="cars" className="form-control" onChange={handleTimeClick}> 
+              <option >00:00</option>
               {array2.map((timeSlot, index) => (
     
     <option   data-key={index}
