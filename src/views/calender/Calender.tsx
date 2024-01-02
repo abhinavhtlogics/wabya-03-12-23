@@ -1745,7 +1745,7 @@ const handleClientClick = (event: any) => {
 
 
 const handleTimeClick = (event: any) => {
-  //console.log(event)
+  console.log(event)
 
   const selectedIndex = event.target.selectedIndex;
     const selectedOption = event.target.options[selectedIndex];
@@ -1766,7 +1766,7 @@ const handleTimeClick = (event: any) => {
     new Date(
       "1970/01/01 " + selectedOption.getAttribute("data-time")
     ).getTime() +
-      30 * 60000
+      45 * 60000
   ).toLocaleTimeString("en-UK", {
     hour: "2-digit",
     minute: "2-digit",
@@ -3669,20 +3669,21 @@ return(<>
           <div class="availability-wrap availability-wrap-session"><h4>select the time</h4>
           <div class="availability-box availability-box-edit">
             <div class="inner">
-              <span><small>from</small>09 : 00</span>
-              <span><small>to</small>17: 00</span>
-              </div>
-              </div>
-              
+              <span><small>from</small>  <select name="cars" class="form-control" onChange={handleTimeClick}> 
               {array2.map((timeSlot, index) => (
     
     <option   data-key={index}
     key={index}
     data-time={timeSlot}
    
-    >{timeSlot}</option>
+    onClick={handleTimeClick} >{timeSlot.replace(/:00$/, '')}</option>
   
 ))}
+</select></span>
+              <span><small>to</small>{meetingendtime}</span>
+              </div>
+              </div>
+              
               </div>
 
 
