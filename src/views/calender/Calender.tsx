@@ -3666,10 +3666,10 @@ return(<>
           {/*/ form-group */}
 
 
-          <div class="availability-wrap availability-wrap-session"><h4>select the time</h4>
-          <div class="availability-box availability-box-edit">
-            <div class="inner">
-              <span><small>from</small>  <select name="cars" class="form-control" onChange={handleTimeClick}> 
+          <div className="availability-wrap availability-wrap-session"><h4>select the time</h4>
+          <div className="availability-box availability-box-edit">
+            <div className="inner">
+              <span><small>from</small>  <select name="cars" className="form-control" onChange={handleTimeClick}> 
               {array2.map((timeSlot, index) => (
     
     <option   data-key={index}
@@ -3680,7 +3680,7 @@ return(<>
   
 ))}
 </select></span>
-              <span><small>to</small>{meetingendtime}</span>
+              <span><small>to</small>{meetingendtime ? meetingendtime : '00:00'}</span>
               </div>
               </div>
               
