@@ -106,7 +106,8 @@ const Footer = () => {
                       <a target='_blank' href='https://www.linkedin.com/company/wabya/'>
                         <i className='fa fa-linkedin'></i>
                       </a>
-                      <a target="_blank" href="https://www.threads.net/@wearebecauseyouare" rel="noreferrer"><i class="fa-brands fa-threads" aria-hidden="true"></i></a>
+                      <a target="_blank" href="https://www.threads.net/@wearebecauseyouare" 
+                      rel="noreferrer"><i className="fa-brands fa-threads" ></i></a>
                       
                     </div>
 <div className='footer-arrow mobile-hidden'><a href="#"><img src='https://wabya.com/images/arrow-up.png' alt="arrow" /></a></div>
