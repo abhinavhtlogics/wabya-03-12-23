@@ -3823,7 +3823,7 @@ return(<>
               </div>
 
              
-              <div className="inner"
+              <div className="inner inner-edit mrb-10 mrt-0"
               
               >
                
@@ -3906,7 +3906,7 @@ return(<>
 
 
 
-              <div className="inner inner-edit"
+              <div className="inner"
               
               >
                
