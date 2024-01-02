@@ -2855,7 +2855,7 @@ button{font-family: Gothic A1 !important;}
 .availability-wrap .availability-box .inner span{display: block; font-weight: 600; color: #0e2540; font-size: 20px;}
 .availability-wrap .availability-box .inner span small{font-weight: 600; color: rgba(0, 0, 0, 0.5); display: block; font-size: 14px;}
 .availability-wrap .btn.btn-darkblue:after{background:#f59533;}
-.availability-wrap .availability-box .inner-edit{padding:25px 15px;}
+.availability-wrap .availability-box .inner-edit{padding:20px 15px;}
 .availability-wrap .availability-box .inner-edit::after{bottom: 14px !important;}
 .availability-wrap .availability-box .inner span.input-edit{display: flex; gap: 0px; font-size: 14px;}
 .availability-wrap .availability-box .inner span.input-edit input{width: 46px; font-size: 13px; padding: 0 3px; letter-spacing: -1px; font-weight: 600; height: auto; margin: 0; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: .375rem;}
