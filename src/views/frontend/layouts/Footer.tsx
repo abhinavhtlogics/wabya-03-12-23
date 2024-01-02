@@ -100,10 +100,10 @@ const Footer = () => {
                       <Link href='https://www.instagram.com/wearebecauseyouare/' passHref>
                         <a target='_blank'><i className='fa fa-instagram'></i></a>
                       </Link>
-                      <a target='_blank' href='#'>
+                      <a target='_blank' href='https://youtube.com/@wearebecauseyouare'>
                         <i className='fa fa-youtube-play'></i>
                       </a>
-                      <a target='_blank' href='#'>
+                      <a target='_blank' href='https://www.linkedin.com/company/wabya/'>
                         <i className='fa fa-linkedin'></i>
                       </a>
 
