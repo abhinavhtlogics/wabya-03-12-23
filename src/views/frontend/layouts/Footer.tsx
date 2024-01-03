@@ -57,8 +57,11 @@ const Footer = () => {
 
                 <div className='col-sm-2'>
                   <div className='wg-1'>
-                    <h4>FAQ</h4>
-                    <ul>
+                  <ul>
+                  <li>
+                        <Link  href='https://wabya-dev-site.netlify.app/frontend/faq'>FAQ</Link>
+                      </li>
+                   
                       <li>
                         <Link target='_blank' href='https://wabya.com/docs/privacy-policy.pdf'>privacy policy</Link>
                       </li>

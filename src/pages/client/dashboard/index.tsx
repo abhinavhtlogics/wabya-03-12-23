@@ -309,7 +309,21 @@ const Dashboard = () => {
   const [accountHolder, setAccountHolder] = useState("");
   const [accountNo, setAccountNo] = useState("");
   const [swiftCode, setSwiftCode] = useState("");
-  
+  useEffect(() => {
+    // Check if the last URL was '/coch/login'
+let lastUrl='';
+    if(localStorage.getItem("p_url")){
+     lastUrl = localStorage.getItem("p_url");
+  }
+    console.log('lastUrl',lastUrl);
+    if (lastUrl == '/joinvideo') {
+      // Reload the current page
+      console.log('yes');
+      localStorage.removeItem("p_url");
+      router.reload();
+    }
+  }, [router.path]); // Empty dependency array means this effect runs once after the initial render
+
 
   const scheduleNewSes = () => {
     setcollectionUpdateId("");
