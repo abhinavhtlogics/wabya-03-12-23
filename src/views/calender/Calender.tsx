@@ -497,7 +497,21 @@ if(isNotAvbl){
     const startAvailability = availability[lowercaseDay].startHour3 + ':' + availability[lowercaseDay].startMinute3;
     const endAvailability = availability[lowercaseDay].endHour3 + ':' + availability[lowercaseDay].endMinute3;
   
+
+    if(timeslot >= startAvailability && timeslot < endAvailability){
     return timeslot >= startAvailability && timeslot < endAvailability;
+    }
+
+
+    const startAvailability2 = availability[lowercaseDay].startHour2 + ':' + availability[lowercaseDay].startMinute2;
+    const endAvailability2 = availability[lowercaseDay].endHour2 + ':' + availability[lowercaseDay].endMinute2;
+  
+
+    
+    return timeslot >= startAvailability2 && timeslot < endAvailability2;
+    
+
+
   };
   
   
@@ -2820,11 +2834,12 @@ return(<>
                        
                         </div>
 
-                        <div class="blue-event free-time"><p class="calendar-clientcanel mrb-0">free time</p></div>
+                        <div className="blue-event free-time"><p className="calendar-clientcanel mrb-0">free time</p></div>
                         </>)
                         : (
                           isBetween_2 ? (
                             <>
+
                               {/* <p style={{ textAlign: 'center' }}>free time </p> */}
                             </>
                           ) : (
@@ -2839,6 +2854,7 @@ return(<>
                       if(index2 < 7 ){
                         return(
 <><td style={{ backgroundColor:  index2 < 7 && isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) ? 'lightgrey' : '' }}>{ !isBetweenAvailabilityTimeslot(timeslot, nextSevenDay[index2].day) && index %2!==0  && isBetween_2? <p style={{'textAlign':'center'}}></p>:null}
+
 </td>
 
 </>
@@ -3811,6 +3827,7 @@ return(<>
             
             {/*/ availability-box */}
 
+
             {days.map((day) => (
             <div className="availability-box availability-box-edit">
               <div className="accepting-availability">
@@ -4107,12 +4124,12 @@ return(<>
 
 
 <>
-            <h3 className="mrb-20">custom availability</h3>
+            {/* <h3 className="mrb-20">custom availability</h3>
           <div className="form-group mrb-30">
             <h4 className="mrb-5">select the date</h4>
             <Calendar  />
           </div>
-          {/*/ form-group */}
+         
 
 
           <div class="availability-wrap availability-wrap-session availability-wrap-session2">
@@ -4147,7 +4164,7 @@ return(<>
     save
 </a>
 
-            </p>
+            </p> */}
 
 </>
 
