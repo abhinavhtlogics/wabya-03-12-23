@@ -3853,18 +3853,33 @@ return(<>
             <div className="availability-box availability-box-edit">
               <div className="accepting-availability">
               <span className="span">{dayMappings[day]}</span>
+              {availability[day].isUnAvbl}
                 <label className="switch">
 
 
-      
+                {!availability[day].isUnAvbl
+                ?
+                <>
 
-                  <input className="switch-input" type="checkbox" checked={!availability[day].isUnAvbl} onChange={(e) => handleIsUnavblToggle(e,day)} />
+                  <input className="switch-input" type="checkbox"  onClick={(e) => handleIsUnavblToggle(e,day)} />
+
                   <span
+                    className="switch-label"
+                    data-on="unavailable"
+                    data-off="available"
+                  />
+
+                  </> : 
+                  <>
+                   <input className="switch-input" type="checkbox"   onClick={(e) => handleIsUnavblToggle(e,day)} />
+                   <span
                     className="switch-label"
                     data-on="available"
                     data-off="unavailable"
                   />
-                  <span className="switch-handle" />
+                  </>}
+                
+                 <span className={`switch-handle ${!availability[day].isUnAvbl ? 'switch-avbl' : 'switch-unavbl'}`} />
                 </label>
               </div>
 

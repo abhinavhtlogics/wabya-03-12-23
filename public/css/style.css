@@ -3764,3 +3764,21 @@ button{font-family: Gothic A1 !important;}
 
 
 .client-arrow button{background-image: url(https://wabya-dev-site.netlify.app/_next/static/media/shape-04.879afd4f.png); background-color: inherit !important;background-size: cover !important; background-repeat: no-repeat !important; background-attachment: scroll !important; min-width: 48px !important; min-height: 46.5px !important; padding: 0 !important; width: auto !important; height: auto !important; border-radius: 0 !important; box-shadow: none !important;}
+
+
+
+.availability-wrap .availability-box .switch-unavbl {
+  position: absolute !important;
+  top: 2px !important;
+  left: 3px  !important;
+  width: 15px !important;
+  height: 15px !important;
+  background: #f17654 !important;
+  border-radius: 100% !important;
+}
+.availability-wrap .availability-box .switch-avbl {
+
+left: 75px !important;
+    background: #236a6d !important;
+
+}
