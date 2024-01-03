@@ -350,7 +350,7 @@ if(clientRegisteredId != ''){
    // coach data fetch
    const getCoachData = async () => {
     console.log('test');
-        const queryDoc = query(coachRef, where('coach_email', '!=', ''));
+        const queryDoc = query(coachRef,where('accept_new_client','==',1));
     
         await getDocs(queryDoc).then(response => {
           console.log(response.docs.length);
@@ -430,6 +430,8 @@ const getAllPlans = async () => {
     
         console.log('clientData',clientData);
 
+
+        if(coachData != null){
         if (coachData.length > 0 && clientData.length > 0) {
           // Create a mapping of coachId to client count
           const coachClientCountMap = {};
@@ -449,7 +451,7 @@ const getAllPlans = async () => {
           setCoachClientCounts(coachClientCountMap);
         }
         
-       
+      }
         }
     
       }, [clientData])
