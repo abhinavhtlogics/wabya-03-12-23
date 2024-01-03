@@ -57,11 +57,11 @@ const Footer = () => {
 
                 <div className='col-sm-2'>
                   <div className='wg-1'>
-                  <ul>
-                  <li>
+                
+                <h4>
                         <Link  href='https://wabya-dev-site.netlify.app/frontend/faq'>FAQ</Link>
-                      </li>
-                   
+                    </h4>
+                   <ul>
                       <li>
                         <Link target='_blank' href='https://wabya.com/docs/privacy-policy.pdf'>privacy policy</Link>
                       </li>
