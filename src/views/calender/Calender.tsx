@@ -551,18 +551,38 @@ const days = [
   };
 
 
-  const handleIsUnavblToggle = (e,day) => {
+  // const handleIsUnavblToggle = (e,day) => {
+  //   e.preventDefault();
+  //   console.log(day);
+  //   setAvailability((prevAvailability) => {
+  //     const updatedAvailability = { ...prevAvailability };
+  //     updatedAvailability[day] = {
+  //       ...prevAvailability[day],
+  //       isUnAvbl: !prevAvailability[day].isUnAvbl
+  //     };
+  //     return updatedAvailability;
+  //   });
+  // };
+  
+  const handleIsUnavblToggle = (e, day) => {
     e.preventDefault();
     console.log(day);
+    console.log('Before update:', availability[day].isUnAvbl);
     setAvailability((prevAvailability) => {
       const updatedAvailability = { ...prevAvailability };
       updatedAvailability[day] = {
         ...prevAvailability[day],
-        isUnAvbl: !prevAvailability[day].isUnAvbl
+        isUnAvbl: !prevAvailability[day].isUnAvbl,
       };
+      console.log('After update:', updatedAvailability[day].isUnAvbl);
       return updatedAvailability;
     });
+
+    
   };
+
+  
+  
   
   useEffect(() => {
 
@@ -3827,13 +3847,18 @@ return(<>
             
             {/*/ availability-box */}
 
+       
 
             {days.map((day) => (
             <div className="availability-box availability-box-edit">
               <div className="accepting-availability">
               <span className="span">{dayMappings[day]}</span>
                 <label className="switch">
-                  <input className="switch-input" type="checkbox" />
+
+
+      
+
+                  <input className="switch-input" type="checkbox" checked={!availability[day].isUnAvbl} onChange={(e) => handleIsUnavblToggle(e,day)} />
                   <span
                     className="switch-label"
                     data-on="available"
@@ -3927,15 +3952,16 @@ return(<>
 
 
 
-              <div className="inner"
-              
-              >
+             
                
                   
                 { ! isEdit ?
                 <>
                   
                   <>
+                  <div className="inner"
+              
+              >
                  <span>
                   <small>from</small>
                  {availability[day].startHour2} : {availability[day].startMinute2}  
@@ -3946,6 +3972,7 @@ return(<>
                  </span>
                  <div className='plus' onClick={() => handleIsMoreToggle(day)}> + </div>
                  {/* <div className='plus' onClick={() => handleIsMoreToggle(day)}> + </div> */}
+                </div>
                  </> 
                 
                 </>
@@ -3953,7 +3980,9 @@ return(<>
                  :
                   
                   <>
-                
+                 <div className="inner inner-edit"
+              
+              >
                   <span className="input-edit">
                    <input type='number' value={availability[day].startHour2}  name='startHour2'
               className='standard-in-num'
@@ -3984,7 +4013,7 @@ return(<>
           /> 
            </span>
 
-
+           </div>
 
 
              </> }
@@ -4002,7 +4031,7 @@ return(<>
 
                 
                
-              </div>
+             
 
 
 
