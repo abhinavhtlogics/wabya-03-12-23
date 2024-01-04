@@ -3974,9 +3974,11 @@ return(<>
                 <>
                   
                   <>
+                  <span className="span">unavailable</span>
                   <div className="inner"
               
               >
+               
                  <span>
                   <small>from</small>
                  {availability[day].startHour2} : {availability[day].startMinute2}  
@@ -3995,6 +3997,7 @@ return(<>
                  :
                   
                   <>
+                   <span className="span">unavailable</span>
                  <div className="inner inner-edit"
               
               >

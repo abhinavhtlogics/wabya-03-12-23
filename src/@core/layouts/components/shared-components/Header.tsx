@@ -216,12 +216,12 @@ const Header = () => {
                     <ul className='navbar-nav'>
                       <li className={router.pathname == "/calendar" ? "active" : ""}>
                         <a href='/coach/calendar' passHref>
-                          <a>Calendar</a>
+                          <a>calendar</a>
                         </a>
                       </li>
                       <li className={router.pathname == "/clients" ? "active" : ""}>
                         <a href='/coach/clients' passHref>
-                          <a>Clients</a>
+                          <a>clients</a>
                         </a>
                       </li>
                     </ul>
