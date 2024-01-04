@@ -2837,7 +2837,21 @@ button{font-family: Gothic A1 !important;}
 .availability-wrap .availability-box .switch-input{position: absolute; top: 0; left: 0; opacity: 0; box-sizing:content-box;}
 .availability-wrap .availability-box .switch-label{position: relative; display: block; height: inherit; font-size: 12px; background: #fff; border-radius: inherit; box-sizing: content-box;}
 .availability-wrap .availability-box .switch-label:before, .availability-wrap .availability-box .switch-label:after{position: absolute; top: 50%; margin-top: -6px; line-height: 1; -webkit-transition: inherit; -moz-transition: inherit; -o-transition: inherit; transition: inherit; box-sizing:content-box; font-size: 12px;}
-.availability-wrap .availability-box .switch-label:before{content: attr(data-off); right: 8px; color: #0f2540;}
+
+
+/* .availability-wrap .availability-box .switch-label:before{content: attr(data-off); right: 8px; color: #0f2540;} */
+.availability-wrap .availability-box .switch-label::before {
+  content: attr(data-off);
+  left: 8px;
+  color: #0f2540;
+  right: inherit;
+}
+
+.availability-wrap .availability-box .switch-label.switch-unlabel::before {
+  left: inherit;
+  right: 8px;
+}
+
 .availability-wrap .availability-box .switch-label:after{content: attr(data-on); left: 8px; color: #0f2540; opacity: 0;}
 .availability-wrap .availability-box .switch-input:checked ~ .switch-label{background: #fff;}
 .availability-wrap .availability-box .switch-input:checked ~ .switch-label:before{opacity: 0;}
@@ -3767,7 +3781,7 @@ button{font-family: Gothic A1 !important;}
 
 
 
-.availability-wrap .availability-box .switch-unavbl {
+/* .availability-wrap .availability-box .switch-unavbl {
   position: absolute !important;
   top: 2px !important;
   left: 3px  !important;
@@ -3775,10 +3789,10 @@ button{font-family: Gothic A1 !important;}
   height: 15px !important;
   background: #f17654 !important;
   border-radius: 100% !important;
-}
+}*/
 .availability-wrap .availability-box .switch-avbl {
 
 left: 75px !important;
     background: #236a6d !important;
 
-}
+} 

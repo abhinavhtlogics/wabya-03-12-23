@@ -3871,9 +3871,9 @@ return(<>
 
                   </> : 
                   <>
-                   <input className="switch-input" type="checkbox"   onClick={(e) => handleIsUnavblToggle(e,day)} />
+                   <input className="switch-input " type="checkbox"   onClick={(e) => handleIsUnavblToggle(e,day)} />
                    <span
-                    className="switch-label"
+                    className="switch-label switch-unlabel"
                     data-on="available"
                     data-off="unavailable"
                   />
