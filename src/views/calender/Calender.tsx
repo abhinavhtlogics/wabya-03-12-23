@@ -252,16 +252,80 @@ const Calender = () => {
   //       setAvailability({ 'mon':{startHour:value}});
   //     }
 
-    
+  function formatNumber(num) {
+    // Ensure num is a number
+    num = parseInt(num);
+  
+    if(num > 23){
+    // Check if num is a valid number
+    if (isNaN(num)) {
+      return 0;
+    }
+  
+    // Convert num to a string and remove leading zeros
+    num = num.toString().replace(/^0+/, '');
+  
+    // If the number is greater than 23, keep only the last digit
+    if (num.length > 1) {
+      num = num.charAt(num.length - 1);
+    }
+  console.log('num',num);
+    return num;
+  }
+  else{
+    return num;
+  }
+  }
+
+
+  function customFormatNumber(num) {
+    // Ensure num is a number
+    num = parseInt(num);
+  
+    // Check if num is a valid number
+    if (isNaN(num)) {
+      return "Invalid number";
+    }
+  
+    // Convert num to a string
+    num = num.toString();
+  
+    // Get the last two digits
+    const lastTwoDigits = parseInt(num.slice(-2));
+  
+    // Check conditions
+    if (lastTwoDigits < 24) {
+      return lastTwoDigits.toString();
+    } else if (num.slice(-1) === '1') {
+      return "10";
+    } else if (num.slice(-1) === '2') {
+      return "20";
+    } else if (num.length === 3) {
+      // Remove middle digit for three-digit numbers
+      return num.charAt(0) + num.charAt(2);
+    }
+  
+    // Return the original number if none of the conditions are met
+    return num;
+  }
   
 
   const handleHourChange = (e, day) => {
     console.log('working');
     const { name, value } = e.target;
 
-    console.log(name,value);
-    const numericValue = parseInt(value, 10);
   
+    console.log(name,value);
+var format_num='';
+  
+    format_num=formatNumber(value);
+   
+    const numericValue = parseInt(format_num, 10);
+    console.log(name,numericValue);
+  
+    
+
+
     // Ensure the input value is within the valid range (00 to 23 for hours)
     const sanitizedValue = Math.max(0, Math.min(numericValue, 23));
   
@@ -276,8 +340,15 @@ const Calender = () => {
       }));
     } else {
       // If changing endHour, ensure it is greater than startHour
+
+      console.log('sanitizedValue',sanitizedValue);
+
       const startHour = parseInt(availability[day].startHour, 10);
-      const updatedEndHour = sanitizedValue < startHour ? startHour : sanitizedValue;
+
+      console.log('start hour',startHour);
+     // const updatedEndHour = sanitizedValue < startHour ? startHour : sanitizedValue;
+
+     const updatedEndHour = sanitizedValue;
   
       setAvailability(prevState => ({
         ...prevState,
@@ -297,7 +368,13 @@ const Calender = () => {
     const { name, value } = e.target;
 
     console.log(name,value);
-    const numericValue = parseInt(value, 10);
+
+    var format_num='';
+  
+    format_num=formatNumber(value);
+   
+    const numericValue = parseInt(format_num, 10);
+   // const numericValue = parseInt(value, 10);
   
     // Ensure the input value is within the valid range (00 to 23 for hours)
     const sanitizedValue = Math.max(0, Math.min(numericValue, 23));
@@ -314,8 +391,10 @@ const Calender = () => {
     } else {
       // If changing endHour, ensure it is greater than startHour
       const startHour2 = parseInt(availability[day].startHour2, 10);
-      const updatedEndHour = sanitizedValue < startHour2 ? startHour2 : sanitizedValue;
+     // const updatedEndHour = sanitizedValue < startHour2 ? startHour2 : sanitizedValue;
   
+
+      const updatedEndHour = sanitizedValue;
       setAvailability(prevState => ({
         ...prevState,
         [day]: {
@@ -334,11 +413,16 @@ const Calender = () => {
     const { name, value } = e.target;
 
     console.log(name,value);
-    const numericValue = parseInt(value, 10);
+   // const numericValue = parseInt(value, 10);
+   var format_num='';
+  
+    format_num=formatNumber(value);
+   
+    const numericValue = parseInt(format_num, 10);
   
     // Ensure the input value is within the valid range (00 to 23 for hours)
-    const sanitizedValue = Math.max(0, Math.min(numericValue, 23));
-  
+    //const sanitizedValue = Math.max(0, Math.min(numericValue, 23));
+    const updatedEndHour = sanitizedValue;
     if (name === 'startHour3') {
       // If changing startHour, update it directly
       setAvailability(prevState => ({
@@ -2047,7 +2131,8 @@ getClientData();
       console.log('here i am')
       var starttime ="";
 if(data.start_time != undefined){
-  var starttime =data.start_time;
+  // var starttime =data.start_time;
+  var starttime = "09:00:00";
         }else{
           var starttime = "09:00:00";
         }
@@ -2055,7 +2140,8 @@ if(data.start_time != undefined){
 
 var interval = "60";
   if(data.start_time){
-    var endtime = data.end_time;
+    // var endtime = data.end_time;
+    var endtime = "17:00:00";
          }else{
            var endtime = "17:00:00";
          }

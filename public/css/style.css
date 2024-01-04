@@ -3781,7 +3781,7 @@ button{font-family: Gothic A1 !important;}
 
 
 
-/* .availability-wrap .availability-box .switch-unavbl {
+.availability-wrap .availability-box .switch-unavbl {
   position: absolute !important;
   top: 2px !important;
   left: 3px  !important;
@@ -3789,10 +3789,10 @@ button{font-family: Gothic A1 !important;}
   height: 15px !important;
   background: #f17654 !important;
   border-radius: 100% !important;
-}*/
+}
 .availability-wrap .availability-box .switch-avbl {
 
 left: 75px !important;
     background: #236a6d !important;
 
-} 
+}
