@@ -4175,12 +4175,13 @@ footer={[]}
                   <span className="input-edit">
                    <input type='number' value={availability[day].startHour2}  name='startHour2'
               className='standard-in-num'
-              onChange={(e) => handleHourChange2(e, day)}/>  <input
+              onChange={(e) => handleHourChange2(e, day)}/> 
+               <input
               type='number'
               value={availability[day].startMinute2}
               name='startMinute2'
               className='standard-in-num'
-              onKeyUp={(e) => handleMinuteChange2(e, day)}
+              onChange={(e) => handleMinuteChange2(e, day)}
             />
             </span>
 
@@ -4269,7 +4270,7 @@ footer={[]}
               value={availability[day].startMinute3}
               name='startMinute3'
               className='standard-in-num'
-              onKeyUp={(e) => handleMinuteChange3(e, day)}
+              onChange={(e) => handleMinuteChange3(e, day)}
             />
             </span>
 
