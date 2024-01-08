@@ -280,6 +280,33 @@ const Calender = () => {
   }
 
 
+
+  function formatNumber2(num) {
+    // Ensure num is a number
+    num = parseInt(num);
+  
+    if(num > 59){
+    // Check if num is a valid number
+    if (isNaN(num)) {
+      return 0;
+    }
+  
+    // Convert num to a string and remove leading zeros
+    num = num.toString().replace(/^0+/, '');
+  
+    // If the number is greater than 23, keep only the last digit
+    if (num.length > 1) {
+      num = num.charAt(num.length - 1);
+    }
+  console.log('num',num);
+    return num;
+  }
+  else{
+    return num;
+  }
+  }
+
+
   function customFormatNumber(num) {
     // Ensure num is a number
     num = parseInt(num);
@@ -457,7 +484,13 @@ var format_num='';
    
     const { name, value } = e.target;
     console.log(e.target);
-    const numericValue = parseInt(e.target.value, 10);
+
+    var format_num='';
+  
+    format_num=formatNumber2(value);
+    const numericValue = parseInt(format_num, 10);
+
+    
     const sanitizedValue = Math.max(0, Math.min(59, numericValue));
     console.log(name,value);
     const updatedAvailability = {
@@ -470,7 +503,8 @@ var format_num='';
     console.log(sanitizedValue);
     if (name === 'endMinute' && updatedAvailability[day].startHour === updatedAvailability[day].endHour) {
       const startMinute = parseInt(updatedAvailability[day].startMinute, 10);
-      const endMinute = sanitizedValue >= startMinute ? sanitizedValue + 1 : startMinute;
+      //const endMinute = sanitizedValue >= startMinute ? sanitizedValue + 1 : startMinute;
+      const endMinute = sanitizedValue;
       updatedAvailability[day].endMinute = endMinute.toString().padStart(2, '0');
     }
   
@@ -478,7 +512,7 @@ var format_num='';
       
       console.log(sanitizedValue);
       const startMinute = parseInt(updatedAvailability[day].startMinute, 10);
-      const endMinute = sanitizedValue >= startMinute ? sanitizedValue + 1 : startMinute;
+      const endMinute = sanitizedValue >= startMinute ? sanitizedValue  : startMinute;
       updatedAvailability[day].startMinute = endMinute.toString().padStart(2, '0');
     }
     setAvailability(updatedAvailability);
@@ -496,7 +530,11 @@ var format_num='';
    
     const { name, value } = e.target;
     console.log(e.target);
-    const numericValue = parseInt(e.target.value, 10);
+    var format_num='';
+  
+    format_num=formatNumber2(value);
+    const numericValue = parseInt(format_num, 10);
+   // const numericValue = parseInt(e.target.value, 10);
     const sanitizedValue = Math.max(0, Math.min(59, numericValue));
     console.log(name,value);
     const updatedAvailability = {
@@ -509,7 +547,8 @@ var format_num='';
     console.log(sanitizedValue);
     if (name === 'endMinute2' && updatedAvailability[day].startHour2 === updatedAvailability[day].endHour2) {
       const startMinute2= parseInt(updatedAvailability[day].startMinute2, 10);
-      const endMinute2 = sanitizedValue >= startMinute2 ? sanitizedValue + 1 : startMinute2;
+     // const endMinute2 = sanitizedValue >= startMinute2 ? sanitizedValue  : startMinute2;
+      const endMinute2 = sanitizedValue;
       updatedAvailability[day].endMinute2 = endMinute2.toString().padStart(2, '0');
     }
   
@@ -517,7 +556,7 @@ var format_num='';
       
       console.log(sanitizedValue);
       const startMinute2 = parseInt(updatedAvailability[day].startMinute2, 10);
-      const endMinute2 = sanitizedValue >= startMinute2 ? sanitizedValue + 1 : startMinute2;
+      const endMinute2 = sanitizedValue >= startMinute2 ? sanitizedValue  : startMinute2;
       updatedAvailability[day].startMinute2 = endMinute2.toString().padStart(2, '0');
     }
     setAvailability(updatedAvailability);
@@ -530,7 +569,11 @@ var format_num='';
    
     const { name, value } = e.target;
     console.log(e.target);
-    const numericValue = parseInt(e.target.value, 10);
+    var format_num='';
+  
+    format_num=formatNumber2(value);
+    const numericValue = parseInt(format_num, 10);
+   // const numericValue = parseInt(e.target.value, 10);
     const sanitizedValue = Math.max(0, Math.min(59, numericValue));
     console.log(name,value);
     const updatedAvailability = {
@@ -543,7 +586,8 @@ var format_num='';
     console.log(sanitizedValue);
     if (name === 'endMinute3' && updatedAvailability[day].startHour2 === updatedAvailability[day].endHour3) {
       const startMinute3= parseInt(updatedAvailability[day].startMinute3, 10);
-      const endMinute3 = sanitizedValue >= startMinute3 ? sanitizedValue + 1 : startMinute3;
+      // const endMinute3 = sanitizedValue >= startMinute3 ? sanitizedValue + 1 : startMinute3;
+      const endMinute3 = sanitizedValue;
       updatedAvailability[day].endMinute3 = endMinute3.toString().padStart(2, '0');
     }
   
@@ -551,7 +595,7 @@ var format_num='';
       
       console.log(sanitizedValue);
       const startMinute3 = parseInt(updatedAvailability[day].startMinute3, 10);
-      const endMinute3 = sanitizedValue >= startMinute3 ? sanitizedValue + 1 : startMinute3;
+      const endMinute3 = sanitizedValue >= startMinute3 ? sanitizedValue : startMinute3;
       updatedAvailability[day].startMinute3 = endMinute3.toString().padStart(2, '0');
     }
     setAvailability(updatedAvailability);
