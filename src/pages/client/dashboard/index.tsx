@@ -1893,6 +1893,8 @@ setmypreferplanName(mypreferplan[0].plan_name);
   const getTimeslots = async (date) => {
     settimeslot_load(true);
 // after 26-12-2023
+
+console.log('on load array');
     console.log(date);
     // setmeetingtime('');
       var tomorrow = new Date(date);
@@ -1983,6 +1985,21 @@ setmypreferplanName(mypreferplan[0].plan_name);
     //getBookedSchedule();
   };
 
+
+  useEffect(() => {
+
+    console.log('get timeslot', date);
+
+    // Using setTimeout to delay the execution of getTimeslots by 3 seconds
+    const timeoutId = setTimeout(() => {
+      getTimeslots(date);
+    }, 6000);
+  
+    // Clean up the timeout if the component unmounts before the timeout is triggered
+    return () => clearTimeout(timeoutId);
+  
+  }, []); // The empty dependency array ensures that the effect runs only once, similar to componentDidMount
+  
  
   function setCharAt(str, index, chr) {
     if (index > str.length - 1) return str;
@@ -2097,6 +2114,7 @@ setmypreferplanName(mypreferplan[0].plan_name);
 
 const getCoachAvailability = async (todayDate :string) => {
 
+  console.log('on load array',todayDate);;
   // Parse the string into a Date object
 const dateObject = new Date(todayDate);
 
@@ -2317,7 +2335,7 @@ settimeslot_load(false);
 }
 
 setarray1(timeslots);
-
+console.log('on load array',timeslots);
 
 }, [coachAvailability]);
 
@@ -2750,6 +2768,16 @@ const dialerCodes = {
     
     const dialerCode = getDialerCode(clientCountry ?  clientCountry : client.client_country);
   
+
+
+
+
+
+
+
+
+
+
   return (
    
   <> 
@@ -3115,7 +3143,7 @@ const dialerCodes = {
           <div className="upload-notes-popup">
                     
                  
-                    <h2>upload notes <span className="upload_notes_client btn" onClick={showSeeNotes}>See Notes</span>
+                    <h2>upload notes <span className="upload_notes_client btn" onClick={showSeeNotes}>see notes</span>
                    </h2>
                     
                      

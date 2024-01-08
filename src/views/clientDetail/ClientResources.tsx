@@ -16,7 +16,7 @@ const ClientResources = () => {
         <div className="col-sm-10 right mrb-30">
           <div className="top">
             <div className="inner-info">
-              <h2>Client Name <span>Resources</span></h2>
+              <h2>client Name <span>resources</span></h2>
             </div>
           </div>
 

@@ -254,6 +254,9 @@ const Calender = () => {
   //       setAvailability({ 'mon':{startHour:value}});
   //     }
 
+
+
+ 
   function formatNumber(num) {
     // Ensure num is a number
     num = parseInt(num);
@@ -1433,6 +1436,8 @@ const [selectedTime, setselectedTime]: any = useState();
 const [BookedId, setBookedId] = useState();
   // get all meeting data
   const getMeetingByDate = async (todayDate: string) => {
+
+    console.log('on load date',todayDate);
     const coachId = sessionStorage.getItem("coachId");
 
     const queryDoc = query(meetingRef, where("coachId", "==", coachId),where("meetingDate", "==", todayDate));
@@ -1598,6 +1603,7 @@ const [BookedId, setBookedId] = useState();
 
 const getTimeslots = async (date) => {
   
+console.log('on load here',date);
   console.log(date);
 
   setmeetingendtime('');
@@ -1688,6 +1694,8 @@ console.log(tomorrow.getDay(),'tommorow');
 };
 
 
+
+
 function isReserved_old(time) {
   // assume reserved times are stored in an array called 'reservedTimes'
   for (let i = 0; i < meetingByDate.length; i++) {
@@ -1728,6 +1736,8 @@ function isTimeWithinRange2(time, startTime, endTime) {
 }
 useEffect(() => {
   // Get the current time
+
+ 
   let now = new Date();
   let currentHours = now.getHours();
   let currentMinutes = now.getMinutes();
@@ -1871,8 +1881,9 @@ if(!isReserved(starttime)){
 //settimeslot_load(false);
 }
 
+console.log('on load array',timeslots);
 setarray2(timeslots);
-
+  
 
 }, [meetingByDate]);
  
@@ -2719,6 +2730,21 @@ console.log('day',nextSevenDay[index].date);
       getBookingId();
     }
   }, [BookedId]);
+  
+
+  useEffect(() => {
+
+    console.log('get timeslot', date);
+
+    // Using setTimeout to delay the execution of getTimeslots by 3 seconds
+    const timeoutId = setTimeout(() => {
+      getTimeslots(date);
+    }, 3000);
+  
+    // Clean up the timeout if the component unmounts before the timeout is triggered
+    return () => clearTimeout(timeoutId);
+  
+  }, []); // The empty dependency array ensures that the effect runs only once, similar to componentDidMount
   
   return (
     <>

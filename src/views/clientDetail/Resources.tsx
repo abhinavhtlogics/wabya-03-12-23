@@ -282,7 +282,7 @@ const year = today.getFullYear();
         <div className="col-sm-10 right mrb-30">
           
         {/* <div className="top"> */}
-        <h2>Resources</h2>
+        <h2>resources</h2>
             {/* <div className="inner-info">
              
             </div> */}
@@ -330,7 +330,7 @@ const year = today.getFullYear();
     percent  : null}
     { showpercent ?
     "%"  : null}
-                      <input type="submit" value="SAVE" className='btn btn-save' onClick={handleSubmit} />
+                      <input type="submit" value="save" className='btn btn-save' onClick={handleSubmit} />
                     </div>
 
                     

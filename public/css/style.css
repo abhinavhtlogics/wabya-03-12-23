@@ -3796,3 +3796,5 @@ left: 75px !important;
     background: #236a6d !important;
 
 }
+
+.react-calendar__navigation__label__labelText{text-transform: lowercase !important;}
