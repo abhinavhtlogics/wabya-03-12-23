@@ -26,8 +26,29 @@ const Dashboard = () => {
   const [scheduleMeeting, setScheduleMeeting] = useState([]);
   const [newClient, setnewClient] = useState([]);
 
+  const [showpage, setshowpage] = useState(false);
+ 
+
   useEffect(() => {
     // Check if the last URL was '/coch/login'
+
+        // Check if the last URL was '/coch/login'
+let lastUrl2='';
+if(localStorage.getItem("p_url2")){
+ lastUrl2 = localStorage.getItem("p_url2");
+}else{
+setshowpage(true);
+}
+console.log('lastUrl',lastUrl2);
+if (lastUrl2 == '/joinvideo2') {
+  // Reload the current page
+  console.log('yes');
+  localStorage.removeItem("p_url2");
+  router.reload();
+}
+
+
+
 let lastUrl='';
     if(localStorage.getItem("last_login_page")){
      lastUrl = localStorage.getItem("last_login_page");
@@ -241,6 +262,10 @@ return () => clearInterval(intervalId);
 
   return (
     <>
+
+{showpage ?
+      (
+    <>
   <MeetingReminderMobile
         meeting={meeting}
         newClient={newClient}
@@ -448,7 +473,7 @@ return () => clearInterval(intervalId);
   </section>
   {/*/ user */}
 
-    
+  </>): null}
     </>
 
   )

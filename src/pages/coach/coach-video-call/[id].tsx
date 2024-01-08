@@ -20,6 +20,7 @@ const VideoCallPage = () => {
 
 
   useEffect(() => {
+    localStorage.setItem('p_url2','/joinvideo2');
     try {
       if (router.query.id !== undefined) {
         if (!iframeLoaded) {
