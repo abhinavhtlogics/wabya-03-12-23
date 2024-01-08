@@ -62,13 +62,16 @@ const ClientLoginPage = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     const [visible, setVisible] = useState<boolean>(false);
-
+    const [showpage, setshowpage] = useState(false);
 
     useEffect(() => {
       // Check if the last URL was '/coch/login'
   let lastUrl='';
       if(localStorage.getItem("p_url")){
        lastUrl = localStorage.getItem("p_url");
+    }
+    else{
+      setshowpage(true);
     }
       console.log('lastUrl',lastUrl);
       if (lastUrl == '/joinvideo') {
@@ -172,6 +175,9 @@ console.log('working');
 
   return (
 <>
+{showpage ?
+      (
+        <>
   <section className="login-wrap">
     <div className="container">
       <div className="row">
@@ -237,6 +243,7 @@ console.log('working');
     </div>
   </section>
   {/*/ login-wrap */}
+  </>): null}
 </>
 
     // <Box className='content-center'>

@@ -190,6 +190,8 @@ const Calender = () => {
 
     const [selectDateMob, setSelectDateMob] = useState(new Date().toISOString().split('T')[0]);
 
+    const [selectDayMob, setSelectDayMob] = useState( new Date().toLocaleDateString('en-US', { weekday: 'short' }));
+
     const [checkedDateMob, setCheckedDateMob] = useState();
     const [meetingSuccessMsg, setmeetingSuccessMsg] = useState('');
     let m = 0;
@@ -421,7 +423,7 @@ var format_num='';
     const numericValue = parseInt(format_num, 10);
   
     // Ensure the input value is within the valid range (00 to 23 for hours)
-    //const sanitizedValue = Math.max(0, Math.min(numericValue, 23));
+    const sanitizedValue = Math.max(0, Math.min(numericValue, 23));
     const updatedEndHour = sanitizedValue;
     if (name === 'startHour3') {
       // If changing startHour, update it directly
@@ -435,8 +437,8 @@ var format_num='';
     } else {
       // If changing endHour, ensure it is greater than startHour
       const startHour3 = parseInt(availability[day].startHour3, 10);
-      const updatedEndHour = sanitizedValue < startHour3 ? startHour3 : sanitizedValue;
-  
+    //  const updatedEndHour = sanitizedValue < startHour3 ? startHour3 : sanitizedValue;
+      const updatedEndHour = sanitizedValue;
       setAvailability(prevState => ({
         ...prevState,
         [day]: {
@@ -555,6 +557,14 @@ var format_num='';
     setAvailability(updatedAvailability);
   };
   
+
+
+
+
+
+  // Assuming bookedTimeslots is a filtered array containing only relevant items
+const filteredBookedTimeslots = bookedTimeslot.filter(item => item.meetingDate === selectDateMob);
+
 
   const isBetweenAvailabilityTimeslot = (timeslot, day) => {
     const validDays = ['tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'mon'];
@@ -2132,18 +2142,22 @@ getClientData();
       var starttime ="";
 if(data.start_time != undefined){
   // var starttime =data.start_time;
-  var starttime = "09:00:00";
+ // var starttime = "09:00:00";
+  var starttime = "00:00:00";
         }else{
-          var starttime = "09:00:00";
+         // var starttime = "09:00:00";
+          var starttime = "00:00:00";
         }
 
 
 var interval = "60";
   if(data.start_time){
     // var endtime = data.end_time;
-    var endtime = "17:00:00";
+   // var endtime = "17:00:00";
+    var endtime = "23:00:00";
          }else{
-           var endtime = "17:00:00";
+          //  var endtime = "17:00:00";
+          var endtime = "23:00:00";
          }
 
          //var endtime = "17:00:00";
@@ -2324,14 +2338,20 @@ var interval = "60";
 
 
    const handleDateClick = (day) => {
+   
     const inputDateString = day;
     const inputDate = new Date(inputDateString);
     const year = inputDate.getFullYear();
     const month = String(inputDate.getMonth() + 1).padStart(2, '0');
     const day_ = String(inputDate.getDate()).padStart(2, '0');
+    console.log('day',day_);
+    const options = { weekday: 'short' };
+    const dayName = new Date(day).toLocaleDateString('en-US', options);
+    console.log('dayName',dayName);
     const formattedDate = `${year}-${month}-${day_}`;
 
 setSelectDateMob(formattedDate);
+setSelectDayMob(dayName);
 console.log(formattedDate);
 m=0;
   };
@@ -3698,59 +3718,80 @@ footer={[]}
           {/*/ calendar-weeksheet */}
           <div className="calendar-timesheet">
             <div className="row">
-              <div className="col-3 timesheet-left">
-                <ul>
-                {array1.map((timeslot:string, index:number) => {
+              
+            {array1.map((timeslot, index) => {
+  const formattedTime = timeslot.slice(0, -3);
+  let i = index % 2;
 
-let formattedTime = timeslot.slice(0, -3);
+  const matchingTimeslot = bookedTimeslot.find(({ clientEmail, meet_idd, isCoachAccept, isCoachCancel, starttime, endtime, title, date, clientName,meetingDate }) =>
+    timeslot >= starttime && timeslot < endtime && selectDateMob == meetingDate
+  );
 
+  const isBetween = !!matchingTimeslot;
 
-return(<>
+  const matchingTimeslot_2 = bookedTimeslot.find(({ clientEmail, meet_idd, isCoachAccept, isCoachCancel, starttime, endtime, title, date, clientName,meetingDate }) =>
+    index > 0 && array1[index - 1] >= starttime && array1[index - 1] < endtime && selectDateMob == meetingDate
+  );
 
-  
+  const isBetween_2 = matchingTimeslot_2;
 
-         
+  const matchingStarttime = matchingTimeslot && matchingTimeslot.starttime.slice(0, -3);
+  const matchingEndtime = matchingTimeslot && matchingTimeslot.endtime.slice(0, -3);
+  const matchingTitle = matchingTimeslot && matchingTimeslot.title;
+  const clientName = matchingTimeslot && matchingTimeslot.clientName;
+  const clientEmail = matchingTimeslot && matchingTimeslot.clientEmail;
+  const meet_iddd = matchingTimeslot && matchingTimeslot.meet_idd;
+  const isCoachAccept_ = matchingTimeslot && matchingTimeslot.isCoachAccept;
+  const isCoachCancel_ = matchingTimeslot && matchingTimeslot.isCoachCancel;
 
- 
-
-
-  
-                  <li>{formattedTime}</li>
-                  </>)
-
-
-})}
-                </ul>
-              </div>
-              <div className="col-9 timesheet-right">
-
-              {
- 
-
-  bookedTimeslot.map((item, index) => {
-    // Check if the item's meeting date matches the selected date
-    if (item.meetingDate === selectDateMob) {
-      m = m + 1; // Increment the count for each meeting that matches the selected date
-      return (
-        <div key={index} className="timesheet-fix">
-          <h3>{item.clientName}</h3>
-          <p>
-            <i className="fa fa-clock-o" aria-hidden="true" /> {item.starttime} - {item.endtime}
-          </p>
+  return (
+    <>
+      <div key={index} className="row timesheet-entry">
+        <div className="col-3 timesheet-left">
+          <ul>
+            <li>{formattedTime}</li>
+          </ul>
         </div>
-      );
-    }
-    return null; // Return null for items with different meeting dates
-  })
-}
 
-{m === 0 ? <div className="timesheet-fix"><h4>No Meeting Found</h4></div> : null}
+        <div className="col-9 timesheet-right">
+        {isBetween && ! isBetweenAvailabilityTimeslot(timeslot, selectDayMob)? (
+  <>
+    <div className="timesheet-fix" >
+      <h3>{clientName}</h3>
+      <p>
+        <i className="fa fa-clock-o" aria-hidden="true" /> {matchingStarttime} - {matchingEndtime}
+      </p>
+    </div>
 
-
-
+    <div className="timesheet-fix">
       
-            
-              </div>
+      <p>
+        free time
+      </p>
+    </div>
+  </>
+) : (
+  // Your else content goes here
+  <div >
+    {/* <h4>Not Between</h4> */}
+{isBetweenAvailabilityTimeslot(timeslot, selectDayMob) ?
+<>
+    <div className="timesheet-fix" style={{ backgroundColor: isBetweenAvailabilityTimeslot(timeslot, selectDayMob) ? '#0f2450' : '' }}>
+<p className='text-center'>unavailable</p>
+ 
+ </div>
+ </>:null}
+  </div>
+)}
+
+          
+        </div>
+      </div>
+    </>
+  );
+})}
+
+           
             </div>
             {/*/ row */}
           </div>

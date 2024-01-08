@@ -309,11 +309,15 @@ const Dashboard = () => {
   const [accountHolder, setAccountHolder] = useState("");
   const [accountNo, setAccountNo] = useState("");
   const [swiftCode, setSwiftCode] = useState("");
+
+  const [showpage, setshowpage] = useState(false);
   useEffect(() => {
     // Check if the last URL was '/coch/login'
 let lastUrl='';
     if(localStorage.getItem("p_url")){
      lastUrl = localStorage.getItem("p_url");
+  }else{
+    setshowpage(true);
   }
     console.log('lastUrl',lastUrl);
     if (lastUrl == '/joinvideo') {
@@ -2747,6 +2751,10 @@ const dialerCodes = {
     const dialerCode = getDialerCode(clientCountry ?  clientCountry : client.client_country);
   
   return (
+   
+  <>
+   {showpage ?
+      (
     <>
      <MeetingCancelled
         cancelMeeting={cancelMeet}
@@ -4999,7 +5007,7 @@ const timeRemaining = Math.floor((meetingDate - currentTime) / 60000);
 
 
 
-
+</>): null}
 </>
   );
 };

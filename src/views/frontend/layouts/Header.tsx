@@ -6,7 +6,7 @@ import { collection, getDoc, doc } from 'firebase/firestore'
 
 const Header = () => {
   const router = useRouter();
-  const { pathname } = useRouter();
+  const { pathname } = useRouter(); 
   console.log(pathname);
 
 //  const router = useRouter()
@@ -14,6 +14,24 @@ const Header = () => {
 
   const [coach, setCoach] = useState(null);
   const [coachId,setCoachId]=useState();
+
+  const [showpage, setshowpage] = useState(false);
+  useEffect(() => {
+    // Check if the last URL was '/coch/login'
+let lastUrl='';
+    if(localStorage.getItem("p_url")){
+     lastUrl = localStorage.getItem("p_url");
+  }else{
+    setshowpage(true);
+  }
+    console.log('lastUrl',lastUrl);
+    if (lastUrl == '/joinvideo') {
+      // Reload the current page
+      console.log('yes');
+     // localStorage.removeItem("p_url");
+      router.reload();
+    }
+  }, [router.path]); // Empty dependency array means this effect runs once after the initial render
 
 
   const logout = () => {
@@ -117,6 +135,10 @@ const Header = () => {
  // 1 second delay
   }, [router.pathname])
   return(
+<>
+	{showpage ?
+		(
+		  <>
   <header className={`header ${coach ? 'header-login' : ''}`}>
   <div className="menu-head">
     <div className="container">
@@ -353,6 +375,10 @@ const Header = () => {
 
   
 </header>
+
+
+</>): null}
+</>
   )
 }
 export default Header
