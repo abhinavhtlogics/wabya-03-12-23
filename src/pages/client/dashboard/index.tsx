@@ -2258,7 +2258,7 @@ if(coachAvailability && coachAvailability.length !=0){
   for (let index = 0; index < coachAvailability.length; index++) {
     
     console.log('meetingday',meetingday);
-    if(coachAvailability[index].day == 'wed'){
+    if(coachAvailability[index].day == meetingday){
 
 
       if(! coachAvailability[index].isUnAvbl){
@@ -2752,7 +2752,7 @@ const dialerCodes = {
   
   return (
    
-  <>
+  <> 
    {showpage ?
       (
     <>
