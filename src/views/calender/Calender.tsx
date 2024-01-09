@@ -2777,14 +2777,14 @@ console.log('day',nextSevenDay[index].date);
             if (index== active) {
               return (
                 <>
-                  <div className='active-owl cal-item' onClick={handleClick} data-id={index}>{ allWeekDay.length>i ? allWeekDay[i].month : null} { allWeekDay.length>i ? allWeekDay[i].date : null } -  { allWeekDay.length>j ?  allWeekDay[j].month : null} { allWeekDay.length>j ?  allWeekDay[j].date : null}</div>
+                  <div className='active-owl cal-item' onClick={handleClick} data-id={index}>{  allWeekDay.length>i ? allWeekDay[i].month.toLowerCase() : null} { allWeekDay.length>i ? allWeekDay[i].date.toLowerCase() : null } -  { allWeekDay.length>j ?  allWeekDay[j].month.toLowerCase() : null} { allWeekDay.length>j ?  allWeekDay[j].date.toLowerCase() : null}</div>
                 </>
               )
             }else{
               return (
 
                 <>
-                  <div className='cal-item' onClick={handleClick} data-id={index}>{ allWeekDay.length>i ? allWeekDay[i].month : null} { allWeekDay.length>i ? allWeekDay[i].date : null } -  { allWeekDay.length>j ?  allWeekDay[j].month : null} { allWeekDay.length>j ?  allWeekDay[j].date : null}</div>
+                  <div className='cal-item' onClick={handleClick} data-id={index}>{ allWeekDay.length>i ? allWeekDay[i].month.toLowerCase() : null} { allWeekDay.length>i ? allWeekDay[i].date.toLowerCase() : null } -  { allWeekDay.length>j ?  allWeekDay[j].month.toLowerCase() : null} { allWeekDay.length>j ?  allWeekDay[j].date.toLowerCase() : null}</div>
                 </>
               );
             }
@@ -2989,7 +2989,7 @@ return(<>
 
                       
 
-                       <p className='calendar-clientname'>Client :  {clientName}</p> 
+                       <p className='calendar-clientname'>Client :  {clientName ? clientName.toLowerCase() : null}</p> 
 
                        {/* {isCoachAccept_ == undefined && isCoachAccept_ !== 1 ? (
   <p>
@@ -3024,7 +3024,7 @@ return(<>
 
 {isCoachCancel_ !== undefined && isCoachCancel_ == 1 ? (
   <p className='calendar-clientcanel'>
-    Cancelled
+    cancelled
       </p>
 ) : null}
                        
