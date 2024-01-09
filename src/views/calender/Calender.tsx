@@ -2218,8 +2218,12 @@ var interval = "60";
          //var endtime = "17:00:00";
   var timeslots = [starttime];
   let index = 0;
+
+  
   while (starttime < endtime) {
     // const interval = index % 2 === 0 ? 45 : 15;
+
+    console.log('starttime',starttime);
     const interval = 60;
     starttime = addMinutes(starttime, interval);
   
@@ -2233,6 +2237,7 @@ var interval = "60";
     index++;
     // settimeslot_load(false);
   }
+  timeslots.push(endtime);
     
     setarray1(timeslots);
   
