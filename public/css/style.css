@@ -2677,14 +2677,26 @@ button{font-family: Gothic A1 !important;}
   .coach-feedback form .form-control:-moz-placeholder{opacity:1;}
   .coach-feedback form textarea{height:200px !important;}
   .coach-feedback form label{display:block; margin:0 0 10px; font-size:13px; font-weight:400;}
-  .coach-feedback form .form-group{margin:0 0 15px;}
+  .coach-feedback form .form-group{margin: 0 0 15px;
+    position: relative;}
   .coach-feedback form .form-btn{margin:0 15px 15px;}
-  .coach-feedback form .btn{background: #1d696c; margin: 0 0 -45px;}
-  .coach-feedback form .btn:after{background: #0e2540;}
-  .coach-feedback .skip-link{font-size: 14px; font-weight:600; text-align:right; margin: 40px 0;}
+  /* .coach-feedback form .btn{background: #1d696c; margin: 0 0 -45px;}
+  .coach-feedback form .btn:after{background: #0e2540;} */
+  .coach-feedback .skip-link{  font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 10px;}
   .coach-feedback .skip-link i{margin: 0 0 0 10px;}
   .coach-feedback .skip-link a{color: #1d696c;}
   .coach-feedback .skip-link a:hover{color: #f79632;}
+  .coach-feedback .feedback-box h3 {
+    border-bottom: 1px solid #0f2540;
+    padding: 0 0 20px;
+    margin: 0 0 30px !important;
+  }
   
   .star-rating{min-width: 155px; position:relative; margin: 0 auto;}
   .star-rating input{-moz-appearance: none; -webkit-appearance: none; display: inline-block; margin: 0; padding: 0; z-index: 2; position: relative; background-image: url(../images/shape-feedback1.png); background-size: contain; height: 21px; width: 22px; background-repeat: no-repeat; background-attachment: scroll; background-position: center center;}
@@ -2695,6 +2707,13 @@ button{font-family: Gothic A1 !important;}
   .star-rating input.sf3{left: 50px;}
   .star-rating input.sf4{left: 75px;}
   .star-rating input.sf5{left: 100px;}
+
+
+  .coach-feedback form .btn{background:#1d696c; border:0; text-decoration: none; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; font-size:14px; font-weight:700; position: relative; z-index: 1; display: inline-block; text-align: center; color: #eae3d1; padding: 12px 11px 10px; letter-spacing:1px; margin:0; overflow:hidden; text-shadow:none; box-shadow:none; text-transform: inherit;}
+  .coach-feedback form .btn:hover, .btn:focus, .btn:visited{color: #eae3d1 !important; background:#f79632;}
+  .coach-feedback form .btn:after{content: ''; position: absolute; height: 100%; left: 0; top: 0; width: 0%; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; background-color: #0e2540; z-index: -1; border: 0; margin:0;}
+  .coach-feedback form .btn:focus:after, .coach-feedback form .btn:visited:after, .coach-feedback form .btn:hover:after{width: 100%;}
+
 
 .react-calendar__month-view__days{min-height: 252px;}
 
@@ -3798,3 +3817,4 @@ left: 75px !important;
 }
 
 .react-calendar__navigation__label__labelText{text-transform: lowercase !important;}
+

@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { database } from '../../../../firebaseConfig'
 import { collection, query, addDoc, where, getDocs,doc,getDoc,updateDoc } from 'firebase/firestore';
-
+import Feedback from "src/components/Feedback";
 
 
 const VideoCallPage = () => {
@@ -18,10 +18,16 @@ const VideoCallPage = () => {
   const [iframeLoaded, setIframeLoaded] = useState(false);
 
   const [notAuthMsg, setnotAuthMsg] = useState(false);
+
+  const [showFeedback, setshowFeedback] = useState(false);
   const [meetId, setmeetId] = useState('');
   const [coachId, setcoachId] = useState('');
   const meetingRef = collection(database, "meeting");
   const [client, setClient] = useState(null);
+
+  const [clientName, setClientName] = useState('');
+
+  const [clientEmail, setClientEmail] = useState('');
   const [isSessionAvbl, setisSessionAvbl] = useState(false);
   
 
@@ -88,7 +94,10 @@ const VideoCallPage = () => {
       if(client != null){
       console.log(client);
       console.log(client.remainingSession);
+      setClientName(client.client_name);
 
+      setClientEmail(client.client_email);
+        
       if(client.remainingSession > 0 || client.isDiscoverySessionAdded == 1){
         setisSessionAvbl(true);
       }
@@ -216,6 +225,8 @@ async function updateMeetingEnd() {
   } catch (error) {
     console.error("Error updating documents: ", error);
   }
+
+  setshowFeedback(true);
 }
 
 async function updateMeetingDocument() {
@@ -341,9 +352,16 @@ updateMeetingEnd();
 
   return (
     <>
+{showFeedback  ?
+    <Feedback   clientName={clientName}
+    clientEmail={clientEmail}/> : null }
       {iframeLoaded  ? null :  !notAuthMsg ? <h3 className='loading-video'>Loading...</h3> : null }
-      <div id="iframeContainer"></div>
+      <div id="iframeContainer">
 
+      
+      </div>
+     
+      
       { notAuthMsg ?
       <div className="error-message-video">
   <h3>Sorry, you are not authorized to access this content.</h3>
