@@ -29,7 +29,9 @@ let lastUrl='';
       // Reload the current page
       console.log('yes');
      // localStorage.removeItem("p_url");
-      router.reload();
+
+	 
+     // router.reload();
     }
   }, [router.path]); // Empty dependency array means this effect runs once after the initial render
 

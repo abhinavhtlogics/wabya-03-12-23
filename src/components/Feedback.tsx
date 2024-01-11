@@ -115,7 +115,7 @@ const Feedback = ({ clientName,clientEmail }) => {
        </body>
     </html>
 `;
-  sendMailFunc('kaylae@tdmc.co.za',adminmsg,'Feedback'); 
+  sendMailFunc('youare@wabya.com',adminmsg,'Feedback'); 
             })
             .catch((err) => {
               console.error(err);
