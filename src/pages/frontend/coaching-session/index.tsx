@@ -465,10 +465,52 @@ const sortedCoaches = coachData && clientData ? coachData.slice().sort((a, b) =>
     console.log(`Coach ${a.coach_idd} - Clients: ${countA}`);
     console.log(`Coach ${b.coach_idd} - Clients: ${countB}`);
 
+    if (coach_prefer === 'male') {
+      // Prioritize male coaches
+      if (a.coach_gender === 'male' && b.coach_gender !== 'male') {
+        return -1;
+      } else if (a.coach_gender !== 'male' && b.coach_gender === 'male') {
+        return 1;
+      }
+    } else if (coach_prefer === 'female') {
+      // Prioritize female coaches
+      if (a.coach_gender === 'female' && b.coach_gender !== 'female') {
+        return -1;
+      } else if (a.coach_gender !== 'female' && b.coach_gender === 'female') {
+        return 1;
+      }
+    }
+
     return countA - countB; // Change to countB - countA for descending order
   })
 : null;
 
+
+  // Your existing sorting logic
+  // const sortedCoaches = () => {
+  //   return coaches.slice().sort((a, b) => {
+  //     const countA = coachClientCounts[a.coach_idd] || 0;
+  //     const countB = coachClientCounts[b.coach_idd] || 0;
+
+  //     if (coach_prefer === 'male') {
+  //       // Prioritize male coaches
+  //       if (a.coach_gender === 'male' && b.coach_gender !== 'male') {
+  //         return -1;
+  //       } else if (a.coach_gender !== 'male' && b.coach_gender === 'male') {
+  //         return 1;
+  //       }
+  //     } else if (coach_prefer === 'female') {
+  //       // Prioritize female coaches
+  //       if (a.coach_gender === 'female' && b.coach_gender !== 'female') {
+  //         return -1;
+  //       } else if (a.coach_gender !== 'female' && b.coach_gender === 'female') {
+  //         return 1;
+  //       }
+  //     }
+
+  //     return countA - countB; // Default sorting based on client counts
+  //   });
+  // };
 
 
 useEffect(() => {
@@ -1047,14 +1089,14 @@ if(client_emailId != ""){
                 <div className="col-sm-12 date-time">
                   <h3>select your date & time</h3>
 
-                  {/* {sortedCoaches && sortedCoaches.map((coach) => (
+                  {sortedCoaches && sortedCoaches.map((coach) => (
         <div key={coach.coach_idd}>
-          <h1>Coach: {coach.coach_name}  </h1>
+          <h1>Coach: {coach.coach_name}  - {coach.coach_gender} </h1>
           <p>Number of Clients: {coachClientCounts[coach.coach_idd]}</p>
         </div>
       ))}
 
-assign coach - {coachId} */}
+assign coach - {coachId}
       
                 <div className="time-btn"><button className="btn" id="myButton" onClick={scheduleNewSes}>select an available time</button></div>
                 </div>
