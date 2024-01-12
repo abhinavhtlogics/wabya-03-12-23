@@ -16,7 +16,7 @@ const VideoCallPage = () => {
     const videoId=router.query.id;
   const [callObject, setCallObject] = useState(null);
   const [iframeLoaded, setIframeLoaded] = useState(false);
-
+  const [backHome, setbackHome] = useState(false);
   const [notAuthMsg, setnotAuthMsg] = useState(false);
 
   const [showFeedback, setshowFeedback] = useState(false);
@@ -341,7 +341,9 @@ updateDoc(update, {
 updateMeetingEnd();
  
 
+callObject.destroy();
 
+setbackHome(true);
         
       });
     }
@@ -365,6 +367,18 @@ updateMeetingEnd();
       { notAuthMsg ?
       <div className="error-message-video">
   <h3>Sorry, you are not authorized to access this content.</h3>
+ 
+</div>
+    :null }
+
+
+
+
+
+{ backHome ?
+      <div className="error-message-video">
+  <h3>you left the meeting.</h3>
+  <h3><a href='../../../client/dashoard'>back to home</a></h3>
  
 </div>
     :null }
