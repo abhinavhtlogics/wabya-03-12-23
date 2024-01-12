@@ -140,7 +140,7 @@ if(plan_detail != null){
                 
                   <div className="row"  style={{ marginTop: '20px' }}>
                     <div className="col-sm-6">	
-                      <label>Price: €{price}.00</label>
+                      <label>Price: £{price}.00</label>
                     </div>
 
                     <div className="col-sm-3">	
