@@ -254,7 +254,7 @@ const Feedback = ({ clientName,clientEmail }) => {
                     <i className="fa fa-long-arrow-right" aria-hidden="true" />
                   </a>
                 </p>
-                <button className="btn btn-send" onClick={handleSubmit}>Submit</button>
+                <button className="btn btn-send" onClick={handleSubmit}>submit</button>
               </div>
             </div>
           </form>
